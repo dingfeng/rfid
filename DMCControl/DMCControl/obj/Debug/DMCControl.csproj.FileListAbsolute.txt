@@ -1,0 +1,17 @@
+G:\cplusProjects\DMCControl\DMCControl\bin\Debug\DMCControl.exe.config
+G:\cplusProjects\DMCControl\DMCControl\bin\Debug\DMCControl.exe
+G:\cplusProjects\DMCControl\DMCControl\bin\Debug\DMCControl.pdb
+G:\cplusProjects\DMCControl\DMCControl\obj\Debug\DMCControl.exe
+G:\cplusProjects\DMCControl\DMCControl\obj\Debug\DMCControl.pdb
+G:\cplusProjects\DMCControl\DMCControl\obj\Debug\DMCControl.csprojResolveAssemblyReference.cache
+F:\rfid实验室\丁峰\cs模式\DMCControl\DMCControl\bin\Debug\DMCControl.exe.config
+F:\rfid实验室\丁峰\cs模式\DMCControl\DMCControl\obj\Debug\DMCControl.exe
+F:\rfid实验室\丁峰\cs模式\DMCControl\DMCControl\obj\Debug\DMCControl.pdb
+F:\rfid实验室\丁峰\cs模式\DMCControl\DMCControl\bin\Debug\DMCControl.exe
+F:\rfid实验室\丁峰\cs模式\DMCControl\DMCControl\bin\Debug\DMCControl.pdb
+D:\cs模式\cs模式\DMCControl\DMCControl\bin\Debug\DMCControl.exe.config
+D:\cs模式\cs模式\DMCControl\DMCControl\obj\Debug\DMCControl.exe
+D:\cs模式\cs模式\DMCControl\DMCControl\obj\Debug\DMCControl.pdb
+D:\cs模式\cs模式\DMCControl\DMCControl\bin\Debug\DMCControl.exe
+D:\cs模式\cs模式\DMCControl\DMCControl\bin\Debug\DMCControl.pdb
+D:\cs模式\cs模式\DMCControl\DMCControl\obj\Debug\DMCControl.csprojResolveAssemblyReference.cache

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1904cfd6-1bea-4a76-97af-459b0f8016a6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://127.0.0.1:50002/DmcControlServiceEndPoint/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="a5776913-001b-4c40-8984-a7fc0b403f03" SourceId="1" SourceUrl="net.tcp://127.0.0.1:50002/DmcControlServiceEndPoint/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="0af8d76c-dd47-467d-90b5-e86042eaaa37" SourceId="1" SourceUrl="net.tcp://127.0.0.1:50002/DmcControlServiceEndPoint/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="26e1fbb7-3228-46fe-bbfa-51a0723badfe" SourceId="1" SourceUrl="net.tcp://127.0.0.1:50002/DmcControlServiceEndPoint/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="70ab9a41-7f8e-48d8-abc4-79761614e000" SourceId="1" SourceUrl="net.tcp://127.0.0.1:50002/DmcControlServiceEndPoint/mex" />
+    <MetadataFile FileName="DMCControl.xsd" MetadataType="Schema" ID="589d09fc-3afd-40c6-830a-ea4cad1f9dd7" SourceId="1" SourceUrl="net.tcp://127.0.0.1:50002/DmcControlServiceEndPoint/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

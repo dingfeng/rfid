@@ -1,0 +1,12 @@
+D:\cs模式\cs模式\DMCControl\DMCControl\bin\x64\Debug\DMCControl.exe.config
+D:\cs模式\cs模式\DMCControl\DMCControl\bin\x64\Debug\DMCControl.exe
+D:\cs模式\cs模式\DMCControl\DMCControl\bin\x64\Debug\DMCControl.pdb
+D:\cs模式\cs模式\DMCControl\DMCControl\obj\x64\Debug\DMCControl.csprojResolveAssemblyReference.cache
+D:\cs模式\cs模式\DMCControl\DMCControl\obj\x64\Debug\DMCControl.exe
+D:\cs模式\cs模式\DMCControl\DMCControl\obj\x64\Debug\DMCControl.pdb
+D:\cs linear guide\DMCControl\DMCControl\bin\x64\Debug\DMCControl.exe.config
+D:\cs linear guide\DMCControl\DMCControl\obj\x64\Debug\DMCControl.exe
+D:\cs linear guide\DMCControl\DMCControl\obj\x64\Debug\DMCControl.pdb
+D:\cs linear guide\DMCControl\DMCControl\bin\x64\Debug\DMCControl.exe
+D:\cs linear guide\DMCControl\DMCControl\bin\x64\Debug\DMCControl.pdb
+D:\cs linear guide\DMCControl\DMCControl\obj\x64\Debug\DMCControl.csprojResolveAssemblyReference.cache

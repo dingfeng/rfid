@@ -1,0 +1,6 @@
+D:\cs linear guide\DMCControl\DMCControl\bin\x64\Release\DMCControl.exe.config
+D:\cs linear guide\DMCControl\DMCControl\bin\x64\Release\DMCControl.exe
+D:\cs linear guide\DMCControl\DMCControl\bin\x64\Release\DMCControl.pdb
+D:\cs linear guide\DMCControl\DMCControl\obj\x64\Release\DMCControl.exe
+D:\cs linear guide\DMCControl\DMCControl\obj\x64\Release\DMCControl.pdb
+D:\cs linear guide\DMCControl\DMCControl\obj\x64\Release\DMCControl.csprojResolveAssemblyReference.cache

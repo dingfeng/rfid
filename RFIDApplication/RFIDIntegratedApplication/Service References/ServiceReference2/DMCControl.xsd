@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DMCControl" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DMCControl" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfDMCPosDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DMCPosDto" nillable="true" type="tns:DMCPosDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDMCPosDto" nillable="true" type="tns:ArrayOfDMCPosDto" />
+  <xs:complexType name="DMCPosDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="microSecond" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="x" type="xs:float" />
+      <xs:element minOccurs="0" name="y" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DMCPosDto" nillable="true" type="tns:DMCPosDto" />
+</xs:schema>

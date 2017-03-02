@@ -1,0 +1,32 @@
+E:\program\Microsoft Visual Studio\RFIDApplication\RFIDTest\bin\Debug\RFIDTest.exe.config
+E:\program\Microsoft Visual Studio\RFIDApplication\RFIDTest\bin\Debug\RFIDTest.exe
+E:\program\Microsoft Visual Studio\RFIDApplication\RFIDTest\bin\Debug\RFIDTest.pdb
+E:\program\Microsoft Visual Studio\RFIDApplication\RFIDTest\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+E:\program\Microsoft Visual Studio\RFIDApplication\RFIDTest\bin\Debug\WeifenLuo.WinFormsUI.Docking.ThemeVS2003.dll
+E:\program\Microsoft Visual Studio\RFIDApplication\RFIDTest\bin\Debug\WeifenLuo.WinFormsUI.Docking.ThemeVS2012.dll
+E:\program\Microsoft Visual Studio\RFIDApplication\RFIDTest\bin\Debug\WeifenLuo.WinFormsUI.Docking.ThemeVS2012Light.dll
+E:\program\Microsoft Visual Studio\RFIDApplication\RFIDTest\bin\Debug\WeifenLuo.WinFormsUI.Docking.ThemeVS2013.dll
+E:\program\Microsoft Visual Studio\RFIDApplication\RFIDTest\bin\Debug\WeifenLuo.WinFormsUI.Docking.ThemeVS2013Blue.dll
+E:\program\Microsoft Visual Studio\RFIDApplication\RFIDTest\bin\Debug\WeifenLuo.WinFormsUI.Docking.ThemeVS2015.dll
+E:\program\Microsoft Visual Studio\RFIDApplication\RFIDTest\obj\Debug\RFIDTest.csprojResolveAssemblyReference.cache
+E:\program\Microsoft Visual Studio\RFIDApplication\RFIDTest\obj\Debug\RFIDTest.Form1.resources
+E:\program\Microsoft Visual Studio\RFIDApplication\RFIDTest\obj\Debug\RFIDTest.Properties.Resources.resources
+E:\program\Microsoft Visual Studio\RFIDApplication\RFIDTest\obj\Debug\RFIDTest.csproj.GenerateResource.Cache
+E:\program\Microsoft Visual Studio\RFIDApplication\RFIDTest\obj\Debug\RFIDTest.exe
+E:\program\Microsoft Visual Studio\RFIDApplication\RFIDTest\obj\Debug\RFIDTest.pdb
+F:\rfid实验室\丁峰\RFIDApplication\RFIDTest\bin\Debug\RFIDTest.exe.config
+F:\rfid实验室\丁峰\RFIDApplication\RFIDTest\bin\Debug\RFIDTest.exe
+F:\rfid实验室\丁峰\RFIDApplication\RFIDTest\bin\Debug\RFIDTest.pdb
+F:\rfid实验室\丁峰\RFIDApplication\RFIDTest\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+F:\rfid实验室\丁峰\RFIDApplication\RFIDTest\bin\Debug\WeifenLuo.WinFormsUI.Docking.ThemeVS2003.dll
+F:\rfid实验室\丁峰\RFIDApplication\RFIDTest\bin\Debug\WeifenLuo.WinFormsUI.Docking.ThemeVS2012.dll
+F:\rfid实验室\丁峰\RFIDApplication\RFIDTest\bin\Debug\WeifenLuo.WinFormsUI.Docking.ThemeVS2012Light.dll
+F:\rfid实验室\丁峰\RFIDApplication\RFIDTest\bin\Debug\WeifenLuo.WinFormsUI.Docking.ThemeVS2013.dll
+F:\rfid实验室\丁峰\RFIDApplication\RFIDTest\bin\Debug\WeifenLuo.WinFormsUI.Docking.ThemeVS2013Blue.dll
+F:\rfid实验室\丁峰\RFIDApplication\RFIDTest\bin\Debug\WeifenLuo.WinFormsUI.Docking.ThemeVS2015.dll
+F:\rfid实验室\丁峰\RFIDApplication\RFIDTest\obj\Debug\RFIDTest.csprojResolveAssemblyReference.cache
+F:\rfid实验室\丁峰\RFIDApplication\RFIDTest\obj\Debug\RFIDTest.Form1.resources
+F:\rfid实验室\丁峰\RFIDApplication\RFIDTest\obj\Debug\RFIDTest.Properties.Resources.resources
+F:\rfid实验室\丁峰\RFIDApplication\RFIDTest\obj\Debug\RFIDTest.csproj.GenerateResource.Cache
+F:\rfid实验室\丁峰\RFIDApplication\RFIDTest\obj\Debug\RFIDTest.exe
+F:\rfid实验室\丁峰\RFIDApplication\RFIDTest\obj\Debug\RFIDTest.pdb

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ImpinjControl" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ImpinjControl" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Org.LLRP.LTK.LLRPV1.DataType" />
+  <xs:complexType name="ConnectResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="antennaConfiguration" nillable="true" type="tns:AntennaConfiguration" />
+      <xs:element minOccurs="0" name="rOReportSpec" nillable="true" type="tns:ROReportSpec" />
+      <xs:element minOccurs="0" name="readerCapabilities" nillable="true" type="tns:ReaderCapabilities" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConnectResponse" nillable="true" type="tns:ConnectResponse" />
+  <xs:complexType name="AntennaConfiguration">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AntennaConnected" nillable="true" type="q1:ArrayOfboolean" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AntennaID" nillable="true" type="q2:ArrayOfunsignedShort" />
+      <xs:element minOccurs="0" name="ChannelIndex" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="EmptyFieldTimeout" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="FieldPingInterval" type="xs:unsignedShort" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Org.LLRP.LTK.LLRPV1.DataType" minOccurs="0" name="FixedChannelList" nillable="true" type="q3:UInt16Array" />
+      <xs:element minOccurs="0" name="FixedFrequencyMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Frequency" type="xs:double" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Org.LLRP.LTK.LLRPV1.DataType" minOccurs="0" name="FrequencyHopList" nillable="true" type="q4:UInt16Array" />
+      <xs:element minOccurs="0" name="HopTableID" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="Hopping" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HoppingStep" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="LowDutyCycleMode" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaxNumberOfAntennaSupported" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="ModeIndex" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="NumberOfAntennaConnected" type="xs:unsignedShort" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Org.LLRP.LTK.LLRPV1.DataType" minOccurs="0" name="ReducedPowerChannelList" nillable="true" type="q5:UInt16Array" />
+      <xs:element minOccurs="0" name="ReducedPowerFrequencyMode" type="xs:boolean" />
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SelectedReceiverSensitivity" nillable="true" type="q6:ArrayOfshort" />
+      <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SelectedReceiverSensitivityIndex" nillable="true" type="q7:ArrayOfunsignedShort" />
+      <xs:element minOccurs="0" name="SelectedSearchMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SelectedSession" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SelectedSessionIndex" type="xs:unsignedShort" />
+      <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SelectedTransmiterPower" nillable="true" type="q8:ArrayOfdouble" />
+      <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SelectedTransmiterPowerIndex" nillable="true" type="q9:ArrayOfunsignedShort" />
+      <xs:element minOccurs="0" name="TagInventoryStateAware" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TagPopulation" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="TagTransitTime" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="Tari" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="extraMask" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mask" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AntennaConfiguration" nillable="true" type="tns:AntennaConfiguration" />
+  <xs:complexType name="ROReportSpec">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EnableAccessSpecID" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EnableAntennaID" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EnableCRC" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EnableChannelIndex" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EnableFirstSeenTimestamp" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EnableInventoryParameterSPecID" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EnableLastSeenTimestamp" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EnablePCbits" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EnablePeakRSSI" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EnableROSpecID" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EnableSpecIndex" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EnableTagSeenCount" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ImpinJEnableGPSCoordinates" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ImpinJEnableOptimizedRead" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ImpinJEnablePeakRSSI" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ImpinJEnableRFDopplerFrequency" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ImpinJEnableRFPhaseAngle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ImpinJEnableSerializedTID" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ROReportTriggerN" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="SelectedROReportTrigger" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ROReportSpec" nillable="true" type="tns:ROReportSpec" />
+  <xs:complexType name="ReaderCapabilities">
+    <xs:sequence>
+      <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="FixedFrequencyModeTable" nillable="true" type="q10:ArrayOfstring" />
+      <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="FrequencyDic" nillable="true" type="q11:ArrayOfKeyValueOfunsignedShortdouble" />
+      <xs:element minOccurs="0" name="MaxNumberOfAntennaSupported" type="xs:unsignedShort" />
+      <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="PreDefinedModeTable" nillable="true" type="q12:ArrayOfKeyValueOfstringunsignedShort" />
+      <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ROReportTrigger" nillable="true" type="q13:ArrayOfstring" />
+      <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ReceiveSensitivityDic" nillable="true" type="q14:ArrayOfKeyValueOfshortunsignedShort" />
+      <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SearchModeTable" nillable="true" type="q15:ArrayOfstring" />
+      <xs:element xmlns:q16="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Sessions" nillable="true" type="q16:ArrayOfKeyValueOfstringunsignedShort" />
+      <xs:element xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SupportedModeIndex" nillable="true" type="q17:ArrayOfunsignedShort" />
+      <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="TransmiterPowerDic" nillable="true" type="q18:ArrayOfKeyValueOfdoubleunsignedShort" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReaderCapabilities" nillable="true" type="tns:ReaderCapabilities" />
+  <xs:complexType name="ArrayOfTagInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TagInfo" nillable="true" type="tns:TagInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTagInfo" nillable="true" type="tns:ArrayOfTagInfo" />
+  <xs:complexType name="TagInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AcutalPhaseInRadian" type="xs:double" />
+      <xs:element minOccurs="0" name="Antenna" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="ChannelIndex" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="DopplerShift" type="xs:int" />
+      <xs:element minOccurs="0" name="EPC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstSeenTime" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="Frequency" type="xs:int" />
+      <xs:element minOccurs="0" name="LastSeenTime" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="RSSI" type="xs:double" />
+      <xs:element minOccurs="0" name="RawPhase" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="TagSeenCount" type="xs:int" />
+      <xs:element minOccurs="0" name="TimeStamp" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="TotalTagCount" type="xs:int" />
+      <xs:element minOccurs="0" name="TxPower" type="xs:double" />
+      <xs:element minOccurs="0" name="Velocity" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TagInfo" nillable="true" type="tns:TagInfo" />
+</xs:schema>

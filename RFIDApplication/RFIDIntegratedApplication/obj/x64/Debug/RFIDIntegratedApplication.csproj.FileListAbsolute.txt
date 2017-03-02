@@ -1,0 +1,197 @@
+F:\rfid实验室\丁峰\修改后文件\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.exe.config
+F:\rfid实验室\丁峰\修改后文件\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.exe
+F:\rfid实验室\丁峰\修改后文件\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.pdb
+F:\rfid实验室\丁峰\修改后文件\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\LLRP.dll
+F:\rfid实验室\丁峰\修改后文件\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\LLRP.Impinj.dll
+F:\rfid实验室\丁峰\修改后文件\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\WeifenLuo.WinFormsUI.Docking.dll
+F:\rfid实验室\丁峰\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.HologramForm.resources
+F:\rfid实验室\丁峰\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.LinearGuideForm.resources
+F:\rfid实验室\丁峰\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SearchRegionForm.resources
+F:\rfid实验室\丁峰\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SimulationForm.resources
+F:\rfid实验室\丁峰\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SortingBooksForm.resources
+F:\rfid实验室\丁峰\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.MainForm.resources
+F:\rfid实验室\丁峰\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.PhaseGraphForm.resources
+F:\rfid实验室\丁峰\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.Properties.Resources.resources
+F:\rfid实验室\丁峰\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.ReaderSettingsForm.resources
+F:\rfid实验室\丁峰\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.RSSIGraphFrom.resources
+F:\rfid实验室\丁峰\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.SearchReaderIPForm.resources
+F:\rfid实验室\丁峰\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.TagTableForm.resources
+F:\rfid实验室\丁峰\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.csproj.GenerateResource.Cache
+F:\rfid实验室\丁峰\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.exe
+F:\rfid实验室\丁峰\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.pdb
+C:\Users\RFID\Desktop\修改后文件\修改后文件\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.exe.config
+C:\Users\RFID\Desktop\修改后文件\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.exe
+C:\Users\RFID\Desktop\修改后文件\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.pdb
+C:\Users\RFID\Desktop\修改后文件\修改后文件\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.exe
+C:\Users\RFID\Desktop\修改后文件\修改后文件\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.pdb
+C:\Users\RFID\Desktop\修改后文件\修改后文件\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\LLRP.dll
+C:\Users\RFID\Desktop\修改后文件\修改后文件\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\LLRP.Impinj.dll
+C:\Users\RFID\Desktop\修改后文件\修改后文件\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\WeifenLuo.WinFormsUI.Docking.dll
+C:\Users\RFID\Desktop\修改后文件\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.csprojResolveAssemblyReference.cache
+C:\Users\RFID\Desktop\修改后文件\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.HologramForm.resources
+C:\Users\RFID\Desktop\修改后文件\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.LinearGuideForm.resources
+C:\Users\RFID\Desktop\修改后文件\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SearchRegionForm.resources
+C:\Users\RFID\Desktop\修改后文件\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SimulationForm.resources
+C:\Users\RFID\Desktop\修改后文件\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SortingBooksForm.resources
+C:\Users\RFID\Desktop\修改后文件\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.MainForm.resources
+C:\Users\RFID\Desktop\修改后文件\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.PhaseGraphForm.resources
+C:\Users\RFID\Desktop\修改后文件\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.Properties.Resources.resources
+C:\Users\RFID\Desktop\修改后文件\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.ReaderSettingsForm.resources
+C:\Users\RFID\Desktop\修改后文件\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.RSSIGraphFrom.resources
+C:\Users\RFID\Desktop\修改后文件\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.SearchReaderIPForm.resources
+C:\Users\RFID\Desktop\修改后文件\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.TagTableForm.resources
+C:\Users\RFID\Desktop\修改后文件\修改后文件\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.csproj.GenerateResource.Cache
+F:\rfid实验室\丁峰\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.exe.config
+F:\rfid实验室\丁峰\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.exe
+F:\rfid实验室\丁峰\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.pdb
+F:\rfid实验室\丁峰\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.exe
+F:\rfid实验室\丁峰\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.pdb
+F:\rfid实验室\丁峰\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\LLRP.dll
+F:\rfid实验室\丁峰\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\LLRP.Impinj.dll
+F:\rfid实验室\丁峰\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\WeifenLuo.WinFormsUI.Docking.dll
+F:\rfid实验室\丁峰\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.HologramForm.resources
+F:\rfid实验室\丁峰\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.LinearGuideForm.resources
+F:\rfid实验室\丁峰\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SearchRegionForm.resources
+F:\rfid实验室\丁峰\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SimulationForm.resources
+F:\rfid实验室\丁峰\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SortingBooksForm.resources
+F:\rfid实验室\丁峰\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.MainForm.resources
+F:\rfid实验室\丁峰\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.PhaseGraphForm.resources
+F:\rfid实验室\丁峰\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.Properties.Resources.resources
+F:\rfid实验室\丁峰\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.ReaderSettingsForm.resources
+F:\rfid实验室\丁峰\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.RSSIGraphFrom.resources
+F:\rfid实验室\丁峰\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.SearchReaderIPForm.resources
+F:\rfid实验室\丁峰\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.TagTableForm.resources
+F:\rfid实验室\丁峰\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.csproj.GenerateResource.Cache
+C:\Users\RFID\Desktop\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.exe.config
+C:\Users\RFID\Desktop\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.exe
+C:\Users\RFID\Desktop\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.pdb
+C:\Users\RFID\Desktop\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.exe
+C:\Users\RFID\Desktop\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.pdb
+C:\Users\RFID\Desktop\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\LLRP.dll
+C:\Users\RFID\Desktop\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\LLRP.Impinj.dll
+C:\Users\RFID\Desktop\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\WeifenLuo.WinFormsUI.Docking.dll
+C:\Users\RFID\Desktop\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.csprojResolveAssemblyReference.cache
+C:\Users\RFID\Desktop\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.HologramForm.resources
+C:\Users\RFID\Desktop\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.LinearGuideForm.resources
+C:\Users\RFID\Desktop\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SearchRegionForm.resources
+C:\Users\RFID\Desktop\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SimulationForm.resources
+C:\Users\RFID\Desktop\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SortingBooksForm.resources
+C:\Users\RFID\Desktop\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.MainForm.resources
+C:\Users\RFID\Desktop\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.PhaseGraphForm.resources
+C:\Users\RFID\Desktop\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.Properties.Resources.resources
+C:\Users\RFID\Desktop\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.ReaderSettingsForm.resources
+C:\Users\RFID\Desktop\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.RSSIGraphFrom.resources
+C:\Users\RFID\Desktop\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.SearchReaderIPForm.resources
+C:\Users\RFID\Desktop\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.TagTableForm.resources
+C:\Users\RFID\Desktop\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.csproj.GenerateResource.Cache
+C:\Users\RFID\Desktop\rfid\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.exe.config
+C:\Users\RFID\Desktop\rfid\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.exe
+C:\Users\RFID\Desktop\rfid\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.pdb
+C:\Users\RFID\Desktop\rfid\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.exe
+C:\Users\RFID\Desktop\rfid\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.pdb
+C:\Users\RFID\Desktop\rfid\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\LLRP.dll
+C:\Users\RFID\Desktop\rfid\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\LLRP.Impinj.dll
+C:\Users\RFID\Desktop\rfid\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\WeifenLuo.WinFormsUI.Docking.dll
+C:\Users\RFID\Desktop\rfid\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.HologramForm.resources
+C:\Users\RFID\Desktop\rfid\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.LinearGuideForm.resources
+C:\Users\RFID\Desktop\rfid\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SearchRegionForm.resources
+C:\Users\RFID\Desktop\rfid\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SimulationForm.resources
+C:\Users\RFID\Desktop\rfid\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SortingBooksForm.resources
+C:\Users\RFID\Desktop\rfid\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.MainForm.resources
+C:\Users\RFID\Desktop\rfid\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.PhaseGraphForm.resources
+C:\Users\RFID\Desktop\rfid\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.Properties.Resources.resources
+C:\Users\RFID\Desktop\rfid\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.ReaderSettingsForm.resources
+C:\Users\RFID\Desktop\rfid\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.RSSIGraphFrom.resources
+C:\Users\RFID\Desktop\rfid\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.SearchReaderIPForm.resources
+C:\Users\RFID\Desktop\rfid\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.TagTableForm.resources
+C:\Users\RFID\Desktop\rfid\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.csproj.GenerateResource.Cache
+C:\Users\RFID\Desktop\rfid\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.csprojResolveAssemblyReference.cache
+C:\Users\RFID\Desktop\有位置信息taglog\RFIDApplication\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.exe.config
+C:\Users\RFID\Desktop\有位置信息taglog\RFIDApplication\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.exe
+C:\Users\RFID\Desktop\有位置信息taglog\RFIDApplication\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.pdb
+C:\Users\RFID\Desktop\有位置信息taglog\RFIDApplication\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.exe
+C:\Users\RFID\Desktop\有位置信息taglog\RFIDApplication\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.pdb
+C:\Users\RFID\Desktop\有位置信息taglog\RFIDApplication\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\LLRP.dll
+C:\Users\RFID\Desktop\有位置信息taglog\RFIDApplication\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\LLRP.Impinj.dll
+C:\Users\RFID\Desktop\有位置信息taglog\RFIDApplication\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\WeifenLuo.WinFormsUI.Docking.dll
+C:\Users\RFID\Desktop\有位置信息taglog\RFIDApplication\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.csprojResolveAssemblyReference.cache
+C:\Users\RFID\Desktop\有位置信息taglog\RFIDApplication\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.HologramForm.resources
+C:\Users\RFID\Desktop\有位置信息taglog\RFIDApplication\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.LinearGuideForm.resources
+C:\Users\RFID\Desktop\有位置信息taglog\RFIDApplication\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SearchRegionForm.resources
+C:\Users\RFID\Desktop\有位置信息taglog\RFIDApplication\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SimulationForm.resources
+C:\Users\RFID\Desktop\有位置信息taglog\RFIDApplication\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SortingBooksForm.resources
+C:\Users\RFID\Desktop\有位置信息taglog\RFIDApplication\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.MainForm.resources
+C:\Users\RFID\Desktop\有位置信息taglog\RFIDApplication\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.PhaseGraphForm.resources
+C:\Users\RFID\Desktop\有位置信息taglog\RFIDApplication\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.Properties.Resources.resources
+C:\Users\RFID\Desktop\有位置信息taglog\RFIDApplication\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.ReaderSettingsForm.resources
+C:\Users\RFID\Desktop\有位置信息taglog\RFIDApplication\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.RSSIGraphFrom.resources
+C:\Users\RFID\Desktop\有位置信息taglog\RFIDApplication\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.SearchReaderIPForm.resources
+C:\Users\RFID\Desktop\有位置信息taglog\RFIDApplication\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.TagTableForm.resources
+C:\Users\RFID\Desktop\有位置信息taglog\RFIDApplication\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.csproj.GenerateResource.Cache
+F:\rfid实验室\丁峰\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.csprojResolveAssemblyReference.cache
+F:\rfid实验室\丁峰\cs模式\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.exe.config
+F:\rfid实验室\丁峰\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.exe
+F:\rfid实验室\丁峰\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.pdb
+F:\rfid实验室\丁峰\cs模式\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.exe
+F:\rfid实验室\丁峰\cs模式\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.pdb
+F:\rfid实验室\丁峰\cs模式\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\LLRP.dll
+F:\rfid实验室\丁峰\cs模式\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\LLRP.Impinj.dll
+F:\rfid实验室\丁峰\cs模式\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\WeifenLuo.WinFormsUI.Docking.dll
+F:\rfid实验室\丁峰\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.HologramForm.resources
+F:\rfid实验室\丁峰\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.LinearGuideForm.resources
+F:\rfid实验室\丁峰\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SearchRegionForm.resources
+F:\rfid实验室\丁峰\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SimulationForm.resources
+F:\rfid实验室\丁峰\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SortingBooksForm.resources
+F:\rfid实验室\丁峰\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.MainForm.resources
+F:\rfid实验室\丁峰\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.PhaseGraphForm.resources
+F:\rfid实验室\丁峰\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.Properties.Resources.resources
+F:\rfid实验室\丁峰\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.ReaderSettingsForm.resources
+F:\rfid实验室\丁峰\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.RSSIGraphFrom.resources
+F:\rfid实验室\丁峰\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.SearchReaderIPForm.resources
+F:\rfid实验室\丁峰\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.TagTableForm.resources
+F:\rfid实验室\丁峰\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.csproj.GenerateResource.Cache
+F:\rfid实验室\丁峰\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.csprojResolveAssemblyReference.cache
+D:\cs模式\cs模式\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.exe.config
+D:\cs模式\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.exe
+D:\cs模式\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.pdb
+D:\cs模式\cs模式\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.exe
+D:\cs模式\cs模式\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.pdb
+D:\cs模式\cs模式\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\LLRP.dll
+D:\cs模式\cs模式\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\LLRP.Impinj.dll
+D:\cs模式\cs模式\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\cs模式\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.csprojResolveAssemblyReference.cache
+D:\cs模式\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.HologramForm.resources
+D:\cs模式\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.LinearGuideForm.resources
+D:\cs模式\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SearchRegionForm.resources
+D:\cs模式\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SimulationForm.resources
+D:\cs模式\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SortingBooksForm.resources
+D:\cs模式\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.MainForm.resources
+D:\cs模式\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.PhaseGraphForm.resources
+D:\cs模式\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.Properties.Resources.resources
+D:\cs模式\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.ReaderSettingsForm.resources
+D:\cs模式\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.RSSIGraphFrom.resources
+D:\cs模式\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.SearchReaderIPForm.resources
+D:\cs模式\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.TagTableForm.resources
+D:\cs模式\cs模式\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.csproj.GenerateResource.Cache
+D:\cs linear guide\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.exe.config
+D:\cs linear guide\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.exe
+D:\cs linear guide\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.pdb
+D:\cs linear guide\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.exe
+D:\cs linear guide\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\RFIDIntegratedApplication.pdb
+D:\cs linear guide\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\LLRP.dll
+D:\cs linear guide\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\LLRP.Impinj.dll
+D:\cs linear guide\RFIDApplication\RFIDIntegratedApplication\bin\x64\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\cs linear guide\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.HologramForm.resources
+D:\cs linear guide\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.LinearGuideForm.resources
+D:\cs linear guide\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SearchRegionForm.resources
+D:\cs linear guide\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SimulationForm.resources
+D:\cs linear guide\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.HolographicsForms.SortingBooksForm.resources
+D:\cs linear guide\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.MainForm.resources
+D:\cs linear guide\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.PhaseGraphForm.resources
+D:\cs linear guide\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.Properties.Resources.resources
+D:\cs linear guide\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.ReaderSettingsForm.resources
+D:\cs linear guide\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.RSSIGraphFrom.resources
+D:\cs linear guide\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.SearchReaderIPForm.resources
+D:\cs linear guide\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.TagTableForm.resources
+D:\cs linear guide\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.csproj.GenerateResource.Cache
+D:\cs linear guide\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.csprojResolveAssemblyReference.cache

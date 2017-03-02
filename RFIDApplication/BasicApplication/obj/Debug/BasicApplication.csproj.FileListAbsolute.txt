@@ -1,0 +1,48 @@
+E:\program\Microsoft Visual Studio\RFIDApplication\BasicApplication\bin\Debug\BasicApplication.exe.config
+E:\program\Microsoft Visual Studio\RFIDApplication\BasicApplication\bin\Debug\BasicApplication.exe
+E:\program\Microsoft Visual Studio\RFIDApplication\BasicApplication\bin\Debug\BasicApplication.pdb
+E:\program\Microsoft Visual Studio\RFIDApplication\BasicApplication\bin\Debug\LLRP.dll
+E:\program\Microsoft Visual Studio\RFIDApplication\BasicApplication\bin\Debug\LLRP.Impinj.dll
+E:\program\Microsoft Visual Studio\RFIDApplication\BasicApplication\bin\Debug\LLRP.pdb
+E:\program\Microsoft Visual Studio\RFIDApplication\BasicApplication\bin\Debug\LLRP.Impinj.pdb
+E:\program\Microsoft Visual Studio\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.csprojResolveAssemblyReference.cache
+E:\program\Microsoft Visual Studio\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.Properties.Resources.resources
+E:\program\Microsoft Visual Studio\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.csproj.GenerateResource.Cache
+E:\program\Microsoft Visual Studio\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.exe
+E:\program\Microsoft Visual Studio\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.pdb
+E:\program\Microsoft Visual Studio\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.MainForm.resources
+E:\program\Microsoft Visual Studio\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.MoreSettingsForm.resources
+E:\program\Microsoft Visual Studio\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.SearchReaderIPForm.resources
+F:\Program\Microsoft Visual Studio\RFIDApplication\BasicApplication\bin\Debug\BasicApplication.exe.config
+F:\Program\Microsoft Visual Studio\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.exe
+F:\Program\Microsoft Visual Studio\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.pdb
+F:\Program\Microsoft Visual Studio\RFIDApplication\BasicApplication\bin\Debug\BasicApplication.exe
+F:\Program\Microsoft Visual Studio\RFIDApplication\BasicApplication\bin\Debug\BasicApplication.pdb
+F:\Program\Microsoft Visual Studio\RFIDApplication\BasicApplication\bin\Debug\LLRP.dll
+F:\Program\Microsoft Visual Studio\RFIDApplication\BasicApplication\bin\Debug\LLRP.Impinj.dll
+F:\Program\Microsoft Visual Studio\RFIDApplication\BasicApplication\bin\Debug\LLRP.pdb
+F:\Program\Microsoft Visual Studio\RFIDApplication\BasicApplication\bin\Debug\LLRP.Impinj.pdb
+F:\Program\Microsoft Visual Studio\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.csprojResolveAssemblyReference.cache
+F:\Program\Microsoft Visual Studio\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.MainForm.resources
+F:\Program\Microsoft Visual Studio\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.MoreSettingsForm.resources
+F:\Program\Microsoft Visual Studio\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.Properties.Resources.resources
+F:\Program\Microsoft Visual Studio\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.SearchReaderIPForm.resources
+F:\Program\Microsoft Visual Studio\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.csproj.GenerateResource.Cache
+H:\RFIDApplication\BasicApplication\bin\Debug\BasicApplication.exe.config
+H:\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.exe
+H:\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.pdb
+E:\Program\RFIDApplication\BasicApplication\bin\Debug\BasicApplication.exe.config
+E:\Program\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.exe
+E:\Program\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.pdb
+E:\Program\RFIDApplication\BasicApplication\bin\Debug\BasicApplication.exe
+E:\Program\RFIDApplication\BasicApplication\bin\Debug\BasicApplication.pdb
+E:\Program\RFIDApplication\BasicApplication\bin\Debug\LLRP.dll
+E:\Program\RFIDApplication\BasicApplication\bin\Debug\LLRP.Impinj.dll
+E:\Program\RFIDApplication\BasicApplication\bin\Debug\LLRP.pdb
+E:\Program\RFIDApplication\BasicApplication\bin\Debug\LLRP.Impinj.pdb
+E:\Program\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.csprojResolveAssemblyReference.cache
+E:\Program\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.MainForm.resources
+E:\Program\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.MoreSettingsForm.resources
+E:\Program\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.Properties.Resources.resources
+E:\Program\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.SearchReaderIPForm.resources
+E:\Program\RFIDApplication\BasicApplication\obj\Debug\BasicApplication.csproj.GenerateResource.Cache

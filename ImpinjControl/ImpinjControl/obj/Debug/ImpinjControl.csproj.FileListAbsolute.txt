@@ -1,0 +1,16 @@
+G:\cplusProjects\ImpinjControl\ImpinjControl\bin\Debug\ImpinjControl.exe.config
+G:\cplusProjects\ImpinjControl\ImpinjControl\bin\Debug\ImpinjControl.exe
+G:\cplusProjects\ImpinjControl\ImpinjControl\bin\Debug\ImpinjControl.pdb
+G:\cplusProjects\ImpinjControl\ImpinjControl\bin\Debug\LLRP.dll
+G:\cplusProjects\ImpinjControl\ImpinjControl\bin\Debug\LLRP.Impinj.dll
+G:\cplusProjects\ImpinjControl\ImpinjControl\obj\Debug\ImpinjControl.csprojResolveAssemblyReference.cache
+G:\cplusProjects\ImpinjControl\ImpinjControl\obj\Debug\ImpinjControl.exe
+G:\cplusProjects\ImpinjControl\ImpinjControl\obj\Debug\ImpinjControl.pdb
+F:\rfid实验室\丁峰\cs模式\ImpinjControl\ImpinjControl\bin\Debug\ImpinjControl.exe.config
+F:\rfid实验室\丁峰\cs模式\ImpinjControl\ImpinjControl\obj\Debug\ImpinjControl.exe
+F:\rfid实验室\丁峰\cs模式\ImpinjControl\ImpinjControl\obj\Debug\ImpinjControl.pdb
+F:\rfid实验室\丁峰\cs模式\ImpinjControl\ImpinjControl\bin\Debug\ImpinjControl.exe
+F:\rfid实验室\丁峰\cs模式\ImpinjControl\ImpinjControl\bin\Debug\ImpinjControl.pdb
+F:\rfid实验室\丁峰\cs模式\ImpinjControl\ImpinjControl\bin\Debug\LLRP.dll
+F:\rfid实验室\丁峰\cs模式\ImpinjControl\ImpinjControl\bin\Debug\LLRP.Impinj.dll
+F:\rfid实验室\丁峰\cs模式\ImpinjControl\ImpinjControl\obj\Debug\ImpinjControl.csprojResolveAssemblyReference.cache

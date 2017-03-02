@@ -1,0 +1,1 @@
+E:\program\Microsoft Visual Studio\RFIDApplication\BasicApplication\bin\Release\BasicApplication.exe.config

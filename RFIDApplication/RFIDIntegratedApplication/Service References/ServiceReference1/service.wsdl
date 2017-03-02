@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ImpinjControlService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IImpinjControlService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256>
+                </sp:Basic256>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict>
+                </sp:Strict>
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ImpinjControl" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Org.LLRP.LTK.LLRPV1.DataType" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IImpinjControlService_connect_InputMessage">
+    <wsdl:part name="parameters" element="tns:connect" />
+  </wsdl:message>
+  <wsdl:message name="IImpinjControlService_connect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:connectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImpinjControlService_startInventory_InputMessage">
+    <wsdl:part name="parameters" element="tns:startInventory" />
+  </wsdl:message>
+  <wsdl:message name="IImpinjControlService_startInventory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:startInventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImpinjControlService_stopInventory_InputMessage">
+    <wsdl:part name="parameters" element="tns:stopInventory" />
+  </wsdl:message>
+  <wsdl:message name="IImpinjControlService_stopInventory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:stopInventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImpinjControlService_tryDeque_InputMessage">
+    <wsdl:part name="parameters" element="tns:tryDeque" />
+  </wsdl:message>
+  <wsdl:message name="IImpinjControlService_tryDeque_OutputMessage">
+    <wsdl:part name="parameters" element="tns:tryDequeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImpinjControlService_disconnect_InputMessage">
+    <wsdl:part name="parameters" element="tns:disconnect" />
+  </wsdl:message>
+  <wsdl:message name="IImpinjControlService_disconnect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:disconnectResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IImpinjControlService">
+    <wsdl:operation name="connect">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImpinjControlService/connect" message="tns:IImpinjControlService_connect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImpinjControlService/connectResponse" message="tns:IImpinjControlService_connect_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="startInventory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImpinjControlService/startInventory" message="tns:IImpinjControlService_startInventory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImpinjControlService/startInventoryResponse" message="tns:IImpinjControlService_startInventory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="stopInventory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImpinjControlService/stopInventory" message="tns:IImpinjControlService_stopInventory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImpinjControlService/stopInventoryResponse" message="tns:IImpinjControlService_stopInventory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="tryDeque">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImpinjControlService/tryDeque" message="tns:IImpinjControlService_tryDeque_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImpinjControlService/tryDequeResponse" message="tns:IImpinjControlService_tryDeque_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="disconnect">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImpinjControlService/disconnect" message="tns:IImpinjControlService_disconnect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImpinjControlService/disconnectResponse" message="tns:IImpinjControlService_disconnect_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IImpinjControlService" type="tns:IImpinjControlService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IImpinjControlService_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="connect">
+      <soap12:operation soapAction="http://tempuri.org/IImpinjControlService/connect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="startInventory">
+      <soap12:operation soapAction="http://tempuri.org/IImpinjControlService/startInventory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="stopInventory">
+      <soap12:operation soapAction="http://tempuri.org/IImpinjControlService/stopInventory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tryDeque">
+      <soap12:operation soapAction="http://tempuri.org/IImpinjControlService/tryDeque" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="disconnect">
+      <soap12:operation soapAction="http://tempuri.org/IImpinjControlService/disconnect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ImpinjControlService">
+    <wsdl:port name="NetTcpBinding_IImpinjControlService" binding="tns:NetTcpBinding_IImpinjControlService">
+      <soap12:address location="net.tcp://127.0.0.1:50003/ImpinjControlServiceEndPoint" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://127.0.0.1:50003/ImpinjControlServiceEndPoint</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>DINGFENG\FD</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

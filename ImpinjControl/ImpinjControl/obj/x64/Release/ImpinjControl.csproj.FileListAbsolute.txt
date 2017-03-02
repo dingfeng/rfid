@@ -1,0 +1,15 @@
+F:\rfid实验室\丁峰\cs模式\ImpinjControl\ImpinjControl\bin\x64\Release\ImpinjControl.exe.config
+F:\rfid实验室\丁峰\cs模式\ImpinjControl\ImpinjControl\bin\x64\Release\ImpinjControl.exe
+F:\rfid实验室\丁峰\cs模式\ImpinjControl\ImpinjControl\bin\x64\Release\ImpinjControl.pdb
+F:\rfid实验室\丁峰\cs模式\ImpinjControl\ImpinjControl\bin\x64\Release\LLRP.dll
+F:\rfid实验室\丁峰\cs模式\ImpinjControl\ImpinjControl\bin\x64\Release\LLRP.Impinj.dll
+F:\rfid实验室\丁峰\cs模式\ImpinjControl\ImpinjControl\obj\x64\Release\ImpinjControl.exe
+F:\rfid实验室\丁峰\cs模式\ImpinjControl\ImpinjControl\obj\x64\Release\ImpinjControl.pdb
+D:\cs linear guide\ImpinjControl\ImpinjControl\bin\x64\Release\ImpinjControl.exe.config
+D:\cs linear guide\ImpinjControl\ImpinjControl\bin\x64\Release\ImpinjControl.exe
+D:\cs linear guide\ImpinjControl\ImpinjControl\bin\x64\Release\ImpinjControl.pdb
+D:\cs linear guide\ImpinjControl\ImpinjControl\bin\x64\Release\LLRP.dll
+D:\cs linear guide\ImpinjControl\ImpinjControl\bin\x64\Release\LLRP.Impinj.dll
+D:\cs linear guide\ImpinjControl\ImpinjControl\obj\x64\Release\ImpinjControl.csprojResolveAssemblyReference.cache
+D:\cs linear guide\ImpinjControl\ImpinjControl\obj\x64\Release\ImpinjControl.exe
+D:\cs linear guide\ImpinjControl\ImpinjControl\obj\x64\Release\ImpinjControl.pdb

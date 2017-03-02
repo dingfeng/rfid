@@ -1,0 +1,113 @@
+<ADD_ROSPEC xmlns="http://www.llrp.org/ltk/schema/core/encoding/xml/1.0"
+ xmlns:llrp="http://www.llrp.org/ltk/schema/core/encoding/xml/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.llrp.org/ltk/schema/core/encoding/xml/1.0 http://www.llrp.org/ltk/schema/core/encoding/xml/1.0/llrp.xsd"
+ Version="1" MessageID="15">
+  <ROSpec>
+    <ROSpecID>1765</ROSpecID>
+    <Priority>0</Priority>
+    <CurrentState>Disabled</CurrentState>
+    <ROBoundarySpec>
+      <ROSpecStartTrigger>
+        <ROSpecStartTriggerType>Null</ROSpecStartTriggerType>
+      </ROSpecStartTrigger>
+      <ROSpecStopTrigger>
+        <ROSpecStopTriggerType>Null</ROSpecStopTriggerType>
+        <DurationTriggerValue>0</DurationTriggerValue>
+      </ROSpecStopTrigger>
+    </ROBoundarySpec>
+    <AISpec>
+      <AntennaIDs>1</AntennaIDs>
+      <AISpecStopTrigger>
+        <AISpecStopTriggerType>Null</AISpecStopTriggerType>
+        <DurationTrigger>0</DurationTrigger>
+      </AISpecStopTrigger>
+      <InventoryParameterSpec>
+        <InventoryParameterSpecID>1234</InventoryParameterSpecID>
+        <ProtocolID>EPCGlobalClass1Gen2</ProtocolID>
+        <AntennaConfiguration>
+          <AntennaID>1</AntennaID>
+          <C1G2InventoryCommand>
+            <TagInventoryStateAware>false</TagInventoryStateAware>
+            <Impinj:ImpinjFixedFrequencyList
+                xmlns:Impinj="http://developer.impinj.com/ltk/schema/encoding/xml/1.22"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://developer.impinj.com/ltk/schema/encoding/xml/1.22 http://developer.impinj.com/ltk/schema/encoding/xml/1.22/impinj.xsd"
+            >
+              <Impinj:FixedFrequencyMode>Disabled</Impinj:FixedFrequencyMode>
+              <Impinj:ChannelList></Impinj:ChannelList>
+            </Impinj:ImpinjFixedFrequencyList>
+          </C1G2InventoryCommand>
+        </AntennaConfiguration>
+      </InventoryParameterSpec>
+    </AISpec>
+    <ROReportSpec>
+      <ROReportTrigger>Upon_N_Tags_Or_End_Of_ROSpec</ROReportTrigger>
+      <N>1</N>
+      <TagReportContentSelector>
+        <EnableROSpecID>false</EnableROSpecID>
+        <EnableSpecIndex>false</EnableSpecIndex>
+        <EnableInventoryParameterSpecID>false</EnableInventoryParameterSpecID>
+        <EnableAntennaID>true</EnableAntennaID>
+        <EnableChannelIndex>true</EnableChannelIndex>
+        <EnablePeakRSSI>true</EnablePeakRSSI>
+        <EnableFirstSeenTimestamp>true</EnableFirstSeenTimestamp>
+        <EnableLastSeenTimestamp>false</EnableLastSeenTimestamp>
+        <EnableTagSeenCount>true</EnableTagSeenCount>
+        <EnableAccessSpecID>false</EnableAccessSpecID>
+        <C1G2EPCMemorySelector>
+          <EnableCRC>false</EnableCRC>
+          <EnablePCBits>false</EnablePCBits>
+        </C1G2EPCMemorySelector>
+      </TagReportContentSelector>
+      <Impinj:ImpinjTagReportContentSelector
+          xmlns:Impinj="http://developer.impinj.com/ltk/schema/encoding/xml/1.22"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://developer.impinj.com/ltk/schema/encoding/xml/1.22 http://developer.impinj.com/ltk/schema/encoding/xml/1.22/impinj.xsd"
+      >
+        <Impinj:ImpinjEnableSerializedTID
+            xmlns:Impinj="http://developer.impinj.com/ltk/schema/encoding/xml/1.22"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://developer.impinj.com/ltk/schema/encoding/xml/1.22 http://developer.impinj.com/ltk/schema/encoding/xml/1.22/impinj.xsd"
+        >
+          <Impinj:SerializedTIDMode>Disabled</Impinj:SerializedTIDMode>
+        </Impinj:ImpinjEnableSerializedTID>
+        <Impinj:ImpinjEnableRFPhaseAngle
+            xmlns:Impinj="http://developer.impinj.com/ltk/schema/encoding/xml/1.22"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://developer.impinj.com/ltk/schema/encoding/xml/1.22 http://developer.impinj.com/ltk/schema/encoding/xml/1.22/impinj.xsd"
+        >
+          <Impinj:RFPhaseAngleMode>Enabled</Impinj:RFPhaseAngleMode>
+        </Impinj:ImpinjEnableRFPhaseAngle>
+        <Impinj:ImpinjEnablePeakRSSI
+            xmlns:Impinj="http://developer.impinj.com/ltk/schema/encoding/xml/1.22"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://developer.impinj.com/ltk/schema/encoding/xml/1.22 http://developer.impinj.com/ltk/schema/encoding/xml/1.22/impinj.xsd"
+        >
+          <Impinj:PeakRSSIMode>Enabled</Impinj:PeakRSSIMode>
+        </Impinj:ImpinjEnablePeakRSSI>
+        <Impinj:ImpinjEnableGPSCoordinates
+            xmlns:Impinj="http://developer.impinj.com/ltk/schema/encoding/xml/1.22"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://developer.impinj.com/ltk/schema/encoding/xml/1.22 http://developer.impinj.com/ltk/schema/encoding/xml/1.22/impinj.xsd"
+        >
+          <Impinj:GPSCoordinatesMode>Disabled</Impinj:GPSCoordinatesMode>
+        </Impinj:ImpinjEnableGPSCoordinates>
+        <Impinj:ImpinjEnableOptimizedRead
+            xmlns:Impinj="http://developer.impinj.com/ltk/schema/encoding/xml/1.22"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://developer.impinj.com/ltk/schema/encoding/xml/1.22 http://developer.impinj.com/ltk/schema/encoding/xml/1.22/impinj.xsd"
+        >
+          <Impinj:OptimizedReadMode>Disabled</Impinj:OptimizedReadMode>
+        </Impinj:ImpinjEnableOptimizedRead>
+        <Impinj:ImpinjEnableRFDopplerFrequency
+            xmlns:Impinj="http://developer.impinj.com/ltk/schema/encoding/xml/1.22"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://developer.impinj.com/ltk/schema/encoding/xml/1.22 http://developer.impinj.com/ltk/schema/encoding/xml/1.22/impinj.xsd"
+        >
+          <Impinj:RFDopplerFrequencyMode>Enabled</Impinj:RFDopplerFrequencyMode>
+        </Impinj:ImpinjEnableRFDopplerFrequency>
+      </Impinj:ImpinjTagReportContentSelector>
+    </ROReportSpec>
+  </ROSpec>
+</ADD_ROSPEC>

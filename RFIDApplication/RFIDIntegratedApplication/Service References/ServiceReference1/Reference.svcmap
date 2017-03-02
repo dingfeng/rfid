@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7eadf6b4-5084-4e78-9de5-e71bcb7e59ed" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://127.0.0.1:50003/ImpinjControlServiceEndPoint/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="57998b2a-60cc-45b8-954d-748d15b5d79b" SourceId="1" SourceUrl="net.tcp://127.0.0.1:50003/ImpinjControlServiceEndPoint/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="d5e21f33-c706-4f0e-92e4-e71a18a20942" SourceId="1" SourceUrl="net.tcp://127.0.0.1:50003/ImpinjControlServiceEndPoint/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="139796bc-6e06-49c1-8b50-92b6ce158036" SourceId="1" SourceUrl="net.tcp://127.0.0.1:50003/ImpinjControlServiceEndPoint/mex" />
+    <MetadataFile FileName="ImpinjControl.xsd" MetadataType="Schema" ID="9e77186f-b038-4c8d-9a98-873513c54d5b" SourceId="1" SourceUrl="net.tcp://127.0.0.1:50003/ImpinjControlServiceEndPoint/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="db1b1049-0144-4234-a1d4-869639e5168e" SourceId="1" SourceUrl="net.tcp://127.0.0.1:50003/ImpinjControlServiceEndPoint/mex" />
+    <MetadataFile FileName="Org.LLRP.LTK.LLRPV1.DataType.xsd" MetadataType="Schema" ID="9f477c88-fa6d-469d-b4fd-00b9f42a20aa" SourceId="1" SourceUrl="net.tcp://127.0.0.1:50003/ImpinjControlServiceEndPoint/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
