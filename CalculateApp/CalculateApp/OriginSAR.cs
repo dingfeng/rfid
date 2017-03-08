@@ -15,7 +15,7 @@ namespace CalculateApp
         /**
          * 覆盖父类方法
          */
-        private const double THRESHOLD = 0.5;
+        private const double THRESHOLD = 0;
         public new void calculate(double antX, double antY, double antZ, int freq, double measuredPhase)
         {
             base.calculate(antX, antY, antZ, freq, measuredPhase);
@@ -53,6 +53,10 @@ namespace CalculateApp
                 if (proportion > THRESHOLD)
                 {
                     newAbsValueMap.Add(tuple,kvp.Value);
+                }
+                else
+                {
+                    this.pfMap.Remove(tuple);
                 }
             }
             this.absValueMap = newAbsValueMap;
