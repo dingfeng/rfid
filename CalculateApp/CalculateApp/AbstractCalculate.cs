@@ -10,16 +10,14 @@ namespace CalculateApp
     public abstract class AbstractCalculate : ILocalCalculateService
     {
         public const int LIGHT_SPEED = 299792458;  //光速
-        protected List<List<List<Complex>>> _sar;
         protected int count;
-        protected List<List<List<double>>> _sum;
-        protected List<List<List<double>>> _square;
-        protected List<List<List<double>>> _average;
         protected List<double> gridX;
         protected List<double> gridY;
         protected List<double> gridZ;
         protected int _count;
-
+        protected Dictionary<Tuple<int, int, int>, Complex> pfMap = new Dictionary<Tuple<int, int, int>, Complex>();
+        protected Dictionary<Tuple<int, int, int>, double> absValueMap = new Dictionary<Tuple<int, int, int>, double>();
+        protected bool first = true;
         /**
          * 对一条数据进行计算
          */
@@ -33,11 +31,10 @@ namespace CalculateApp
          */
         public void clear()
         {
-            this._sar = null;
-            this._sum = null;
-            this._square = null;
-            this._average = null;
             this._count = 0;
+            this.pfMap.Clear();
+            this.absValueMap.Clear();
+            first = true;
         }
 
         /**
@@ -47,10 +44,6 @@ namespace CalculateApp
         {
             clear();
             this._count++;
-            this._sar = new List<List<List<Complex>>>();
-            this._sum = new List<List<List<double>>>();
-            this._square = new List<List<List<double>>>();
-            this._average = new List<List<List<double>>>();
             int xCount = Convert.ToInt32((confParam.xEnd - confParam.xStart) / confParam.xInterval) + 1;
             int yCount = Convert.ToInt32((confParam.yEnd - confParam.yStart) / confParam.yInterval) + 1;
             int zCount = Convert.ToInt32((confParam.zEnd - confParam.zStart) / confParam.zInterval) + 1;
@@ -62,22 +55,13 @@ namespace CalculateApp
             fillList(gridZ, confParam.zStart, confParam.zInterval, zCount);
             for (int k = 0; k < zCount; k++)
             {
-                this._sar.Add(new List<List<Complex>>());
-                this._sum.Add(new List<List<double>>());
-                this._square.Add(new List<List<double>>());
-                this._average.Add(new List<List<double>>());
                 for (int i = 0; i < yCount; i++)
                 {
-                    this._sar[k].Add(new List<Complex>());
-                    this._sum[k].Add(new List<double>());
-                    this._square[k].Add(new List<double>());
-                    this._average[k].Add(new List<double>());
                     for (int j = 0; j < xCount; j++)
                     {
-                        this._sar[k][i].Add(0);
-                        this._sum[k][i].Add(0);
-                        this._square[k][i].Add(0);
-                        this._average[k][i].Add(0);
+                        Tuple<int, int, int> tuple = new Tuple<int, int, int>(k,i,j);
+                        pfMap.Add(tuple,0);
+                        absValueMap.Add(tuple, 0);
                     }
                 }
             }
