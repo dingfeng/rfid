@@ -6,10 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RFIDIntegratedApplication.ServiceReference1;
+using RFIDIntegratedApplication.ServiceReference3;
 namespace RFIDIntegratedApplication.Analysis
 {
     class SARParameter
     {
+        public static ConfParam confParam;   //存储searchRegion中的配置信息
+        public static HashSet<string> epcSet = new HashSet<string>();   
+
         //Parameters for calculating phase
         public const int C = 299792458;                     // The speed of light specified in m/s
         public const int FrequencyHoppingInterval = 250000; //Interval between two adjacent frequcny specified in Hz

@@ -10,3 +10,9 @@ D:\cs linear guide\DMCControl\DMCControl\obj\x64\Debug\DMCControl.pdb
 D:\cs linear guide\DMCControl\DMCControl\bin\x64\Debug\DMCControl.exe
 D:\cs linear guide\DMCControl\DMCControl\bin\x64\Debug\DMCControl.pdb
 D:\cs linear guide\DMCControl\DMCControl\obj\x64\Debug\DMCControl.csprojResolveAssemblyReference.cache
+F:\rfid实验室\丁峰\cs linear guide\DMCControl\DMCControl\bin\x64\Debug\DMCControl.exe.config
+F:\rfid实验室\丁峰\cs linear guide\DMCControl\DMCControl\obj\x64\Debug\DMCControl.exe
+F:\rfid实验室\丁峰\cs linear guide\DMCControl\DMCControl\obj\x64\Debug\DMCControl.pdb
+F:\rfid实验室\丁峰\cs linear guide\DMCControl\DMCControl\bin\x64\Debug\DMCControl.exe
+F:\rfid实验室\丁峰\cs linear guide\DMCControl\DMCControl\bin\x64\Debug\DMCControl.pdb
+F:\rfid实验室\丁峰\cs linear guide\DMCControl\DMCControl\obj\x64\Debug\DMCControl.csprojResolveAssemblyReference.cache

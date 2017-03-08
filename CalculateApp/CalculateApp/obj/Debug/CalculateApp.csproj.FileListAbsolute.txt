@@ -1,2 +1,6 @@
 G:\cplusProjects\CalculateApp\CalculateApp\bin\Debug\CalculateApp.exe.config
 F:\rfid实验室\丁峰\cs linear guide\CalculateApp\CalculateApp\bin\Debug\CalculateApp.exe.config
+F:\rfid实验室\丁峰\cs linear guide\CalculateApp\CalculateApp\bin\Debug\CalculateApp.exe
+F:\rfid实验室\丁峰\cs linear guide\CalculateApp\CalculateApp\bin\Debug\CalculateApp.pdb
+F:\rfid实验室\丁峰\cs linear guide\CalculateApp\CalculateApp\obj\Debug\CalculateApp.exe
+F:\rfid实验室\丁峰\cs linear guide\CalculateApp\CalculateApp\obj\Debug\CalculateApp.pdb

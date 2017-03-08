@@ -1,0 +1,6 @@
+F:\rfid实验室\丁峰\cs linear guide\CalculateApp\CalculateApp\bin\x64\Debug\CalculateApp.exe.config
+F:\rfid实验室\丁峰\cs linear guide\CalculateApp\CalculateApp\bin\x64\Debug\CalculateApp.exe
+F:\rfid实验室\丁峰\cs linear guide\CalculateApp\CalculateApp\bin\x64\Debug\CalculateApp.pdb
+F:\rfid实验室\丁峰\cs linear guide\CalculateApp\CalculateApp\obj\x64\Debug\CalculateApp.exe
+F:\rfid实验室\丁峰\cs linear guide\CalculateApp\CalculateApp\obj\x64\Debug\CalculateApp.pdb
+F:\rfid实验室\丁峰\cs linear guide\CalculateApp\CalculateApp\obj\x64\Debug\CalculateApp.csprojResolveAssemblyReference.cache

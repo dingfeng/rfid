@@ -30,6 +30,7 @@
         {
             this.tcReaderSettings = new System.Windows.Forms.TabControl();
             this.tpBasic = new System.Windows.Forms.TabPage();
+            this.tpBasic.AutoScroll = true;
             this.cbResetToFactoryDefault = new System.Windows.Forms.CheckBox();
             this.gbTagFilter = new System.Windows.Forms.GroupBox();
             this.cbExtraMask = new System.Windows.Forms.ComboBox();
@@ -62,6 +63,7 @@
             this.rbtnIP = new System.Windows.Forms.RadioButton();
             this.tbxIP = new System.Windows.Forms.TextBox();
             this.tpAntenna = new System.Windows.Forms.TabPage();
+            this.tpAntenna.AutoScroll = true;
             this.tabControlAntenna = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.gbRFReceiver1 = new System.Windows.Forms.GroupBox();
@@ -126,6 +128,7 @@
             this.cbAntenna1 = new System.Windows.Forms.CheckBox();
             this.lblAntennaID = new System.Windows.Forms.Label();
             this.tpRoSpec = new System.Windows.Forms.TabPage();
+            this.tpRoSpec.AutoScroll = true;
             this.gbImpinjTagReportContentSelector = new System.Windows.Forms.GroupBox();
             this.cbImpinjEnableSerializedTID = new System.Windows.Forms.CheckBox();
             this.cbImpinjEnableRFPhaseAngle = new System.Windows.Forms.CheckBox();
@@ -198,6 +201,7 @@
             // 
             // tpBasic
             // 
+            this.tpBasic.AutoScroll = true;
             this.tpBasic.Controls.Add(this.cbResetToFactoryDefault);
             this.tpBasic.Controls.Add(this.gbTagFilter);
             this.tpBasic.Controls.Add(this.gbFrequencyInfo);
@@ -451,6 +455,7 @@
             this.gbAddress.TabIndex = 7;
             this.gbAddress.TabStop = false;
             this.gbAddress.Text = "Address";
+            this.gbAddress.Enter += new System.EventHandler(this.gbAddress_Enter);
             // 
             // btnSearchIP
             // 
@@ -461,6 +466,7 @@
             this.btnSearchIP.TabIndex = 17;
             this.btnSearchIP.Text = "Search";
             this.btnSearchIP.UseVisualStyleBackColor = true;
+            this.btnSearchIP.Click += new System.EventHandler(this.btnSearchIP_Click);
             // 
             // lblMAC3
             // 
@@ -565,6 +571,7 @@
             // 
             // tpAntenna
             // 
+            this.tpAntenna.AutoScroll = true;
             this.tpAntenna.Controls.Add(this.tabControlAntenna);
             this.tpAntenna.Controls.Add(this.cbAntenna4);
             this.tpAntenna.Controls.Add(this.gbC1G2InventoryCommand);
@@ -1280,6 +1287,7 @@
             // 
             // tpRoSpec
             // 
+            this.tpRoSpec.AutoScroll = true;
             this.tpRoSpec.Controls.Add(this.gbImpinjTagReportContentSelector);
             this.tpRoSpec.Controls.Add(this.gbTagReportContentSelector);
             this.tpRoSpec.Controls.Add(this.nudN);

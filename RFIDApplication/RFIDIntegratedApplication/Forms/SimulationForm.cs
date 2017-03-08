@@ -102,12 +102,12 @@ namespace RFIDIntegratedApplication.HolographicsForms
         /// <param name="tagY">Tag position y</param>
         /// <param name="freq">Frequency</param>
         /// <returns>Measured Phase</returns>
-        public double CaculatingSimulationMeasuredPhase(double antX, double antY, double tagX, double tagY, int freq)
+        public double CaculatingSimulationMeasuredPhase(double antX, double antY, double antZ, double tagX, double tagY, double tagZ, int freq)
         {
             double simulationMeasuredPhase = Double.MinValue;
 
             double waveLength = SARParameter.C / Convert.ToDouble(freq);
-            double distance = Math.Sqrt(Math.Pow(antX - tagX, 2) + Math.Pow(antY - tagY, 2)) + Convert.ToDouble(tbxLength.Text.Trim());
+            double distance = Math.Sqrt(Math.Pow(antX - tagX, 2) + Math.Pow(antY - tagY, 2) + Math.Pow(antZ - tagZ,2)) + Convert.ToDouble(tbxLength.Text.Trim());
             
             if (cbPhaseAmbiguity.Checked)
             {
@@ -174,7 +174,8 @@ namespace RFIDIntegratedApplication.HolographicsForms
                 tagInfo.EPC = SARParameter.Simulation.Tags[_simulationTotalTagCount % SARParameter.Simulation.Tags.Count];
                 double tagX = SARParameter.Simulation.TagXs[_simulationTotalTagCount % SARParameter.Simulation.TagXs.Count];
                 double tagY = SARParameter.Simulation.TagYs[_simulationTotalTagCount % SARParameter.Simulation.TagYs.Count];
-                tagInfo.AcutalPhaseInRadian = CaculatingSimulationMeasuredPhase(point.Item1, point.Item2, tagX, tagY, tagInfo.Frequency);
+                double tagZ = SARParameter.Simulation.TagZs[_simulationTotalTagCount % SARParameter.Simulation.TagZs.Count];
+                tagInfo.AcutalPhaseInRadian = CaculatingSimulationMeasuredPhase(point.Item1, point.Item2, point.Item3, tagX, tagY,tagZ, tagInfo.Frequency);
                 tagInfo.FirstSeenTime = (ulong)(1000000 * _simulationTotalTagCount * Convert.ToDouble(tbxSamplingInterval.Text.Trim()));
                 tagInfo.TimeStamp = tagInfo.FirstSeenTime;
                 tagInfo.TotalTagCount = _simulationTotalTagCount++;
@@ -260,6 +261,16 @@ namespace RFIDIntegratedApplication.HolographicsForms
 
             tsbtnSimulationStart.Enabled = true;
             tsbtnSimulationStop.Enabled = false;
+        }
+
+        private void nudSimulationHopStep_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvSimulationTagPosition_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

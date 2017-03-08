@@ -101,7 +101,7 @@
             // 
             this.tsmiSave.Image = ((System.Drawing.Image)(resources.GetObject("tsmiSave.Image")));
             this.tsmiSave.Name = "tsmiSave";
-            this.tsmiSave.Size = new System.Drawing.Size(181, 26);
+            this.tsmiSave.Size = new System.Drawing.Size(137, 26);
             this.tsmiSave.Text = "Save";
             this.tsmiSave.Click += new System.EventHandler(this.tsmiSave_Click);
             // 
@@ -109,7 +109,7 @@
             // 
             this.tsmiSaveAs.Image = ((System.Drawing.Image)(resources.GetObject("tsmiSaveAs.Image")));
             this.tsmiSaveAs.Name = "tsmiSaveAs";
-            this.tsmiSaveAs.Size = new System.Drawing.Size(181, 26);
+            this.tsmiSaveAs.Size = new System.Drawing.Size(137, 26);
             this.tsmiSaveAs.Text = "Save as";
             this.tsmiSaveAs.Click += new System.EventHandler(this.tsmiSaveAs_Click);
             // 
@@ -177,6 +177,7 @@
             this.tssbtnAddWindow.Name = "tssbtnAddWindow";
             this.tssbtnAddWindow.Size = new System.Drawing.Size(108, 24);
             this.tssbtnAddWindow.Text = "Window";
+            this.tssbtnAddWindow.ButtonClick += new System.EventHandler(this.tssbtnAddWindow_ButtonClick);
             // 
             // tsmiReaderSettings
             // 

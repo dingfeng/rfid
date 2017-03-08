@@ -101,7 +101,7 @@ namespace RFIDIntegratedApplication
                 ComboBox[] comboboxReces = new ComboBox[] { cbReceiverSensitivity1, cbReceiverSensitivity2, cbReceiverSensitivity3, cbReceiverSensitivity4 };
                 ComboBox[] comboboxTrans = new ComboBox[] { cbTransmiterPower1, cbTransmiterPower2, cbTransmiterPower3, cbTransmiterPower4 };
                 GetAntennaIndependentSettings(checkboxs, comboboxReces, comboboxTrans);
-                
+
                 //RoSpec Settings
                 cbROReportTrigger.Enabled = true;
                 nudN.Enabled = true;
@@ -629,7 +629,7 @@ namespace RFIDIntegratedApplication
 
         private void cbMask_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(RFIDReaderParameter.ReadMode != "Timer")
+            if (RFIDReaderParameter.ReadMode != "Timer")
             {
                 _mainform.StopInventory();
                 _mainform.StartInventory();
@@ -716,6 +716,16 @@ namespace RFIDIntegratedApplication
         }
 
         private void tbxDuration_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearchIP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbAddress_Enter(object sender, EventArgs e)
         {
 
         }

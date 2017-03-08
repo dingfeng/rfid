@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CalculateApp" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CalculateApp" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ConfParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="epc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xEnd" type="xs:int" />
+      <xs:element minOccurs="0" name="xInterval" type="xs:double" />
+      <xs:element minOccurs="0" name="xStart" type="xs:int" />
+      <xs:element minOccurs="0" name="yEnd" type="xs:int" />
+      <xs:element minOccurs="0" name="yInterval" type="xs:double" />
+      <xs:element minOccurs="0" name="yStart" type="xs:int" />
+      <xs:element minOccurs="0" name="zEnd" type="xs:int" />
+      <xs:element minOccurs="0" name="zInterval" type="xs:double" />
+      <xs:element minOccurs="0" name="zStart" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfParam" nillable="true" type="tns:ConfParam" />
+</xs:schema>

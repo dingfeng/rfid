@@ -47,21 +47,21 @@
             // 
             // tbxSRXInterval
             // 
-            this.tbxSRXInterval.Location = new System.Drawing.Point(119, 69);
-            this.tbxSRXInterval.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxSRXInterval.Location = new System.Drawing.Point(159, 86);
+            this.tbxSRXInterval.Margin = new System.Windows.Forms.Padding(5);
             this.tbxSRXInterval.Name = "tbxSRXInterval";
-            this.tbxSRXInterval.Size = new System.Drawing.Size(80, 21);
+            this.tbxSRXInterval.Size = new System.Drawing.Size(105, 25);
             this.tbxSRXInterval.TabIndex = 1;
-            this.tbxSRXInterval.Text = "0.01";
+            this.tbxSRXInterval.Text = "0.1";
             this.tbxSRXInterval.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbxSRXInterval.TextChanged += new System.EventHandler(this.tbxSRXInterval_TextChanged);
             // 
             // tbxSRXEnd
             // 
-            this.tbxSRXEnd.Location = new System.Drawing.Point(119, 102);
-            this.tbxSRXEnd.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxSRXEnd.Location = new System.Drawing.Point(159, 128);
+            this.tbxSRXEnd.Margin = new System.Windows.Forms.Padding(5);
             this.tbxSRXEnd.Name = "tbxSRXEnd";
-            this.tbxSRXEnd.Size = new System.Drawing.Size(80, 21);
+            this.tbxSRXEnd.Size = new System.Drawing.Size(105, 25);
             this.tbxSRXEnd.TabIndex = 2;
             this.tbxSRXEnd.Text = "2";
             this.tbxSRXEnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -70,10 +70,10 @@
             // labelSRStartPoint
             // 
             this.labelSRStartPoint.AutoSize = true;
-            this.labelSRStartPoint.Location = new System.Drawing.Point(13, 39);
-            this.labelSRStartPoint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSRStartPoint.Location = new System.Drawing.Point(17, 49);
+            this.labelSRStartPoint.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelSRStartPoint.Name = "labelSRStartPoint";
-            this.labelSRStartPoint.Size = new System.Drawing.Size(71, 12);
+            this.labelSRStartPoint.Size = new System.Drawing.Size(95, 15);
             this.labelSRStartPoint.TabIndex = 8;
             this.labelSRStartPoint.Text = "Start Point";
             this.labelSRStartPoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -81,31 +81,31 @@
             // lblSRX
             // 
             this.lblSRX.AutoSize = true;
-            this.lblSRX.Location = new System.Drawing.Point(132, 11);
-            this.lblSRX.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSRX.Location = new System.Drawing.Point(176, 14);
+            this.lblSRX.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblSRX.Name = "lblSRX";
-            this.lblSRX.Size = new System.Drawing.Size(35, 12);
+            this.lblSRX.Size = new System.Drawing.Size(47, 15);
             this.lblSRX.TabIndex = 6;
             this.lblSRX.Text = "X (m)";
             this.lblSRX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tbxSRYStart
             // 
-            this.tbxSRYStart.Location = new System.Drawing.Point(208, 35);
-            this.tbxSRYStart.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxSRYStart.Location = new System.Drawing.Point(277, 44);
+            this.tbxSRYStart.Margin = new System.Windows.Forms.Padding(5);
             this.tbxSRYStart.Name = "tbxSRYStart";
-            this.tbxSRYStart.Size = new System.Drawing.Size(76, 21);
+            this.tbxSRYStart.Size = new System.Drawing.Size(100, 25);
             this.tbxSRYStart.TabIndex = 3;
-            this.tbxSRYStart.Text = "2";
+            this.tbxSRYStart.Text = "0";
             this.tbxSRYStart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblSRY
             // 
             this.lblSRY.AutoSize = true;
-            this.lblSRY.Location = new System.Drawing.Point(221, 11);
-            this.lblSRY.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSRY.Location = new System.Drawing.Point(295, 14);
+            this.lblSRY.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblSRY.Name = "lblSRY";
-            this.lblSRY.Size = new System.Drawing.Size(35, 12);
+            this.lblSRY.Size = new System.Drawing.Size(47, 15);
             this.lblSRY.TabIndex = 7;
             this.lblSRY.Tag = " ";
             this.lblSRY.Text = "Y (m)";
@@ -113,83 +113,85 @@
             // 
             // tbxSRZEnd
             // 
-            this.tbxSRZEnd.Location = new System.Drawing.Point(293, 102);
-            this.tbxSRZEnd.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxSRZEnd.Location = new System.Drawing.Point(391, 128);
+            this.tbxSRZEnd.Margin = new System.Windows.Forms.Padding(5);
             this.tbxSRZEnd.Name = "tbxSRZEnd";
-            this.tbxSRZEnd.Size = new System.Drawing.Size(77, 21);
+            this.tbxSRZEnd.Size = new System.Drawing.Size(101, 25);
             this.tbxSRZEnd.TabIndex = 13;
-            this.tbxSRZEnd.Text = "0";
+            this.tbxSRZEnd.Text = "2";
             this.tbxSRZEnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbxSRZEnd.TextChanged += new System.EventHandler(this.tbxSRZEnd_TextChanged);
             // 
             // tbxSRYInterval
             // 
-            this.tbxSRYInterval.Location = new System.Drawing.Point(208, 69);
-            this.tbxSRYInterval.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxSRYInterval.Location = new System.Drawing.Point(277, 86);
+            this.tbxSRYInterval.Margin = new System.Windows.Forms.Padding(5);
             this.tbxSRYInterval.Name = "tbxSRYInterval";
-            this.tbxSRYInterval.Size = new System.Drawing.Size(76, 21);
+            this.tbxSRYInterval.Size = new System.Drawing.Size(100, 25);
             this.tbxSRYInterval.TabIndex = 4;
-            this.tbxSRYInterval.Text = "-0.01";
+            this.tbxSRYInterval.Text = "0.1";
             this.tbxSRYInterval.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbxSRYInterval.TextChanged += new System.EventHandler(this.tbxSRYInterval_TextChanged);
             // 
             // lblSRZ
             // 
             this.lblSRZ.AutoSize = true;
-            this.lblSRZ.Location = new System.Drawing.Point(307, 11);
-            this.lblSRZ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSRZ.Location = new System.Drawing.Point(409, 14);
+            this.lblSRZ.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblSRZ.Name = "lblSRZ";
-            this.lblSRZ.Size = new System.Drawing.Size(35, 12);
+            this.lblSRZ.Size = new System.Drawing.Size(47, 15);
             this.lblSRZ.TabIndex = 14;
             this.lblSRZ.Text = "Z (m)";
             this.lblSRZ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tbxSRZInterval
             // 
-            this.tbxSRZInterval.Location = new System.Drawing.Point(293, 69);
-            this.tbxSRZInterval.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxSRZInterval.Location = new System.Drawing.Point(391, 86);
+            this.tbxSRZInterval.Margin = new System.Windows.Forms.Padding(5);
             this.tbxSRZInterval.Name = "tbxSRZInterval";
-            this.tbxSRZInterval.Size = new System.Drawing.Size(77, 21);
+            this.tbxSRZInterval.Size = new System.Drawing.Size(101, 25);
             this.tbxSRZInterval.TabIndex = 12;
-            this.tbxSRZInterval.Text = "0";
+            this.tbxSRZInterval.Text = "0.1";
             this.tbxSRZInterval.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbxSRZInterval.TextChanged += new System.EventHandler(this.tbxSRZInterval_TextChanged);
             // 
             // tbxSRXStart
             // 
-            this.tbxSRXStart.Location = new System.Drawing.Point(119, 35);
-            this.tbxSRXStart.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxSRXStart.Location = new System.Drawing.Point(159, 44);
+            this.tbxSRXStart.Margin = new System.Windows.Forms.Padding(5);
             this.tbxSRXStart.Name = "tbxSRXStart";
-            this.tbxSRXStart.Size = new System.Drawing.Size(80, 21);
+            this.tbxSRXStart.Size = new System.Drawing.Size(105, 25);
             this.tbxSRXStart.TabIndex = 0;
             this.tbxSRXStart.Text = "0";
             this.tbxSRXStart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbxSRZStart
             // 
-            this.tbxSRZStart.Location = new System.Drawing.Point(293, 35);
-            this.tbxSRZStart.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxSRZStart.Location = new System.Drawing.Point(391, 44);
+            this.tbxSRZStart.Margin = new System.Windows.Forms.Padding(5);
             this.tbxSRZStart.Name = "tbxSRZStart";
-            this.tbxSRZStart.Size = new System.Drawing.Size(77, 21);
+            this.tbxSRZStart.Size = new System.Drawing.Size(101, 25);
             this.tbxSRZStart.TabIndex = 11;
             this.tbxSRZStart.Text = "0";
             this.tbxSRZStart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbxSRYEnd
             // 
-            this.tbxSRYEnd.Location = new System.Drawing.Point(208, 102);
-            this.tbxSRYEnd.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxSRYEnd.Location = new System.Drawing.Point(277, 128);
+            this.tbxSRYEnd.Margin = new System.Windows.Forms.Padding(5);
             this.tbxSRYEnd.Name = "tbxSRYEnd";
-            this.tbxSRYEnd.Size = new System.Drawing.Size(76, 21);
+            this.tbxSRYEnd.Size = new System.Drawing.Size(100, 25);
             this.tbxSRYEnd.TabIndex = 5;
-            this.tbxSRYEnd.Text = "0";
+            this.tbxSRYEnd.Text = "2";
             this.tbxSRYEnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblSRInterval
             // 
             this.lblSRInterval.AutoSize = true;
-            this.lblSRInterval.Location = new System.Drawing.Point(25, 72);
-            this.lblSRInterval.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSRInterval.Location = new System.Drawing.Point(33, 90);
+            this.lblSRInterval.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblSRInterval.Name = "lblSRInterval";
-            this.lblSRInterval.Size = new System.Drawing.Size(53, 12);
+            this.lblSRInterval.Size = new System.Drawing.Size(71, 15);
             this.lblSRInterval.TabIndex = 10;
             this.lblSRInterval.Text = "Interval";
             this.lblSRInterval.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -197,20 +199,20 @@
             // lblSREndPoint
             // 
             this.lblSREndPoint.AutoSize = true;
-            this.lblSREndPoint.Location = new System.Drawing.Point(13, 106);
-            this.lblSREndPoint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSREndPoint.Location = new System.Drawing.Point(17, 132);
+            this.lblSREndPoint.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblSREndPoint.Name = "lblSREndPoint";
-            this.lblSREndPoint.Size = new System.Drawing.Size(59, 12);
+            this.lblSREndPoint.Size = new System.Drawing.Size(79, 15);
             this.lblSREndPoint.TabIndex = 9;
             this.lblSREndPoint.Text = "End Point";
             this.lblSREndPoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SearchRegionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(398, 157);
+            this.ClientSize = new System.Drawing.Size(531, 196);
             this.Controls.Add(this.lblSREndPoint);
             this.Controls.Add(this.lblSRInterval);
             this.Controls.Add(this.tbxSRYEnd);
@@ -232,7 +234,7 @@
             | WeifenLuo.WinFormsUI.Docking.DockAreas.DockBottom)));
             this.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.HideOnClose = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "SearchRegionForm";
             this.ShowIcon = false;
             this.Text = "SearchRegion";

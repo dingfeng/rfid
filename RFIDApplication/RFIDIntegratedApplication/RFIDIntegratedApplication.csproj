@@ -96,34 +96,28 @@
     <Compile Include="Analysis\SyntheticApertureRadar.cs" />
     <Compile Include="Analysis\TagPos.cs" />
     <Compile Include="CurrentMillis.cs" />
-    <Compile Include="HolographicsForms\HologramForm.cs">
+    <Compile Include="Forms\LinearGuideForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HolographicsForms\HologramForm.Designer.cs">
-      <DependentUpon>HologramForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HolographicsForms\LinearGuideForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HolographicsForms\LinearGuideForm.Designer.cs">
+    <Compile Include="Forms\LinearGuideForm.designer.cs">
       <DependentUpon>LinearGuideForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="HolographicsForms\SearchRegionForm.cs">
+    <Compile Include="Forms\SearchRegionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HolographicsForms\SearchRegionForm.Designer.cs">
+    <Compile Include="Forms\SearchRegionForm.Designer.cs">
       <DependentUpon>SearchRegionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="HolographicsForms\SimulationForm.cs">
+    <Compile Include="Forms\SimulationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HolographicsForms\SimulationForm.Designer.cs">
+    <Compile Include="Forms\SimulationForm.Designer.cs">
       <DependentUpon>SimulationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="HolographicsForms\SortingBooksForm.cs">
+    <Compile Include="Forms\SortingBooksForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HolographicsForms\SortingBooksForm.Designer.cs">
+    <Compile Include="Forms\SortingBooksForm.Designer.cs">
       <DependentUpon>SortingBooksForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
@@ -174,7 +168,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ServiceReference3\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="service\CalculateType.cs" />
     <Compile Include="service\ServiceManager.cs" />
+    <Compile Include="service\StringValue.cs" />
     <Compile Include="TagTableForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,19 +187,16 @@
     <Compile Include="Utility\AppConfig.cs" />
     <Compile Include="Utility\CSVFileHelper.cs" />
     <Compile Include="Utility\IFormable.cs" />
-    <EmbeddedResource Include="HolographicsForms\HologramForm.resx">
-      <DependentUpon>HologramForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HolographicsForms\LinearGuideForm.resx">
+    <EmbeddedResource Include="Forms\LinearGuideForm.resx">
       <DependentUpon>LinearGuideForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HolographicsForms\SearchRegionForm.resx">
+    <EmbeddedResource Include="Forms\SearchRegionForm.resx">
       <DependentUpon>SearchRegionForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HolographicsForms\SimulationForm.resx">
+    <EmbeddedResource Include="Forms\SimulationForm.resx">
       <DependentUpon>SimulationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HolographicsForms\SortingBooksForm.resx">
+    <EmbeddedResource Include="Forms\SortingBooksForm.resx">
       <DependentUpon>SortingBooksForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
@@ -271,6 +269,16 @@
     <None Include="Service References\ServiceReference2\service1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\ServiceReference3\CalculateApp.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference3\service.wsdl" />
+    <None Include="Service References\ServiceReference3\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference3\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -334,6 +342,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="rfid.ico" />
+    <None Include="Service References\ServiceReference3\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReference3\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference3\configuration91.svcinfo" />
     <None Include="Service References\ServiceReference2\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -353,6 +367,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServiceReference1\" />
     <WCFMetadataStorage Include="Service References\ServiceReference2\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference3\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

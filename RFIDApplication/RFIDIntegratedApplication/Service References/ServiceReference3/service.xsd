@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/CalculateApp" />
+  <xs:element name="init">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="epc" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/CalculateApp" minOccurs="0" name="confParam" nillable="true" type="q1:ConfParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="initResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="calculate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="epc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="antX" type="xs:double" />
+        <xs:element minOccurs="0" name="antY" type="xs:double" />
+        <xs:element minOccurs="0" name="Z" type="xs:double" />
+        <xs:element minOccurs="0" name="freq" type="xs:int" />
+        <xs:element minOccurs="0" name="measuredPhase" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="calculateResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clear">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="epc" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clearResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clearAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clearAllResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

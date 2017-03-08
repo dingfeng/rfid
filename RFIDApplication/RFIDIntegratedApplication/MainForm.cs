@@ -20,17 +20,18 @@ using System.Windows.Forms;
 using WeifenLuo.WinFormsUI.Docking;
 using RFIDIntegratedApplication.ServiceReference1;
 using RFIDIntegratedApplication.service;
+using RFIDIntegratedApplication.ServiceReference3;
 namespace RFIDIntegratedApplication
 {
     public partial class MainForm : Form, IFormable
     {
+
         public ReaderSettingsForm _readerSettingsForm;
         TagTableForm _tagTableForm;
         RSSIGraphFrom _rssiGraphForm;
         PhaseGraphForm _phaseGraphForm;
 
         SearchRegionForm _searchRegionForm;
-        HologramForm _hologramForm;
         SimulationForm _simulationForm;
 
         LinearGuideForm _linearGuideForm;
@@ -45,6 +46,7 @@ namespace RFIDIntegratedApplication
 
         static ConcurrentQueue<TagInfo> _tagsQueue;  // Queue for storing taginfo
         Thread _dequeueThread;                       // Dequeue Thread for dequeue taginfo and then update forms
+        Thread _dequeueTagPosThread;                 // Dequeue thread for dequeue tagPos and then updateForms
         public MainForm()
         {
             InitializeComponent();
@@ -63,9 +65,7 @@ namespace RFIDIntegratedApplication
             _rssiGraphForm = new RSSIGraphFrom();
             _phaseGraphForm = new PhaseGraphForm();
 
-            _hologramForm = new HologramForm();
-
-            _sortingBooksForm = new SortingBooksForm(_hologramForm);
+            _sortingBooksForm = new SortingBooksForm();
             _linearGuideForm = new LinearGuideForm();
 
             _searchRegionForm = new SearchRegionForm();
@@ -102,10 +102,7 @@ namespace RFIDIntegratedApplication
                         return _searchRegionForm;
                     }
 
-                    if (persistString == typeof(HologramForm).ToString())
-                    {
-                        return _hologramForm;
-                    }
+
 
                     if (persistString == typeof(SimulationForm).ToString())
                     {
@@ -142,8 +139,7 @@ namespace RFIDIntegratedApplication
                 if (_searchRegionForm.DockState != DockState.Unknown && _searchRegionForm.DockState != DockState.Hidden)
                     AppConfig.searchRegionDockState = _searchRegionForm.DockState;
 
-                if (_hologramForm.DockState != DockState.Unknown && _hologramForm.DockState != DockState.Hidden)
-                    AppConfig.hologramDockState = _hologramForm.DockState;
+
 
                 if (_simulationForm.DockState != DockState.Unknown && _simulationForm.DockState != DockState.Hidden)
                     AppConfig.simulationDockState = _simulationForm.DockState;
@@ -261,9 +257,7 @@ namespace RFIDIntegratedApplication
             if (_searchRegionForm.Visible)
                 _searchRegionForm.UpdateComponentStatus(flag, isSimulation);
 
-            // Modify the status of components in HologramForm when starting inventorying
-            if (_hologramForm.Visible)
-                _hologramForm.UpdateComponentStatus(flag, isSimulation);
+
 
             // Modify the status of components in LinearGuideForm when starting inventorying
             if (_linearGuideForm.Visible)
@@ -285,7 +279,7 @@ namespace RFIDIntegratedApplication
         public void UpdateStatusStrip(TagInfo tagInfo, bool isSimulation)
         {
             // Update Counter
-           // tsslblCounter.Text = tagInfo.TotalTagCount.ToString();
+            // tsslblCounter.Text = tagInfo.TotalTagCount.ToString();
 
             // Update Run Time for Manual read mode and Timer read mode respectively
             if (!isSimulation)
@@ -293,7 +287,7 @@ namespace RFIDIntegratedApplication
                 if (RFIDReaderParameter.ReadMode == "Manual")
                 {
                     TimeSpan interval = DateTime.Now - _startTime;
-                  //  tsslRunTime.Text = interval.ToString().Substring(0, 12);
+                    //  tsslRunTime.Text = interval.ToString().Substring(0, 12);
                 }
                 else
                 {
@@ -337,15 +331,14 @@ namespace RFIDIntegratedApplication
             while (true)
             {
                 List<TagInfo> tagInfoList = null;
-                TagInfo tagInfo=null;
+                TagInfo tagInfo = null;
                 if (SARParameter.IsSimulation)
                 {
-                   if( _tagsQueue.TryDequeue(out tagInfo))
+                    if (_tagsQueue.TryDequeue(out tagInfo))
                     {
                         tagInfoList = new List<TagInfo>();
                         tagInfoList.Add(tagInfo);
                     }
-                    
                 }
                 else
                 {
@@ -373,12 +366,8 @@ namespace RFIDIntegratedApplication
                             {
                                 if (SARParameter.IsSimulation)
                                 {
-                                //处于模拟中，使用SAR(tagInfo)
-                                _sortingBooksForm.SAR(tagInfoInList);
-                                }
-                                else
-                                {
-                                    _sortingBooksForm.SAR();
+                                    //处于模拟中，使用SAR(tagInfo)
+                                    _sortingBooksForm.SAR(tagInfoInList);
                                 }
                             }
 
@@ -390,6 +379,23 @@ namespace RFIDIntegratedApplication
                 Thread.Sleep(10);
             }
         }
+
+
+        public void dequeTagPos()
+        {
+            TagPos tagPos;
+            if (_sortingBooksForm.Visible)
+            {
+                while (true)
+                {
+                    if (SARParameter.tagPosQueue.TryDequeue(out tagPos))
+                    {
+                        _sortingBooksForm.SAR(tagPos);
+                    }
+                }
+            }
+        }
+
 
         /// <summary>
         /// Update display forms(TagTableForm, RSSIGraphForm...) once receiving a new tag report from RFID reader
@@ -529,6 +535,10 @@ namespace RFIDIntegratedApplication
             _dequeueThread = new Thread(DequeueTagInfo);
             _dequeueThread.IsBackground = true;
             _dequeueThread.Start();
+
+            _dequeueTagPosThread = new Thread(dequeTagPos);
+            _dequeueTagPosThread.IsBackground = true;
+            _dequeueTagPosThread.Start();
         }
 
         public void StartInventory()
@@ -536,7 +546,7 @@ namespace RFIDIntegratedApplication
             SARParameter.IsSimulation = false;
             PhaseLocating.getInstance().started = true;
             if (!_readerSettingsForm.SendConfigToRFIDReaderPara()) return;
-            
+
             IImpinjControlService impinjControlService = ServiceManager.getOneImpinjControlService();
             impinjControlService.startInventory(RFIDReaderParameter.antennaConfiguration, RFIDReaderParameter.rOReportSpec);
             ServiceManager.closeService(impinjControlService);
@@ -558,6 +568,13 @@ namespace RFIDIntegratedApplication
                 _dequeueThread.Abort();
             }
             catch (Exception)
+            {
+                throw;
+            }
+            try
+            {
+                _dequeueTagPosThread.Abort();
+            }catch (Exception)
             {
                 throw;
             }
@@ -592,12 +609,6 @@ namespace RFIDIntegratedApplication
             {
                 _searchRegionForm.Clear();
                 _searchRegionForm.InitializeSearchRegion();
-            }
-
-            if (_hologramForm.Visible)
-            {
-                _hologramForm.Clear();
-                _hologramForm.InitializeHeatMap();
             }
 
             if (_sortingBooksForm.Visible)
@@ -681,8 +692,6 @@ namespace RFIDIntegratedApplication
         {
             _searchRegionForm.Show(this.dockPanelMain, AppConfig.searchRegionDockState);
             _simulationForm.Show(this.dockPanelMain, AppConfig.simulationDockState);
-            _hologramForm.Show(this.dockPanelMain, AppConfig.hologramDockState);
-
             _linearGuideForm.Show(this.dockPanelMain, AppConfig.linearGuideDockState);
             _sortingBooksForm.Show(this.dockPanelMain, AppConfig.sortingBooksDockState);
         }
@@ -792,6 +801,11 @@ namespace RFIDIntegratedApplication
         }
 
         private void tsslRunTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tssbtnAddWindow_ButtonClick(object sender, EventArgs e)
         {
 
         }

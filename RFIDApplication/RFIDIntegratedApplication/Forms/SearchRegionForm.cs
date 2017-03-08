@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WeifenLuo.WinFormsUI.Docking;
-
+using RFIDIntegratedApplication.ServiceReference3;
 namespace RFIDIntegratedApplication.HolographicsForms
 {
     public partial class SearchRegionForm : DockContent, IFormable
@@ -59,6 +59,7 @@ namespace RFIDIntegratedApplication.HolographicsForms
         public void InitializeSearchRegion()
         {
             // Calculate the number of grids in each axis
+            /*
             int gridNumX = (int)((Convert.ToInt32(tbxSRXEnd.Text.Trim()) - Convert.ToInt32(tbxSRXStart.Text.Trim())) / Convert.ToDouble(tbxSRXInterval.Text.Trim())) + 1;
             int gridNumY = (int)((Convert.ToInt32(tbxSRYEnd.Text.Trim()) - Convert.ToInt32(tbxSRYStart.Text.Trim())) / Convert.ToDouble(tbxSRYInterval.Text.Trim())) + 1;
             int gridNumZ = (int)((Convert.ToInt32(tbxSRZEnd.Text.Trim()) - Convert.ToInt32(tbxSRZStart.Text.Trim())) / Convert.ToDouble(tbxSRZInterval.Text.Trim())) + 1;
@@ -82,6 +83,28 @@ namespace RFIDIntegratedApplication.HolographicsForms
                 SARParameter.GridZ.Add(Convert.ToDouble(tbxSRZStart.Text.Trim()) + i * Convert.ToDouble(tbxSRZInterval.Text.Trim()));
                 //Console.WriteLine("****Z" + SARParameter.GridZ[i]);
             }
+            */
+            int xStart = Convert.ToInt32(tbxSRXStart.Text.Trim());
+            int xEnd = Convert.ToInt32(tbxSRXEnd.Text.Trim());
+            double xInterval = Convert.ToDouble(tbxSRXInterval.Text.Trim());
+            int yStart = Convert.ToInt32(tbxSRYStart.Text.Trim());
+            int yEnd = Convert.ToInt32(tbxSRYEnd.Text.Trim());
+            double yInterval = Convert.ToDouble(tbxSRYInterval.Text.Trim());
+            int zStart = Convert.ToInt32(tbxSRZStart.Text.Trim());
+            int zEnd = Convert.ToInt32(tbxSRZEnd.Text.Trim());
+            double zInterval = Convert.ToDouble(tbxSRZInterval.Text.Trim());
+            ConfParam confParam = new ConfParam();
+            confParam.xStart = xStart;
+            confParam.xEnd = xEnd;
+            confParam.xInterval = xInterval;
+            confParam.yStart = yStart;
+            confParam.yEnd = yEnd;
+            confParam.yInterval = yInterval;
+            confParam.zStart = zStart;
+            confParam.zEnd = zEnd;
+            confParam.zInterval = zInterval;
+            SARParameter.confParam = confParam;
+            SARParameter.epcSet.Clear();
         }
 
         /// <summary>
@@ -122,6 +145,16 @@ namespace RFIDIntegratedApplication.HolographicsForms
         }
 
         private void tbxSRYInterval_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxSRZEnd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxSRZInterval_TextChanged(object sender, EventArgs e)
         {
 
         }

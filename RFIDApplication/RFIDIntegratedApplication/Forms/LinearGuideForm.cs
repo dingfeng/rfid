@@ -281,13 +281,7 @@ namespace RFIDIntegratedApplication.HolographicsForms
 
         private void LinearGuideForm_Shown(object sender, EventArgs e)
         {
-            //初始化导轨控制板
-            IDmcControlService service = ServiceManager.getOneDmcControlService();
-            service.begin();
-            ServiceManager.closeService(service);
-            _posThread = new Thread(new ThreadStart(updatePos));
-            _posThread.Start();
-            dmcConnected = true;
+
         }
 
         public void stopDmc()
@@ -342,6 +336,42 @@ namespace RFIDIntegratedApplication.HolographicsForms
 
         private void LinearGuideForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //初始化导轨控制板
+             IDmcControlService service = ServiceManager.getOneDmcControlService();
+            service.beginAsync();
+             ServiceManager.closeService(service);
+            _posThread = new Thread(new ThreadStart(updatePos));
+            _posThread.Start();
+            dmcConnected = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //关闭导轨
+            IDmcControlService service = ServiceManager.getOneDmcControlService();
+            service.shutdownAsync();
+            ServiceManager.closeService(service);
+            try
+            {
+                if (_posThread != null)
+                {
+                    _posThread.Abort();
+                }
+            }
+            catch
+            {
+
+            }
+            dmcConnected = false;
+        }
+
+        private void tbxSetHorizontalPos_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

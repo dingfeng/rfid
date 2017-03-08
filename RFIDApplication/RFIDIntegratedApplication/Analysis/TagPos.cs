@@ -7,7 +7,7 @@ using RFIDIntegratedApplication.Tag;
 using RFIDIntegratedApplication.ServiceReference1;
 namespace RFIDIntegratedApplication.Analysis
 {
-    class TagPos
+    public  class TagPos
     {
         public TagInfo tagInfo;  //标签信息
         public Tuple<double, double, double> pos; //位置信息
