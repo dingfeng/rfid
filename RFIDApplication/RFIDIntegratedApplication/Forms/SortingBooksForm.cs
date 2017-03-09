@@ -49,6 +49,7 @@ namespace RFIDIntegratedApplication.HolographicsForms
                 string algorithmType = tssbtnAlgorithms.Text.Trim();
                 CalculateType calculateType = getTypeByStr(algorithmType);
                 ICalculateService iCalculateService = ServiceManager.getCalculateService(calculateType);
+                
                 if (!SARParameter.epcSet.Contains(tagInfo.EPC))
                 {
                     iCalculateService.init(tagInfo.EPC, SARParameter.confParam);
@@ -64,9 +65,6 @@ namespace RFIDIntegratedApplication.HolographicsForms
         //从队列中去除一个TagPos
         public void SAR(TagPos tagPos)
         {
-            // TagPos tagPos;
-            //  if(SARParameter.tagPosQueue.TryDequeue(out tagPos))
-            //  {
             TagInfo tagInfo = tagPos.tagInfo;
             string algorithmType = tssbtnAlgorithms.Text.Trim();
             CalculateType calculateType = getTypeByStr(algorithmType);
@@ -79,8 +77,6 @@ namespace RFIDIntegratedApplication.HolographicsForms
             Tuple<double, double, double> position = tagPos.pos;
             iCalculateService.calculate(tagInfo.EPC, position.Item1, position.Item2, position.Item3, tagInfo.Frequency, tagInfo.AcutalPhaseInRadian);
             ServiceManager.closeService(iCalculateService);
-            //DisplayLocalizationResult(tagInfo);
-            //  }
         }
 
         private CalculateType getTypeByStr(string calculateTypeStr)

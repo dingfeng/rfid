@@ -15,7 +15,11 @@ namespace CalculateApp
         /**
          * 覆盖父类方法
          */
+        private double predictedX;
+        private double predictedY;
+        private double predictedZ;
         private const double THRESHOLD = 0;
+        private const int LEAST_COUNT = 100;
         public new void calculate(double antX, double antY, double antZ, int freq, double measuredPhase)
         {
             base.calculate(antX, antY, antZ, freq, measuredPhase);
@@ -42,7 +46,9 @@ namespace CalculateApp
                 if (sarAbsValue > gridValueMax)
                 {
                     gridValueMax = sarAbsValue;
-                    Console.WriteLine("X: " + gridX[j] + " Y: " + gridY[i] + " Z: " + gridZ[k]);
+                    predictedX = gridX[j];
+                    predictedY = gridY[i];
+                    predictedZ = gridZ[k];
                 }
             }
             Dictionary<Tuple<int, int, int>, double> newAbsValueMap = new Dictionary<Tuple<int, int, int>, double>();
@@ -50,16 +56,17 @@ namespace CalculateApp
             {
                 Tuple<int, int, int> tuple = kvp.Key;
                 double proportion = kvp.Value / sum;
-                if (proportion > THRESHOLD)
+                if (proportion > THRESHOLD || count < LEAST_COUNT)
                 {
                     newAbsValueMap.Add(tuple,kvp.Value);
                 }
-                else
+                else if (proportion <= THRESHOLD)
                 {
                     this.pfMap.Remove(tuple);
                 }
             }
             this.absValueMap = newAbsValueMap;
+            Console.WriteLine("predicted X: "+predictedX+" Y: "+predictedY+" Z: "+predictedZ);
         }
     }
 }

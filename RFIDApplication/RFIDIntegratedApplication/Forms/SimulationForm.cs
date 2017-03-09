@@ -121,7 +121,6 @@ namespace RFIDIntegratedApplication.HolographicsForms
             }
 
             simulationMeasuredPhase = AppMath.GetNormalDistribution(simulationMeasuredPhase + Convert.ToDouble(tbxMu.Text.Trim()), Convert.ToDouble(tbxSigma.Text.Trim()));
-            
             return simulationMeasuredPhase;
         }
 

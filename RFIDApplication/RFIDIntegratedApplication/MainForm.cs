@@ -362,16 +362,17 @@ namespace RFIDIntegratedApplication
                         this.BeginInvoke(method: new Action(() =>
                         {
                             this.UpdateDisplayForms(tagInfoInList, SARParameter.IsSimulation);
-                            if (_sortingBooksForm.Visible)
-                            {
-                                if (SARParameter.IsSimulation)
-                                {
-                                    //处于模拟中，使用SAR(tagInfo)
-                                    _sortingBooksForm.SAR(tagInfoInList);
-                                }
-                            }
-
                         }));
+
+                        if (_sortingBooksForm.Visible)
+                        {
+                            if (SARParameter.IsSimulation)
+                            {
+                                //处于模拟中，使用SAR(tagInfo)
+                                _sortingBooksForm.SAR(tagInfoInList);
+                            }
+                        }
+
                     }
                     TagInfo lastTagInfo = tagInfoList.Last();
                     UpdateStatusStrip(lastTagInfo, false);
