@@ -22,6 +22,7 @@ namespace CalculateApp
         private const int LEAST_COUNT = 100;
         public new void calculate(double antX, double antY, double antZ, int freq, double measuredPhase)
         {
+            //Console.WriteLine("antX: "+antX+" antY: "+antY+" antZ: "+antZ+" freq: "+freq+" measuredPhase: "+measuredPhase);
             base.calculate(antX, antY, antZ, freq, measuredPhase);
             double gridValueMax = double.MinValue;
             double waveLength = LIGHT_SPEED / Convert.ToDouble(freq);

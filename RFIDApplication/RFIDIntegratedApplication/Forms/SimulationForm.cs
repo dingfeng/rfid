@@ -107,8 +107,7 @@ namespace RFIDIntegratedApplication.HolographicsForms
             double simulationMeasuredPhase = Double.MinValue;
 
             double waveLength = SARParameter.C / Convert.ToDouble(freq);
-            double distance = Math.Sqrt(Math.Pow(antX - tagX, 2) + Math.Pow(antY - tagY, 2) + Math.Pow(antZ - tagZ,2)) + Convert.ToDouble(tbxLength.Text.Trim());
-            
+            double distance = Math.Sqrt(Math.Pow(antX - tagX, 2) + Math.Pow(antY - tagY, 2) + Math.Pow(antZ - tagZ, 2));
             if (cbPhaseAmbiguity.Checked)
             {
                 // Phase with ambiguity

@@ -158,5 +158,15 @@ namespace RFIDIntegratedApplication.HolographicsForms
         {
 
         }
+
+        private void tbxSRZStart_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxSRXStart_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

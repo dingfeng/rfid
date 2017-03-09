@@ -43,7 +43,6 @@ namespace CalculateApp
         public void init(ConfParam confParam)
         {
             clear();
-            this._count++;
             int xCount = Convert.ToInt32((confParam.xEnd - confParam.xStart) / confParam.xInterval) + 1;
             int yCount = Convert.ToInt32((confParam.yEnd - confParam.yStart) / confParam.yInterval) + 1;
             int zCount = Convert.ToInt32((confParam.zEnd - confParam.zStart) / confParam.zInterval) + 1;

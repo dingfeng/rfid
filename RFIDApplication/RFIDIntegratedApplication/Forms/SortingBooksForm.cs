@@ -49,7 +49,6 @@ namespace RFIDIntegratedApplication.HolographicsForms
                 string algorithmType = tssbtnAlgorithms.Text.Trim();
                 CalculateType calculateType = getTypeByStr(algorithmType);
                 ICalculateService iCalculateService = ServiceManager.getCalculateService(calculateType);
-                
                 if (!SARParameter.epcSet.Contains(tagInfo.EPC))
                 {
                     iCalculateService.init(tagInfo.EPC, SARParameter.confParam);

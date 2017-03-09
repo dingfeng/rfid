@@ -164,6 +164,7 @@
             this.tbxSRXStart.TabIndex = 0;
             this.tbxSRXStart.Text = "0";
             this.tbxSRXStart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbxSRXStart.TextChanged += new System.EventHandler(this.tbxSRXStart_TextChanged);
             // 
             // tbxSRZStart
             // 
@@ -174,6 +175,7 @@
             this.tbxSRZStart.TabIndex = 11;
             this.tbxSRZStart.Text = "0";
             this.tbxSRZStart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbxSRZStart.TextChanged += new System.EventHandler(this.tbxSRZStart_TextChanged);
             // 
             // tbxSRYEnd
             // 
