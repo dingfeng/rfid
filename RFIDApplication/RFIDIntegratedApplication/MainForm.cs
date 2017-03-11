@@ -288,23 +288,36 @@ namespace RFIDIntegratedApplication
                 {
                     TimeSpan interval = DateTime.Now - _startTime;
                     //  tsslRunTime.Text = interval.ToString().Substring(0, 12);
+                    this.BeginInvoke(method : new Action(()=>
+                    {
+                        tsslRunTime.Text = interval.ToString().Substring(0, 12);
+                    }));
                 }
                 else
                 {
                     TimeSpan interval = _startTime - DateTime.Now;
                     if (interval.TotalMilliseconds >= new TimeSpan(0, 0, 0, 0, 100).TotalMilliseconds)
                     {
-                        tsslRunTime.Text = interval.ToString().Substring(0, 12);
+                        this.BeginInvoke(method: new Action(() =>
+                        {
+                            tsslRunTime.Text = interval.ToString().Substring(0, 12);
+                        }));
                     }
                     else
                     {
-                        tsslRunTime.Text = new TimeSpan(0, 0, 0, 0).ToString();
+                        this.BeginInvoke(method: new Action(() =>
+                        {
+                            tsslRunTime.Text = new TimeSpan(0, 0, 0, 0).ToString();
+                        }));
                     }
                 }
             }
             else
             {
-                tsslRunTime.Text = new TimeSpan(0, 0, 0, (int)(tagInfo.FirstSeenTime / 1000000)).ToString();
+                this.BeginInvoke(method: new Action(() =>
+                {
+                    tsslRunTime.Text = new TimeSpan(0, 0, 0, (int)(tagInfo.FirstSeenTime / 1000000)).ToString();
+                }));
             }
         }
 
