@@ -35,6 +35,7 @@
             this.tsmiSave = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSaveAs = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.tsbtnConnect = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnStart = new System.Windows.Forms.ToolStripButton();
@@ -61,9 +62,8 @@
             // 
             this.dockPanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dockPanelMain.Location = new System.Drawing.Point(0, 27);
-            this.dockPanelMain.Margin = new System.Windows.Forms.Padding(4);
             this.dockPanelMain.Name = "dockPanelMain";
-            this.dockPanelMain.Size = new System.Drawing.Size(1346, 929);
+            this.dockPanelMain.Size = new System.Drawing.Size(1010, 738);
             this.dockPanelMain.TabIndex = 1;
             // 
             // toolStrip
@@ -73,6 +73,7 @@
             this.tssbtnSave,
             this.toolStripSeparator5,
             this.tsbtnConnect,
+            this.toolStripButton1,
             this.toolStripSeparator4,
             this.tsbtnStart,
             this.tsbtnStop,
@@ -81,7 +82,7 @@
             this.tssbtnAddWindow});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(1346, 27);
+            this.toolStrip.Size = new System.Drawing.Size(1010, 27);
             this.toolStrip.TabIndex = 5;
             this.toolStrip.Text = "Tool Strip";
             // 
@@ -93,7 +94,7 @@
             this.tssbtnSave.Image = ((System.Drawing.Image)(resources.GetObject("tssbtnSave.Image")));
             this.tssbtnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tssbtnSave.Name = "tssbtnSave";
-            this.tssbtnSave.Size = new System.Drawing.Size(82, 24);
+            this.tssbtnSave.Size = new System.Drawing.Size(71, 24);
             this.tssbtnSave.Text = "Save";
             this.tssbtnSave.ButtonClick += new System.EventHandler(this.tssbtnSave_ButtonClick);
             // 
@@ -101,7 +102,7 @@
             // 
             this.tsmiSave.Image = ((System.Drawing.Image)(resources.GetObject("tsmiSave.Image")));
             this.tsmiSave.Name = "tsmiSave";
-            this.tsmiSave.Size = new System.Drawing.Size(137, 26);
+            this.tsmiSave.Size = new System.Drawing.Size(120, 22);
             this.tsmiSave.Text = "Save";
             this.tsmiSave.Click += new System.EventHandler(this.tsmiSave_Click);
             // 
@@ -109,7 +110,7 @@
             // 
             this.tsmiSaveAs.Image = ((System.Drawing.Image)(resources.GetObject("tsmiSaveAs.Image")));
             this.tsmiSaveAs.Name = "tsmiSaveAs";
-            this.tsmiSaveAs.Size = new System.Drawing.Size(137, 26);
+            this.tsmiSaveAs.Size = new System.Drawing.Size(120, 22);
             this.tsmiSaveAs.Text = "Save as";
             this.tsmiSaveAs.Click += new System.EventHandler(this.tsmiSaveAs_Click);
             // 
@@ -118,12 +119,21 @@
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(95, 24);
+            this.toolStripButton1.Text = "Disconnect";
+            this.toolStripButton1.Click += new System.EventHandler(this.tsbtnDisconnect_Click);
+            // 
             // tsbtnConnect
             // 
             this.tsbtnConnect.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnConnect.Image")));
             this.tsbtnConnect.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnConnect.Name = "tsbtnConnect";
-            this.tsbtnConnect.Size = new System.Drawing.Size(94, 24);
+            this.tsbtnConnect.Size = new System.Drawing.Size(79, 24);
             this.tsbtnConnect.Text = "Connect";
             this.tsbtnConnect.Click += new System.EventHandler(this.tsbtnConnect_Click);
             // 
@@ -137,7 +147,7 @@
             this.tsbtnStart.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnStart.Image")));
             this.tsbtnStart.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnStart.Name = "tsbtnStart";
-            this.tsbtnStart.Size = new System.Drawing.Size(68, 24);
+            this.tsbtnStart.Size = new System.Drawing.Size(59, 24);
             this.tsbtnStart.Text = "Start";
             this.tsbtnStart.Click += new System.EventHandler(this.tsbtnStart_Click);
             // 
@@ -146,7 +156,7 @@
             this.tsbtnStop.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnStop.Image")));
             this.tsbtnStop.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnStop.Name = "tsbtnStop";
-            this.tsbtnStop.Size = new System.Drawing.Size(68, 24);
+            this.tsbtnStop.Size = new System.Drawing.Size(59, 24);
             this.tsbtnStop.Text = "Stop";
             this.tsbtnStop.Click += new System.EventHandler(this.tsbtnStop_Click);
             // 
@@ -155,7 +165,7 @@
             this.tsbtnClear.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnClear.Image")));
             this.tsbtnClear.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnClear.Name = "tsbtnClear";
-            this.tsbtnClear.Size = new System.Drawing.Size(70, 24);
+            this.tsbtnClear.Size = new System.Drawing.Size(62, 24);
             this.tsbtnClear.Text = "Clear";
             this.tsbtnClear.Click += new System.EventHandler(this.tsbtnClear_Click);
             // 
@@ -175,7 +185,7 @@
             this.tssbtnAddWindow.Image = ((System.Drawing.Image)(resources.GetObject("tssbtnAddWindow.Image")));
             this.tssbtnAddWindow.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tssbtnAddWindow.Name = "tssbtnAddWindow";
-            this.tssbtnAddWindow.Size = new System.Drawing.Size(108, 24);
+            this.tssbtnAddWindow.Size = new System.Drawing.Size(91, 24);
             this.tssbtnAddWindow.Text = "Window";
             this.tssbtnAddWindow.ButtonClick += new System.EventHandler(this.tssbtnAddWindow_ButtonClick);
             // 
@@ -183,7 +193,7 @@
             // 
             this.tsmiReaderSettings.Image = ((System.Drawing.Image)(resources.GetObject("tsmiReaderSettings.Image")));
             this.tsmiReaderSettings.Name = "tsmiReaderSettings";
-            this.tsmiReaderSettings.Size = new System.Drawing.Size(200, 26);
+            this.tsmiReaderSettings.Size = new System.Drawing.Size(168, 22);
             this.tsmiReaderSettings.Text = "Reader Settings";
             this.tsmiReaderSettings.Click += new System.EventHandler(this.tsmiReaderSettings_Click);
             // 
@@ -191,7 +201,7 @@
             // 
             this.tsmiTagTable.Image = ((System.Drawing.Image)(resources.GetObject("tsmiTagTable.Image")));
             this.tsmiTagTable.Name = "tsmiTagTable";
-            this.tsmiTagTable.Size = new System.Drawing.Size(200, 26);
+            this.tsmiTagTable.Size = new System.Drawing.Size(168, 22);
             this.tsmiTagTable.Text = "Tag Table";
             this.tsmiTagTable.Click += new System.EventHandler(this.tsmiTagTable_Click);
             // 
@@ -199,7 +209,7 @@
             // 
             this.tsmiRSSIGraph.Image = ((System.Drawing.Image)(resources.GetObject("tsmiRSSIGraph.Image")));
             this.tsmiRSSIGraph.Name = "tsmiRSSIGraph";
-            this.tsmiRSSIGraph.Size = new System.Drawing.Size(200, 26);
+            this.tsmiRSSIGraph.Size = new System.Drawing.Size(168, 22);
             this.tsmiRSSIGraph.Text = "RSSI Graph";
             this.tsmiRSSIGraph.Click += new System.EventHandler(this.tsmiRSSIGraph_Click);
             // 
@@ -207,7 +217,7 @@
             // 
             this.tsmiPhaseGraph.Image = ((System.Drawing.Image)(resources.GetObject("tsmiPhaseGraph.Image")));
             this.tsmiPhaseGraph.Name = "tsmiPhaseGraph";
-            this.tsmiPhaseGraph.Size = new System.Drawing.Size(200, 26);
+            this.tsmiPhaseGraph.Size = new System.Drawing.Size(168, 22);
             this.tsmiPhaseGraph.Text = "Phase Graph";
             this.tsmiPhaseGraph.Click += new System.EventHandler(this.tsmiPhaseGraph_Click);
             // 
@@ -218,14 +228,14 @@
             this.tsmiDemoTrackingObjects});
             this.tsmiHolographics.Image = ((System.Drawing.Image)(resources.GetObject("tsmiHolographics.Image")));
             this.tsmiHolographics.Name = "tsmiHolographics";
-            this.tsmiHolographics.Size = new System.Drawing.Size(200, 26);
+            this.tsmiHolographics.Size = new System.Drawing.Size(168, 22);
             this.tsmiHolographics.Text = "Holographics";
             // 
             // tsmiDemoSortingBooks
             // 
             this.tsmiDemoSortingBooks.Image = ((System.Drawing.Image)(resources.GetObject("tsmiDemoSortingBooks.Image")));
             this.tsmiDemoSortingBooks.Name = "tsmiDemoSortingBooks";
-            this.tsmiDemoSortingBooks.Size = new System.Drawing.Size(262, 26);
+            this.tsmiDemoSortingBooks.Size = new System.Drawing.Size(220, 22);
             this.tsmiDemoSortingBooks.Text = "Demo - Sorting books";
             this.tsmiDemoSortingBooks.Click += new System.EventHandler(this.tsmiDemoSortingBooks_Click);
             // 
@@ -233,7 +243,7 @@
             // 
             this.tsmiDemoTrackingObjects.Image = ((System.Drawing.Image)(resources.GetObject("tsmiDemoTrackingObjects.Image")));
             this.tsmiDemoTrackingObjects.Name = "tsmiDemoTrackingObjects";
-            this.tsmiDemoTrackingObjects.Size = new System.Drawing.Size(262, 26);
+            this.tsmiDemoTrackingObjects.Size = new System.Drawing.Size(220, 22);
             this.tsmiDemoTrackingObjects.Text = "Demo - Tracking objects";
             // 
             // statusStrip1
@@ -243,11 +253,10 @@
             this.tsslRunTime,
             this.tsslblCounter,
             this.tsslblStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 927);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 736);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(19, 0, 1, 0);
             this.statusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.statusStrip1.Size = new System.Drawing.Size(1346, 29);
+            this.statusStrip1.Size = new System.Drawing.Size(1010, 29);
             this.statusStrip1.TabIndex = 12;
             this.statusStrip1.Text = "status";
             // 
@@ -260,7 +269,7 @@
             this.tsslRunTime.Image = ((System.Drawing.Image)(resources.GetObject("tsslRunTime.Image")));
             this.tsslRunTime.Name = "tsslRunTime";
             this.tsslRunTime.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tsslRunTime.Size = new System.Drawing.Size(101, 24);
+            this.tsslRunTime.Size = new System.Drawing.Size(86, 24);
             this.tsslRunTime.Text = "Run Time";
             this.tsslRunTime.Click += new System.EventHandler(this.tsslRunTime_Click);
             // 
@@ -272,7 +281,7 @@
             this.tsslblCounter.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
             this.tsslblCounter.Image = ((System.Drawing.Image)(resources.GetObject("tsslblCounter.Image")));
             this.tsslblCounter.Name = "tsslblCounter";
-            this.tsslblCounter.Size = new System.Drawing.Size(92, 24);
+            this.tsslblCounter.Size = new System.Drawing.Size(78, 24);
             this.tsslblCounter.Text = "Counter";
             this.tsslblCounter.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
@@ -280,21 +289,20 @@
             // 
             this.tsslblStatus.Image = ((System.Drawing.Image)(resources.GetObject("tsslblStatus.Image")));
             this.tsslblStatus.Name = "tsslblStatus";
-            this.tsslblStatus.Size = new System.Drawing.Size(74, 24);
+            this.tsslblStatus.Size = new System.Drawing.Size(64, 24);
             this.tsslblStatus.Text = "Ready";
             this.tsslblStatus.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1346, 956);
+            this.ClientSize = new System.Drawing.Size(1010, 765);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dockPanelMain);
             this.Controls.Add(this.toolStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.ShowIcon = false;
             this.Text = "RFID Integrated Application";
@@ -336,5 +344,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiHolographics;
         private System.Windows.Forms.ToolStripMenuItem tsmiDemoSortingBooks;
         private System.Windows.Forms.ToolStripMenuItem tsmiDemoTrackingObjects;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

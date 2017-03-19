@@ -581,14 +581,14 @@ namespace RFIDIntegratedApplication
             }
             catch (Exception)
             {
-                throw;
+               // throw;
             }
             try
             {
                 _dequeueTagPosThread.Abort();
             }catch (Exception)
             {
-                throw;
+              //  throw;
             }
         }
 
@@ -820,6 +820,21 @@ namespace RFIDIntegratedApplication
         private void tssbtnAddWindow_ButtonClick(object sender, EventArgs e)
         {
 
+        }
+
+        private void tsbtnDisconnect_Click(object sender, EventArgs e)
+        {
+            StopInventory();
+            //Tool Strip
+            tssbtnSave.Enabled = false;
+            tsbtnConnect.Enabled = true;
+            tsbtnStart.Enabled = false;
+            tsbtnStop.Enabled = false;
+            tsbtnClear.Enabled = false;
+            tssbtnAddWindow.Enabled = true;
+
+            // Modify the status of components in ReaderSettingsForm when initializing components
+            _readerSettingsForm.UpdateComponentStatus(0, true);
         }
     }
 }

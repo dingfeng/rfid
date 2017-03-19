@@ -71,7 +71,9 @@ namespace ImpinjControl
                     antennaConfiguration = new AntennaConfiguration();
                     antennaConfiguration.init(readerCapabilities);
                     antennaConfiguration = _readerSettings.getRFIDReaderPara(antennaConfiguration, readerCapabilities.MaxNumberOfAntennaSupported);
-                    ConnectResponse connectResponse = new ConnectResponse(antennaConfiguration, readerCapabilities, new ROReportSpec());
+                    _readerSettings.antennaConfiguration = antennaConfiguration;
+                    _readerSettings.rOReportSpec = new ROReportSpec();
+                    ConnectResponse connectResponse = new ConnectResponse(antennaConfiguration, readerCapabilities, _readerSettings.rOReportSpec);
                     connected = true;
                     Console.WriteLine("status: connected");
                     return connectResponse;
