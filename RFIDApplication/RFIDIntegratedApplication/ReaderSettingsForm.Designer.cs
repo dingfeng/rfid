@@ -30,7 +30,6 @@
         {
             this.tcReaderSettings = new System.Windows.Forms.TabControl();
             this.tpBasic = new System.Windows.Forms.TabPage();
-            this.tpBasic.AutoScroll = true;
             this.cbResetToFactoryDefault = new System.Windows.Forms.CheckBox();
             this.gbTagFilter = new System.Windows.Forms.GroupBox();
             this.cbExtraMask = new System.Windows.Forms.ComboBox();
@@ -63,7 +62,6 @@
             this.rbtnIP = new System.Windows.Forms.RadioButton();
             this.tbxIP = new System.Windows.Forms.TextBox();
             this.tpAntenna = new System.Windows.Forms.TabPage();
-            this.tpAntenna.AutoScroll = true;
             this.tabControlAntenna = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.gbRFReceiver1 = new System.Windows.Forms.GroupBox();
@@ -128,7 +126,6 @@
             this.cbAntenna1 = new System.Windows.Forms.CheckBox();
             this.lblAntennaID = new System.Windows.Forms.Label();
             this.tpRoSpec = new System.Windows.Forms.TabPage();
-            this.tpRoSpec.AutoScroll = true;
             this.gbImpinjTagReportContentSelector = new System.Windows.Forms.GroupBox();
             this.cbImpinjEnableSerializedTID = new System.Windows.Forms.CheckBox();
             this.cbImpinjEnableRFPhaseAngle = new System.Windows.Forms.CheckBox();
@@ -193,10 +190,9 @@
             this.tcReaderSettings.Controls.Add(this.tpRoSpec);
             this.tcReaderSettings.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcReaderSettings.Location = new System.Drawing.Point(0, 0);
-            this.tcReaderSettings.Margin = new System.Windows.Forms.Padding(4);
             this.tcReaderSettings.Name = "tcReaderSettings";
             this.tcReaderSettings.SelectedIndex = 0;
-            this.tcReaderSettings.Size = new System.Drawing.Size(379, 875);
+            this.tcReaderSettings.Size = new System.Drawing.Size(284, 700);
             this.tcReaderSettings.TabIndex = 0;
             // 
             // tpBasic
@@ -207,11 +203,10 @@
             this.tpBasic.Controls.Add(this.gbFrequencyInfo);
             this.tpBasic.Controls.Add(this.gbReadMode);
             this.tpBasic.Controls.Add(this.gbAddress);
-            this.tpBasic.Location = new System.Drawing.Point(4, 25);
-            this.tpBasic.Margin = new System.Windows.Forms.Padding(4);
+            this.tpBasic.Location = new System.Drawing.Point(4, 22);
             this.tpBasic.Name = "tpBasic";
-            this.tpBasic.Padding = new System.Windows.Forms.Padding(4);
-            this.tpBasic.Size = new System.Drawing.Size(371, 846);
+            this.tpBasic.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpBasic.Size = new System.Drawing.Size(276, 674);
             this.tpBasic.TabIndex = 0;
             this.tpBasic.Text = "Basic";
             this.tpBasic.UseVisualStyleBackColor = true;
@@ -219,10 +214,9 @@
             // cbResetToFactoryDefault
             // 
             this.cbResetToFactoryDefault.AutoSize = true;
-            this.cbResetToFactoryDefault.Location = new System.Drawing.Point(17, 10);
-            this.cbResetToFactoryDefault.Margin = new System.Windows.Forms.Padding(4);
+            this.cbResetToFactoryDefault.Location = new System.Drawing.Point(13, 8);
             this.cbResetToFactoryDefault.Name = "cbResetToFactoryDefault";
-            this.cbResetToFactoryDefault.Size = new System.Drawing.Size(221, 19);
+            this.cbResetToFactoryDefault.Size = new System.Drawing.Size(168, 16);
             this.cbResetToFactoryDefault.TabIndex = 11;
             this.cbResetToFactoryDefault.Text = "Reset To Factory Default";
             this.cbResetToFactoryDefault.UseVisualStyleBackColor = true;
@@ -234,11 +228,9 @@
             this.gbTagFilter.Controls.Add(this.cbMask);
             this.gbTagFilter.Controls.Add(this.lblExtraMask);
             this.gbTagFilter.Controls.Add(this.lblMask);
-            this.gbTagFilter.Location = new System.Drawing.Point(11, 644);
-            this.gbTagFilter.Margin = new System.Windows.Forms.Padding(4);
+            this.gbTagFilter.Location = new System.Drawing.Point(8, 515);
             this.gbTagFilter.Name = "gbTagFilter";
-            this.gbTagFilter.Padding = new System.Windows.Forms.Padding(4);
-            this.gbTagFilter.Size = new System.Drawing.Size(347, 88);
+            this.gbTagFilter.Size = new System.Drawing.Size(260, 70);
             this.gbTagFilter.TabIndex = 10;
             this.gbTagFilter.TabStop = false;
             this.gbTagFilter.Text = "Tag Filter";
@@ -246,40 +238,36 @@
             // cbExtraMask
             // 
             this.cbExtraMask.FormattingEnabled = true;
-            this.cbExtraMask.Location = new System.Drawing.Point(100, 55);
-            this.cbExtraMask.Margin = new System.Windows.Forms.Padding(4);
+            this.cbExtraMask.Location = new System.Drawing.Point(75, 44);
             this.cbExtraMask.Name = "cbExtraMask";
-            this.cbExtraMask.Size = new System.Drawing.Size(236, 23);
+            this.cbExtraMask.Size = new System.Drawing.Size(178, 20);
             this.cbExtraMask.TabIndex = 5;
             this.cbExtraMask.SelectedIndexChanged += new System.EventHandler(this.cbExtraMask_SelectedIndexChanged);
             // 
             // cbMask
             // 
             this.cbMask.FormattingEnabled = true;
-            this.cbMask.Location = new System.Drawing.Point(100, 22);
-            this.cbMask.Margin = new System.Windows.Forms.Padding(4);
+            this.cbMask.Location = new System.Drawing.Point(75, 18);
             this.cbMask.Name = "cbMask";
-            this.cbMask.Size = new System.Drawing.Size(236, 23);
+            this.cbMask.Size = new System.Drawing.Size(178, 20);
             this.cbMask.TabIndex = 4;
             this.cbMask.SelectedIndexChanged += new System.EventHandler(this.cbMask_SelectedIndexChanged);
             // 
             // lblExtraMask
             // 
             this.lblExtraMask.AutoSize = true;
-            this.lblExtraMask.Location = new System.Drawing.Point(12, 59);
-            this.lblExtraMask.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblExtraMask.Location = new System.Drawing.Point(9, 47);
             this.lblExtraMask.Name = "lblExtraMask";
-            this.lblExtraMask.Size = new System.Drawing.Size(87, 15);
+            this.lblExtraMask.Size = new System.Drawing.Size(65, 12);
             this.lblExtraMask.TabIndex = 1;
             this.lblExtraMask.Text = "Extra Mask";
             // 
             // lblMask
             // 
             this.lblMask.AutoSize = true;
-            this.lblMask.Location = new System.Drawing.Point(12, 26);
-            this.lblMask.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMask.Location = new System.Drawing.Point(9, 21);
             this.lblMask.Name = "lblMask";
-            this.lblMask.Size = new System.Drawing.Size(39, 15);
+            this.lblMask.Size = new System.Drawing.Size(29, 12);
             this.lblMask.TabIndex = 0;
             this.lblMask.Text = "Mask";
             // 
@@ -291,21 +279,18 @@
             this.gbFrequencyInfo.Controls.Add(this.lblFreqSet);
             this.gbFrequencyInfo.Controls.Add(this.cbFreqMode);
             this.gbFrequencyInfo.Controls.Add(this.lblFreqMode);
-            this.gbFrequencyInfo.Location = new System.Drawing.Point(11, 342);
-            this.gbFrequencyInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.gbFrequencyInfo.Location = new System.Drawing.Point(8, 274);
             this.gbFrequencyInfo.Name = "gbFrequencyInfo";
-            this.gbFrequencyInfo.Padding = new System.Windows.Forms.Padding(4);
-            this.gbFrequencyInfo.Size = new System.Drawing.Size(347, 294);
+            this.gbFrequencyInfo.Size = new System.Drawing.Size(260, 235);
             this.gbFrequencyInfo.TabIndex = 9;
             this.gbFrequencyInfo.TabStop = false;
             this.gbFrequencyInfo.Text = "Frequency Information";
             // 
             // nudHop
             // 
-            this.nudHop.Location = new System.Drawing.Point(100, 258);
-            this.nudHop.Margin = new System.Windows.Forms.Padding(4);
+            this.nudHop.Location = new System.Drawing.Point(75, 206);
             this.nudHop.Name = "nudHop";
-            this.nudHop.Size = new System.Drawing.Size(237, 25);
+            this.nudHop.Size = new System.Drawing.Size(178, 21);
             this.nudHop.TabIndex = 7;
             this.nudHop.Value = new decimal(new int[] {
             1,
@@ -317,49 +302,44 @@
             // clbFreqSet
             // 
             this.clbFreqSet.FormattingEnabled = true;
-            this.clbFreqSet.Location = new System.Drawing.Point(100, 74);
-            this.clbFreqSet.Margin = new System.Windows.Forms.Padding(4);
+            this.clbFreqSet.Location = new System.Drawing.Point(75, 59);
             this.clbFreqSet.Name = "clbFreqSet";
-            this.clbFreqSet.Size = new System.Drawing.Size(236, 164);
+            this.clbFreqSet.Size = new System.Drawing.Size(178, 132);
             this.clbFreqSet.TabIndex = 5;
             // 
             // lblHop
             // 
             this.lblHop.AutoSize = true;
-            this.lblHop.Location = new System.Drawing.Point(13, 260);
-            this.lblHop.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHop.Location = new System.Drawing.Point(10, 208);
             this.lblHop.Name = "lblHop";
-            this.lblHop.Size = new System.Drawing.Size(71, 15);
+            this.lblHop.Size = new System.Drawing.Size(53, 12);
             this.lblHop.TabIndex = 4;
             this.lblHop.Text = "Hop Step";
             // 
             // lblFreqSet
             // 
             this.lblFreqSet.AutoSize = true;
-            this.lblFreqSet.Location = new System.Drawing.Point(13, 74);
-            this.lblFreqSet.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFreqSet.Location = new System.Drawing.Point(10, 59);
             this.lblFreqSet.Name = "lblFreqSet";
-            this.lblFreqSet.Size = new System.Drawing.Size(71, 15);
+            this.lblFreqSet.Size = new System.Drawing.Size(53, 12);
             this.lblFreqSet.TabIndex = 2;
             this.lblFreqSet.Text = "Freq Set";
             // 
             // cbFreqMode
             // 
             this.cbFreqMode.FormattingEnabled = true;
-            this.cbFreqMode.Location = new System.Drawing.Point(100, 31);
-            this.cbFreqMode.Margin = new System.Windows.Forms.Padding(4);
+            this.cbFreqMode.Location = new System.Drawing.Point(75, 25);
             this.cbFreqMode.Name = "cbFreqMode";
-            this.cbFreqMode.Size = new System.Drawing.Size(236, 23);
+            this.cbFreqMode.Size = new System.Drawing.Size(178, 20);
             this.cbFreqMode.TabIndex = 1;
             this.cbFreqMode.SelectedIndexChanged += new System.EventHandler(this.cbFreqMode_SelectedIndexChanged);
             // 
             // lblFreqMode
             // 
             this.lblFreqMode.AutoSize = true;
-            this.lblFreqMode.Location = new System.Drawing.Point(13, 35);
-            this.lblFreqMode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFreqMode.Location = new System.Drawing.Point(10, 28);
             this.lblFreqMode.Name = "lblFreqMode";
-            this.lblFreqMode.Size = new System.Drawing.Size(79, 15);
+            this.lblFreqMode.Size = new System.Drawing.Size(59, 12);
             this.lblFreqMode.TabIndex = 0;
             this.lblFreqMode.Text = "Freq Mode";
             // 
@@ -370,11 +350,9 @@
             this.gbReadMode.Controls.Add(this.lblDuration);
             this.gbReadMode.Controls.Add(this.rbtnTimerReadMode);
             this.gbReadMode.Controls.Add(this.rbtnManualReadMode);
-            this.gbReadMode.Location = new System.Drawing.Point(11, 196);
-            this.gbReadMode.Margin = new System.Windows.Forms.Padding(4);
+            this.gbReadMode.Location = new System.Drawing.Point(8, 157);
             this.gbReadMode.Name = "gbReadMode";
-            this.gbReadMode.Padding = new System.Windows.Forms.Padding(4);
-            this.gbReadMode.Size = new System.Drawing.Size(347, 139);
+            this.gbReadMode.Size = new System.Drawing.Size(260, 111);
             this.gbReadMode.TabIndex = 8;
             this.gbReadMode.TabStop = false;
             this.gbReadMode.Text = "Read Mode";
@@ -382,39 +360,35 @@
             // lblMs
             // 
             this.lblMs.AutoSize = true;
-            this.lblMs.Location = new System.Drawing.Point(227, 100);
-            this.lblMs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMs.Location = new System.Drawing.Point(170, 80);
             this.lblMs.Name = "lblMs";
-            this.lblMs.Size = new System.Drawing.Size(23, 15);
+            this.lblMs.Size = new System.Drawing.Size(17, 12);
             this.lblMs.TabIndex = 4;
             this.lblMs.Text = "ms";
             // 
             // tbxDuration
             // 
-            this.tbxDuration.Location = new System.Drawing.Point(125, 96);
-            this.tbxDuration.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxDuration.Location = new System.Drawing.Point(94, 77);
             this.tbxDuration.Name = "tbxDuration";
-            this.tbxDuration.Size = new System.Drawing.Size(91, 25);
+            this.tbxDuration.Size = new System.Drawing.Size(69, 21);
             this.tbxDuration.TabIndex = 3;
             this.tbxDuration.TextChanged += new System.EventHandler(this.tbxDuration_TextChanged);
             // 
             // lblDuration
             // 
             this.lblDuration.AutoSize = true;
-            this.lblDuration.Location = new System.Drawing.Point(39, 100);
-            this.lblDuration.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDuration.Location = new System.Drawing.Point(29, 80);
             this.lblDuration.Name = "lblDuration";
-            this.lblDuration.Size = new System.Drawing.Size(71, 15);
+            this.lblDuration.Size = new System.Drawing.Size(53, 12);
             this.lblDuration.TabIndex = 2;
             this.lblDuration.Text = "Duration";
             // 
             // rbtnTimerReadMode
             // 
             this.rbtnTimerReadMode.AutoSize = true;
-            this.rbtnTimerReadMode.Location = new System.Drawing.Point(16, 65);
-            this.rbtnTimerReadMode.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnTimerReadMode.Location = new System.Drawing.Point(12, 52);
             this.rbtnTimerReadMode.Name = "rbtnTimerReadMode";
-            this.rbtnTimerReadMode.Size = new System.Drawing.Size(148, 19);
+            this.rbtnTimerReadMode.Size = new System.Drawing.Size(113, 16);
             this.rbtnTimerReadMode.TabIndex = 1;
             this.rbtnTimerReadMode.Text = "Timer Read Mode";
             this.rbtnTimerReadMode.UseVisualStyleBackColor = true;
@@ -424,10 +398,9 @@
             // 
             this.rbtnManualReadMode.AutoSize = true;
             this.rbtnManualReadMode.Checked = true;
-            this.rbtnManualReadMode.Location = new System.Drawing.Point(16, 32);
-            this.rbtnManualReadMode.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnManualReadMode.Location = new System.Drawing.Point(12, 26);
             this.rbtnManualReadMode.Name = "rbtnManualReadMode";
-            this.rbtnManualReadMode.Size = new System.Drawing.Size(156, 19);
+            this.rbtnManualReadMode.Size = new System.Drawing.Size(119, 16);
             this.rbtnManualReadMode.TabIndex = 0;
             this.rbtnManualReadMode.TabStop = true;
             this.rbtnManualReadMode.Text = "Manual Read Mode";
@@ -447,11 +420,9 @@
             this.gbAddress.Controls.Add(this.rbtnHostname);
             this.gbAddress.Controls.Add(this.rbtnIP);
             this.gbAddress.Controls.Add(this.tbxIP);
-            this.gbAddress.Location = new System.Drawing.Point(11, 45);
-            this.gbAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.gbAddress.Location = new System.Drawing.Point(8, 36);
             this.gbAddress.Name = "gbAddress";
-            this.gbAddress.Padding = new System.Windows.Forms.Padding(4);
-            this.gbAddress.Size = new System.Drawing.Size(347, 144);
+            this.gbAddress.Size = new System.Drawing.Size(260, 115);
             this.gbAddress.TabIndex = 7;
             this.gbAddress.TabStop = false;
             this.gbAddress.Text = "Address";
@@ -459,10 +430,9 @@
             // 
             // btnSearchIP
             // 
-            this.btnSearchIP.Location = new System.Drawing.Point(219, 32);
-            this.btnSearchIP.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchIP.Location = new System.Drawing.Point(164, 26);
             this.btnSearchIP.Name = "btnSearchIP";
-            this.btnSearchIP.Size = new System.Drawing.Size(100, 29);
+            this.btnSearchIP.Size = new System.Drawing.Size(75, 23);
             this.btnSearchIP.TabIndex = 17;
             this.btnSearchIP.Text = "Search";
             this.btnSearchIP.UseVisualStyleBackColor = true;
@@ -471,77 +441,69 @@
             // lblMAC3
             // 
             this.lblMAC3.AutoSize = true;
-            this.lblMAC3.Location = new System.Drawing.Point(203, 112);
-            this.lblMAC3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMAC3.Location = new System.Drawing.Point(152, 90);
             this.lblMAC3.Name = "lblMAC3";
-            this.lblMAC3.Size = new System.Drawing.Size(15, 15);
+            this.lblMAC3.Size = new System.Drawing.Size(11, 12);
             this.lblMAC3.TabIndex = 16;
             this.lblMAC3.Text = "-";
             // 
             // tbxMAC3
             // 
-            this.tbxMAC3.Location = new System.Drawing.Point(220, 106);
-            this.tbxMAC3.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxMAC3.Location = new System.Drawing.Point(165, 85);
             this.tbxMAC3.MaxLength = 2;
             this.tbxMAC3.Name = "tbxMAC3";
-            this.tbxMAC3.Size = new System.Drawing.Size(27, 25);
+            this.tbxMAC3.Size = new System.Drawing.Size(21, 21);
             this.tbxMAC3.TabIndex = 13;
             // 
             // lblMAC2
             // 
             this.lblMAC2.AutoSize = true;
-            this.lblMAC2.Location = new System.Drawing.Point(153, 111);
-            this.lblMAC2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMAC2.Location = new System.Drawing.Point(115, 89);
             this.lblMAC2.Name = "lblMAC2";
-            this.lblMAC2.Size = new System.Drawing.Size(15, 15);
+            this.lblMAC2.Size = new System.Drawing.Size(11, 12);
             this.lblMAC2.TabIndex = 15;
             this.lblMAC2.Text = "-";
             // 
             // lblMAC4
             // 
             this.lblMAC4.AutoSize = true;
-            this.lblMAC4.Location = new System.Drawing.Point(253, 112);
-            this.lblMAC4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMAC4.Location = new System.Drawing.Point(190, 90);
             this.lblMAC4.Name = "lblMAC4";
-            this.lblMAC4.Size = new System.Drawing.Size(55, 15);
+            this.lblMAC4.Size = new System.Drawing.Size(41, 12);
             this.lblMAC4.TabIndex = 14;
             this.lblMAC4.Text = ".local";
             // 
             // tbxMAC2
             // 
-            this.tbxMAC2.Location = new System.Drawing.Point(171, 106);
-            this.tbxMAC2.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxMAC2.Location = new System.Drawing.Point(128, 85);
             this.tbxMAC2.MaxLength = 2;
             this.tbxMAC2.Name = "tbxMAC2";
-            this.tbxMAC2.Size = new System.Drawing.Size(28, 25);
+            this.tbxMAC2.Size = new System.Drawing.Size(22, 21);
             this.tbxMAC2.TabIndex = 12;
             // 
             // tbxMAC1
             // 
-            this.tbxMAC1.Location = new System.Drawing.Point(123, 106);
-            this.tbxMAC1.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxMAC1.Location = new System.Drawing.Point(92, 85);
             this.tbxMAC1.MaxLength = 2;
             this.tbxMAC1.Name = "tbxMAC1";
-            this.tbxMAC1.Size = new System.Drawing.Size(27, 25);
+            this.tbxMAC1.Size = new System.Drawing.Size(21, 21);
             this.tbxMAC1.TabIndex = 11;
             // 
             // lblMAC1
             // 
             this.lblMAC1.AutoSize = true;
-            this.lblMAC1.Location = new System.Drawing.Point(35, 111);
-            this.lblMAC1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMAC1.Location = new System.Drawing.Point(26, 89);
             this.lblMAC1.Name = "lblMAC1";
-            this.lblMAC1.Size = new System.Drawing.Size(87, 15);
+            this.lblMAC1.Size = new System.Drawing.Size(65, 12);
             this.lblMAC1.TabIndex = 10;
             this.lblMAC1.Text = "SpeedwayR-";
             // 
             // rbtnHostname
             // 
             this.rbtnHostname.AutoSize = true;
-            this.rbtnHostname.Location = new System.Drawing.Point(16, 76);
-            this.rbtnHostname.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnHostname.Location = new System.Drawing.Point(12, 61);
             this.rbtnHostname.Name = "rbtnHostname";
-            this.rbtnHostname.Size = new System.Drawing.Size(92, 19);
+            this.rbtnHostname.Size = new System.Drawing.Size(71, 16);
             this.rbtnHostname.TabIndex = 3;
             this.rbtnHostname.Text = "Hostname";
             this.rbtnHostname.UseVisualStyleBackColor = true;
@@ -551,10 +513,9 @@
             // 
             this.rbtnIP.AutoSize = true;
             this.rbtnIP.Checked = true;
-            this.rbtnIP.Location = new System.Drawing.Point(16, 36);
-            this.rbtnIP.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnIP.Location = new System.Drawing.Point(12, 29);
             this.rbtnIP.Name = "rbtnIP";
-            this.rbtnIP.Size = new System.Drawing.Size(44, 19);
+            this.rbtnIP.Size = new System.Drawing.Size(35, 16);
             this.rbtnIP.TabIndex = 2;
             this.rbtnIP.TabStop = true;
             this.rbtnIP.Text = "IP";
@@ -563,10 +524,9 @@
             // 
             // tbxIP
             // 
-            this.tbxIP.Location = new System.Drawing.Point(73, 34);
-            this.tbxIP.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxIP.Location = new System.Drawing.Point(55, 27);
             this.tbxIP.Name = "tbxIP";
-            this.tbxIP.Size = new System.Drawing.Size(132, 25);
+            this.tbxIP.Size = new System.Drawing.Size(100, 21);
             this.tbxIP.TabIndex = 1;
             // 
             // tpAntenna
@@ -579,11 +539,10 @@
             this.tpAntenna.Controls.Add(this.cbAntenna2);
             this.tpAntenna.Controls.Add(this.cbAntenna1);
             this.tpAntenna.Controls.Add(this.lblAntennaID);
-            this.tpAntenna.Location = new System.Drawing.Point(4, 25);
-            this.tpAntenna.Margin = new System.Windows.Forms.Padding(4);
+            this.tpAntenna.Location = new System.Drawing.Point(4, 22);
             this.tpAntenna.Name = "tpAntenna";
-            this.tpAntenna.Padding = new System.Windows.Forms.Padding(4);
-            this.tpAntenna.Size = new System.Drawing.Size(371, 846);
+            this.tpAntenna.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpAntenna.Size = new System.Drawing.Size(276, 674);
             this.tpAntenna.TabIndex = 1;
             this.tpAntenna.Text = "Antenna";
             this.tpAntenna.UseVisualStyleBackColor = true;
@@ -594,11 +553,10 @@
             this.tabControlAntenna.Controls.Add(this.tabPage2);
             this.tabControlAntenna.Controls.Add(this.tabPage3);
             this.tabControlAntenna.Controls.Add(this.tabPage4);
-            this.tabControlAntenna.Location = new System.Drawing.Point(8, 668);
-            this.tabControlAntenna.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControlAntenna.Location = new System.Drawing.Point(6, 534);
             this.tabControlAntenna.Name = "tabControlAntenna";
             this.tabControlAntenna.SelectedIndex = 0;
-            this.tabControlAntenna.Size = new System.Drawing.Size(349, 165);
+            this.tabControlAntenna.Size = new System.Drawing.Size(262, 132);
             this.tabControlAntenna.TabIndex = 19;
             // 
             // tabPage1
@@ -606,11 +564,10 @@
             this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage1.Controls.Add(this.gbRFReceiver1);
             this.tabPage1.Controls.Add(this.gbRFTransmiter1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(341, 136);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Size = new System.Drawing.Size(254, 106);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Antenna1";
             // 
@@ -618,11 +575,9 @@
             // 
             this.gbRFReceiver1.Controls.Add(this.lblReceiverSensitivity1);
             this.gbRFReceiver1.Controls.Add(this.cbReceiverSensitivity1);
-            this.gbRFReceiver1.Location = new System.Drawing.Point(8, 8);
-            this.gbRFReceiver1.Margin = new System.Windows.Forms.Padding(4);
+            this.gbRFReceiver1.Location = new System.Drawing.Point(6, 6);
             this.gbRFReceiver1.Name = "gbRFReceiver1";
-            this.gbRFReceiver1.Padding = new System.Windows.Forms.Padding(4);
-            this.gbRFReceiver1.Size = new System.Drawing.Size(325, 56);
+            this.gbRFReceiver1.Size = new System.Drawing.Size(244, 45);
             this.gbRFReceiver1.TabIndex = 4;
             this.gbRFReceiver1.TabStop = false;
             this.gbRFReceiver1.Text = "RF Receiver";
@@ -630,31 +585,27 @@
             // lblReceiverSensitivity1
             // 
             this.lblReceiverSensitivity1.AutoSize = true;
-            this.lblReceiverSensitivity1.Location = new System.Drawing.Point(9, 24);
-            this.lblReceiverSensitivity1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblReceiverSensitivity1.Location = new System.Drawing.Point(7, 19);
             this.lblReceiverSensitivity1.Name = "lblReceiverSensitivity1";
-            this.lblReceiverSensitivity1.Size = new System.Drawing.Size(215, 15);
+            this.lblReceiverSensitivity1.Size = new System.Drawing.Size(161, 12);
             this.lblReceiverSensitivity1.TabIndex = 1;
             this.lblReceiverSensitivity1.Text = "Receiver Sensitivity (dBm)";
             // 
             // cbReceiverSensitivity1
             // 
             this.cbReceiverSensitivity1.FormattingEnabled = true;
-            this.cbReceiverSensitivity1.Location = new System.Drawing.Point(232, 20);
-            this.cbReceiverSensitivity1.Margin = new System.Windows.Forms.Padding(4);
+            this.cbReceiverSensitivity1.Location = new System.Drawing.Point(174, 16);
             this.cbReceiverSensitivity1.Name = "cbReceiverSensitivity1";
-            this.cbReceiverSensitivity1.Size = new System.Drawing.Size(87, 23);
+            this.cbReceiverSensitivity1.Size = new System.Drawing.Size(66, 20);
             this.cbReceiverSensitivity1.TabIndex = 0;
             // 
             // gbRFTransmiter1
             // 
             this.gbRFTransmiter1.Controls.Add(this.cbTransmiterPower1);
             this.gbRFTransmiter1.Controls.Add(this.lblTransmiterPower1);
-            this.gbRFTransmiter1.Location = new System.Drawing.Point(8, 66);
-            this.gbRFTransmiter1.Margin = new System.Windows.Forms.Padding(4);
+            this.gbRFTransmiter1.Location = new System.Drawing.Point(6, 53);
             this.gbRFTransmiter1.Name = "gbRFTransmiter1";
-            this.gbRFTransmiter1.Padding = new System.Windows.Forms.Padding(4);
-            this.gbRFTransmiter1.Size = new System.Drawing.Size(325, 60);
+            this.gbRFTransmiter1.Size = new System.Drawing.Size(244, 48);
             this.gbRFTransmiter1.TabIndex = 5;
             this.gbRFTransmiter1.TabStop = false;
             this.gbRFTransmiter1.Text = "RF Transmiter";
@@ -662,19 +613,17 @@
             // cbTransmiterPower1
             // 
             this.cbTransmiterPower1.FormattingEnabled = true;
-            this.cbTransmiterPower1.Location = new System.Drawing.Point(232, 24);
-            this.cbTransmiterPower1.Margin = new System.Windows.Forms.Padding(4);
+            this.cbTransmiterPower1.Location = new System.Drawing.Point(174, 19);
             this.cbTransmiterPower1.Name = "cbTransmiterPower1";
-            this.cbTransmiterPower1.Size = new System.Drawing.Size(87, 23);
+            this.cbTransmiterPower1.Size = new System.Drawing.Size(66, 20);
             this.cbTransmiterPower1.TabIndex = 5;
             // 
             // lblTransmiterPower1
             // 
             this.lblTransmiterPower1.AutoSize = true;
-            this.lblTransmiterPower1.Location = new System.Drawing.Point(9, 28);
-            this.lblTransmiterPower1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTransmiterPower1.Location = new System.Drawing.Point(7, 22);
             this.lblTransmiterPower1.Name = "lblTransmiterPower1";
-            this.lblTransmiterPower1.Size = new System.Drawing.Size(183, 15);
+            this.lblTransmiterPower1.Size = new System.Drawing.Size(137, 12);
             this.lblTransmiterPower1.TabIndex = 2;
             this.lblTransmiterPower1.Text = "Transmiter Power (dBm)";
             // 
@@ -683,11 +632,10 @@
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage2.Controls.Add(this.gbRFReceiver2);
             this.tabPage2.Controls.Add(this.gbRFTransmiter2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(341, 136);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Size = new System.Drawing.Size(254, 106);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Antenna2";
             // 
@@ -695,11 +643,9 @@
             // 
             this.gbRFReceiver2.Controls.Add(this.lblReceiverSensitivity2);
             this.gbRFReceiver2.Controls.Add(this.cbReceiverSensitivity2);
-            this.gbRFReceiver2.Location = new System.Drawing.Point(8, 8);
-            this.gbRFReceiver2.Margin = new System.Windows.Forms.Padding(4);
+            this.gbRFReceiver2.Location = new System.Drawing.Point(6, 6);
             this.gbRFReceiver2.Name = "gbRFReceiver2";
-            this.gbRFReceiver2.Padding = new System.Windows.Forms.Padding(4);
-            this.gbRFReceiver2.Size = new System.Drawing.Size(325, 56);
+            this.gbRFReceiver2.Size = new System.Drawing.Size(244, 45);
             this.gbRFReceiver2.TabIndex = 6;
             this.gbRFReceiver2.TabStop = false;
             this.gbRFReceiver2.Text = "RF Receiver";
@@ -707,31 +653,27 @@
             // lblReceiverSensitivity2
             // 
             this.lblReceiverSensitivity2.AutoSize = true;
-            this.lblReceiverSensitivity2.Location = new System.Drawing.Point(9, 24);
-            this.lblReceiverSensitivity2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblReceiverSensitivity2.Location = new System.Drawing.Point(7, 19);
             this.lblReceiverSensitivity2.Name = "lblReceiverSensitivity2";
-            this.lblReceiverSensitivity2.Size = new System.Drawing.Size(215, 15);
+            this.lblReceiverSensitivity2.Size = new System.Drawing.Size(161, 12);
             this.lblReceiverSensitivity2.TabIndex = 1;
             this.lblReceiverSensitivity2.Text = "Receiver Sensitivity (dBm)";
             // 
             // cbReceiverSensitivity2
             // 
             this.cbReceiverSensitivity2.FormattingEnabled = true;
-            this.cbReceiverSensitivity2.Location = new System.Drawing.Point(232, 20);
-            this.cbReceiverSensitivity2.Margin = new System.Windows.Forms.Padding(4);
+            this.cbReceiverSensitivity2.Location = new System.Drawing.Point(174, 16);
             this.cbReceiverSensitivity2.Name = "cbReceiverSensitivity2";
-            this.cbReceiverSensitivity2.Size = new System.Drawing.Size(87, 23);
+            this.cbReceiverSensitivity2.Size = new System.Drawing.Size(66, 20);
             this.cbReceiverSensitivity2.TabIndex = 0;
             // 
             // gbRFTransmiter2
             // 
             this.gbRFTransmiter2.Controls.Add(this.cbTransmiterPower2);
             this.gbRFTransmiter2.Controls.Add(this.lblTransmiterPower2);
-            this.gbRFTransmiter2.Location = new System.Drawing.Point(8, 66);
-            this.gbRFTransmiter2.Margin = new System.Windows.Forms.Padding(4);
+            this.gbRFTransmiter2.Location = new System.Drawing.Point(6, 53);
             this.gbRFTransmiter2.Name = "gbRFTransmiter2";
-            this.gbRFTransmiter2.Padding = new System.Windows.Forms.Padding(4);
-            this.gbRFTransmiter2.Size = new System.Drawing.Size(325, 60);
+            this.gbRFTransmiter2.Size = new System.Drawing.Size(244, 48);
             this.gbRFTransmiter2.TabIndex = 7;
             this.gbRFTransmiter2.TabStop = false;
             this.gbRFTransmiter2.Text = "RF Transmiter";
@@ -739,19 +681,17 @@
             // cbTransmiterPower2
             // 
             this.cbTransmiterPower2.FormattingEnabled = true;
-            this.cbTransmiterPower2.Location = new System.Drawing.Point(232, 24);
-            this.cbTransmiterPower2.Margin = new System.Windows.Forms.Padding(4);
+            this.cbTransmiterPower2.Location = new System.Drawing.Point(174, 19);
             this.cbTransmiterPower2.Name = "cbTransmiterPower2";
-            this.cbTransmiterPower2.Size = new System.Drawing.Size(87, 23);
+            this.cbTransmiterPower2.Size = new System.Drawing.Size(66, 20);
             this.cbTransmiterPower2.TabIndex = 5;
             // 
             // lblTransmiterPower2
             // 
             this.lblTransmiterPower2.AutoSize = true;
-            this.lblTransmiterPower2.Location = new System.Drawing.Point(9, 28);
-            this.lblTransmiterPower2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTransmiterPower2.Location = new System.Drawing.Point(7, 22);
             this.lblTransmiterPower2.Name = "lblTransmiterPower2";
-            this.lblTransmiterPower2.Size = new System.Drawing.Size(183, 15);
+            this.lblTransmiterPower2.Size = new System.Drawing.Size(137, 12);
             this.lblTransmiterPower2.TabIndex = 2;
             this.lblTransmiterPower2.Text = "Transmiter Power (dBm)";
             // 
@@ -760,11 +700,10 @@
             this.tabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage3.Controls.Add(this.gbRFReceiver3);
             this.tabPage3.Controls.Add(this.gbRFTransmiter3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage3.Size = new System.Drawing.Size(341, 136);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Size = new System.Drawing.Size(254, 106);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Antenna3";
             // 
@@ -772,11 +711,9 @@
             // 
             this.gbRFReceiver3.Controls.Add(this.lblReceiverSensitivity3);
             this.gbRFReceiver3.Controls.Add(this.cbReceiverSensitivity3);
-            this.gbRFReceiver3.Location = new System.Drawing.Point(8, 8);
-            this.gbRFReceiver3.Margin = new System.Windows.Forms.Padding(4);
+            this.gbRFReceiver3.Location = new System.Drawing.Point(6, 6);
             this.gbRFReceiver3.Name = "gbRFReceiver3";
-            this.gbRFReceiver3.Padding = new System.Windows.Forms.Padding(4);
-            this.gbRFReceiver3.Size = new System.Drawing.Size(325, 56);
+            this.gbRFReceiver3.Size = new System.Drawing.Size(244, 45);
             this.gbRFReceiver3.TabIndex = 6;
             this.gbRFReceiver3.TabStop = false;
             this.gbRFReceiver3.Text = "RF Receiver";
@@ -784,31 +721,27 @@
             // lblReceiverSensitivity3
             // 
             this.lblReceiverSensitivity3.AutoSize = true;
-            this.lblReceiverSensitivity3.Location = new System.Drawing.Point(9, 24);
-            this.lblReceiverSensitivity3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblReceiverSensitivity3.Location = new System.Drawing.Point(7, 19);
             this.lblReceiverSensitivity3.Name = "lblReceiverSensitivity3";
-            this.lblReceiverSensitivity3.Size = new System.Drawing.Size(215, 15);
+            this.lblReceiverSensitivity3.Size = new System.Drawing.Size(161, 12);
             this.lblReceiverSensitivity3.TabIndex = 1;
             this.lblReceiverSensitivity3.Text = "Receiver Sensitivity (dBm)";
             // 
             // cbReceiverSensitivity3
             // 
             this.cbReceiverSensitivity3.FormattingEnabled = true;
-            this.cbReceiverSensitivity3.Location = new System.Drawing.Point(232, 20);
-            this.cbReceiverSensitivity3.Margin = new System.Windows.Forms.Padding(4);
+            this.cbReceiverSensitivity3.Location = new System.Drawing.Point(174, 16);
             this.cbReceiverSensitivity3.Name = "cbReceiverSensitivity3";
-            this.cbReceiverSensitivity3.Size = new System.Drawing.Size(87, 23);
+            this.cbReceiverSensitivity3.Size = new System.Drawing.Size(66, 20);
             this.cbReceiverSensitivity3.TabIndex = 0;
             // 
             // gbRFTransmiter3
             // 
             this.gbRFTransmiter3.Controls.Add(this.cbTransmiterPower3);
             this.gbRFTransmiter3.Controls.Add(this.lblTransmiterPower3);
-            this.gbRFTransmiter3.Location = new System.Drawing.Point(8, 66);
-            this.gbRFTransmiter3.Margin = new System.Windows.Forms.Padding(4);
+            this.gbRFTransmiter3.Location = new System.Drawing.Point(6, 53);
             this.gbRFTransmiter3.Name = "gbRFTransmiter3";
-            this.gbRFTransmiter3.Padding = new System.Windows.Forms.Padding(4);
-            this.gbRFTransmiter3.Size = new System.Drawing.Size(327, 60);
+            this.gbRFTransmiter3.Size = new System.Drawing.Size(245, 48);
             this.gbRFTransmiter3.TabIndex = 7;
             this.gbRFTransmiter3.TabStop = false;
             this.gbRFTransmiter3.Text = "RF Transmiter";
@@ -816,19 +749,17 @@
             // cbTransmiterPower3
             // 
             this.cbTransmiterPower3.FormattingEnabled = true;
-            this.cbTransmiterPower3.Location = new System.Drawing.Point(232, 24);
-            this.cbTransmiterPower3.Margin = new System.Windows.Forms.Padding(4);
+            this.cbTransmiterPower3.Location = new System.Drawing.Point(174, 19);
             this.cbTransmiterPower3.Name = "cbTransmiterPower3";
-            this.cbTransmiterPower3.Size = new System.Drawing.Size(87, 23);
+            this.cbTransmiterPower3.Size = new System.Drawing.Size(66, 20);
             this.cbTransmiterPower3.TabIndex = 5;
             // 
             // lblTransmiterPower3
             // 
             this.lblTransmiterPower3.AutoSize = true;
-            this.lblTransmiterPower3.Location = new System.Drawing.Point(9, 28);
-            this.lblTransmiterPower3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTransmiterPower3.Location = new System.Drawing.Point(7, 22);
             this.lblTransmiterPower3.Name = "lblTransmiterPower3";
-            this.lblTransmiterPower3.Size = new System.Drawing.Size(183, 15);
+            this.lblTransmiterPower3.Size = new System.Drawing.Size(137, 12);
             this.lblTransmiterPower3.TabIndex = 2;
             this.lblTransmiterPower3.Text = "Transmiter Power (dBm)";
             // 
@@ -837,11 +768,10 @@
             this.tabPage4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage4.Controls.Add(this.gbRFReceiver4);
             this.tabPage4.Controls.Add(this.gbRFTransmiter4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage4.Size = new System.Drawing.Size(341, 136);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage4.Size = new System.Drawing.Size(254, 106);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Antenna4";
             // 
@@ -849,11 +779,9 @@
             // 
             this.gbRFReceiver4.Controls.Add(this.lblReceiverSensitivity4);
             this.gbRFReceiver4.Controls.Add(this.cbReceiverSensitivity4);
-            this.gbRFReceiver4.Location = new System.Drawing.Point(8, 8);
-            this.gbRFReceiver4.Margin = new System.Windows.Forms.Padding(4);
+            this.gbRFReceiver4.Location = new System.Drawing.Point(6, 6);
             this.gbRFReceiver4.Name = "gbRFReceiver4";
-            this.gbRFReceiver4.Padding = new System.Windows.Forms.Padding(4);
-            this.gbRFReceiver4.Size = new System.Drawing.Size(327, 56);
+            this.gbRFReceiver4.Size = new System.Drawing.Size(245, 45);
             this.gbRFReceiver4.TabIndex = 6;
             this.gbRFReceiver4.TabStop = false;
             this.gbRFReceiver4.Text = "RF Receiver";
@@ -861,31 +789,27 @@
             // lblReceiverSensitivity4
             // 
             this.lblReceiverSensitivity4.AutoSize = true;
-            this.lblReceiverSensitivity4.Location = new System.Drawing.Point(9, 24);
-            this.lblReceiverSensitivity4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblReceiverSensitivity4.Location = new System.Drawing.Point(7, 19);
             this.lblReceiverSensitivity4.Name = "lblReceiverSensitivity4";
-            this.lblReceiverSensitivity4.Size = new System.Drawing.Size(215, 15);
+            this.lblReceiverSensitivity4.Size = new System.Drawing.Size(161, 12);
             this.lblReceiverSensitivity4.TabIndex = 1;
             this.lblReceiverSensitivity4.Text = "Receiver Sensitivity (dBm)";
             // 
             // cbReceiverSensitivity4
             // 
             this.cbReceiverSensitivity4.FormattingEnabled = true;
-            this.cbReceiverSensitivity4.Location = new System.Drawing.Point(232, 20);
-            this.cbReceiverSensitivity4.Margin = new System.Windows.Forms.Padding(4);
+            this.cbReceiverSensitivity4.Location = new System.Drawing.Point(174, 16);
             this.cbReceiverSensitivity4.Name = "cbReceiverSensitivity4";
-            this.cbReceiverSensitivity4.Size = new System.Drawing.Size(87, 23);
+            this.cbReceiverSensitivity4.Size = new System.Drawing.Size(66, 20);
             this.cbReceiverSensitivity4.TabIndex = 0;
             // 
             // gbRFTransmiter4
             // 
             this.gbRFTransmiter4.Controls.Add(this.cbTransmiterPower4);
             this.gbRFTransmiter4.Controls.Add(this.lblTransmiterPower4);
-            this.gbRFTransmiter4.Location = new System.Drawing.Point(8, 66);
-            this.gbRFTransmiter4.Margin = new System.Windows.Forms.Padding(4);
+            this.gbRFTransmiter4.Location = new System.Drawing.Point(6, 53);
             this.gbRFTransmiter4.Name = "gbRFTransmiter4";
-            this.gbRFTransmiter4.Padding = new System.Windows.Forms.Padding(4);
-            this.gbRFTransmiter4.Size = new System.Drawing.Size(327, 60);
+            this.gbRFTransmiter4.Size = new System.Drawing.Size(245, 48);
             this.gbRFTransmiter4.TabIndex = 7;
             this.gbRFTransmiter4.TabStop = false;
             this.gbRFTransmiter4.Text = "RF Transmiter";
@@ -893,19 +817,17 @@
             // cbTransmiterPower4
             // 
             this.cbTransmiterPower4.FormattingEnabled = true;
-            this.cbTransmiterPower4.Location = new System.Drawing.Point(232, 24);
-            this.cbTransmiterPower4.Margin = new System.Windows.Forms.Padding(4);
+            this.cbTransmiterPower4.Location = new System.Drawing.Point(174, 19);
             this.cbTransmiterPower4.Name = "cbTransmiterPower4";
-            this.cbTransmiterPower4.Size = new System.Drawing.Size(83, 23);
+            this.cbTransmiterPower4.Size = new System.Drawing.Size(63, 20);
             this.cbTransmiterPower4.TabIndex = 5;
             // 
             // lblTransmiterPower4
             // 
             this.lblTransmiterPower4.AutoSize = true;
-            this.lblTransmiterPower4.Location = new System.Drawing.Point(9, 28);
-            this.lblTransmiterPower4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTransmiterPower4.Location = new System.Drawing.Point(7, 22);
             this.lblTransmiterPower4.Name = "lblTransmiterPower4";
-            this.lblTransmiterPower4.Size = new System.Drawing.Size(183, 15);
+            this.lblTransmiterPower4.Size = new System.Drawing.Size(137, 12);
             this.lblTransmiterPower4.TabIndex = 2;
             this.lblTransmiterPower4.Text = "Transmiter Power (dBm)";
             // 
@@ -913,10 +835,9 @@
             // 
             this.cbAntenna4.AllowDrop = true;
             this.cbAntenna4.AutoSize = true;
-            this.cbAntenna4.Location = new System.Drawing.Point(227, 640);
-            this.cbAntenna4.Margin = new System.Windows.Forms.Padding(4);
+            this.cbAntenna4.Location = new System.Drawing.Point(170, 512);
             this.cbAntenna4.Name = "cbAntenna4";
-            this.cbAntenna4.Size = new System.Drawing.Size(37, 19);
+            this.cbAntenna4.Size = new System.Drawing.Size(30, 16);
             this.cbAntenna4.TabIndex = 18;
             this.cbAntenna4.Text = "4";
             this.cbAntenna4.UseVisualStyleBackColor = true;
@@ -928,11 +849,9 @@
             this.gbC1G2InventoryCommand.Controls.Add(this.gbC1G2RFControl);
             this.gbC1G2InventoryCommand.Controls.Add(this.lblTagInventoryStateAware);
             this.gbC1G2InventoryCommand.Controls.Add(this.cbTagInventoryStateAware);
-            this.gbC1G2InventoryCommand.Location = new System.Drawing.Point(11, 8);
-            this.gbC1G2InventoryCommand.Margin = new System.Windows.Forms.Padding(4);
+            this.gbC1G2InventoryCommand.Location = new System.Drawing.Point(8, 6);
             this.gbC1G2InventoryCommand.Name = "gbC1G2InventoryCommand";
-            this.gbC1G2InventoryCommand.Padding = new System.Windows.Forms.Padding(4);
-            this.gbC1G2InventoryCommand.Size = new System.Drawing.Size(347, 612);
+            this.gbC1G2InventoryCommand.Size = new System.Drawing.Size(260, 490);
             this.gbC1G2InventoryCommand.TabIndex = 14;
             this.gbC1G2InventoryCommand.TabStop = false;
             this.gbC1G2InventoryCommand.Text = "C1G2 Inventory Command";
@@ -951,11 +870,9 @@
             this.gbImpinj.Controls.Add(this.cbImpinjReducedPowerFrequencyMode);
             this.gbImpinj.Controls.Add(this.cbImpiJSearchMode);
             this.gbImpinj.Controls.Add(this.lblImpinjInventorySearchMode);
-            this.gbImpinj.Location = new System.Drawing.Point(8, 311);
-            this.gbImpinj.Margin = new System.Windows.Forms.Padding(4);
+            this.gbImpinj.Location = new System.Drawing.Point(6, 249);
             this.gbImpinj.Name = "gbImpinj";
-            this.gbImpinj.Padding = new System.Windows.Forms.Padding(4);
-            this.gbImpinj.Size = new System.Drawing.Size(328, 291);
+            this.gbImpinj.Size = new System.Drawing.Size(246, 233);
             this.gbImpinj.TabIndex = 4;
             this.gbImpinj.TabStop = false;
             this.gbImpinj.Text = "Impinj";
@@ -963,30 +880,27 @@
             // lblScope2
             // 
             this.lblScope2.AutoSize = true;
-            this.lblScope2.Location = new System.Drawing.Point(163, 255);
-            this.lblScope2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblScope2.Location = new System.Drawing.Point(122, 204);
             this.lblScope2.Name = "lblScope2";
-            this.lblScope2.Size = new System.Drawing.Size(63, 15);
+            this.lblScope2.Size = new System.Drawing.Size(47, 12);
             this.lblScope2.TabIndex = 13;
             this.lblScope2.Text = "0-65000";
             // 
             // lblScope1
             // 
             this.lblScope1.AutoSize = true;
-            this.lblScope1.Location = new System.Drawing.Point(159, 210);
-            this.lblScope1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblScope1.Location = new System.Drawing.Point(119, 168);
             this.lblScope1.Name = "lblScope1";
-            this.lblScope1.Size = new System.Drawing.Size(63, 15);
+            this.lblScope1.Size = new System.Drawing.Size(47, 12);
             this.lblScope1.TabIndex = 12;
             this.lblScope1.Text = "0-65000";
             // 
             // cbImpinjLowDutyCycleMode
             // 
             this.cbImpinjLowDutyCycleMode.AutoSize = true;
-            this.cbImpinjLowDutyCycleMode.Location = new System.Drawing.Point(7, 158);
-            this.cbImpinjLowDutyCycleMode.Margin = new System.Windows.Forms.Padding(4);
+            this.cbImpinjLowDutyCycleMode.Location = new System.Drawing.Point(5, 126);
             this.cbImpinjLowDutyCycleMode.Name = "cbImpinjLowDutyCycleMode";
-            this.cbImpinjLowDutyCycleMode.Size = new System.Drawing.Size(237, 19);
+            this.cbImpinjLowDutyCycleMode.Size = new System.Drawing.Size(180, 16);
             this.cbImpinjLowDutyCycleMode.TabIndex = 9;
             this.cbImpinjLowDutyCycleMode.Text = "Impinj Low Duty Cycle Mode";
             this.cbImpinjLowDutyCycleMode.UseVisualStyleBackColor = true;
@@ -996,69 +910,63 @@
             // 
             this.lblEmptyFieldTimeout.AutoSize = true;
             this.lblEmptyFieldTimeout.Enabled = false;
-            this.lblEmptyFieldTimeout.Location = new System.Drawing.Point(28, 181);
-            this.lblEmptyFieldTimeout.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmptyFieldTimeout.Location = new System.Drawing.Point(21, 145);
             this.lblEmptyFieldTimeout.Name = "lblEmptyFieldTimeout";
-            this.lblEmptyFieldTimeout.Size = new System.Drawing.Size(199, 15);
+            this.lblEmptyFieldTimeout.Size = new System.Drawing.Size(149, 12);
             this.lblEmptyFieldTimeout.TabIndex = 10;
             this.lblEmptyFieldTimeout.Text = "Empty Field Timeout (ms)";
             // 
             // tbxEmptyFieldTimeout
             // 
             this.tbxEmptyFieldTimeout.Enabled = false;
-            this.tbxEmptyFieldTimeout.Location = new System.Drawing.Point(48, 202);
-            this.tbxEmptyFieldTimeout.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxEmptyFieldTimeout.Location = new System.Drawing.Point(36, 162);
             this.tbxEmptyFieldTimeout.Name = "tbxEmptyFieldTimeout";
-            this.tbxEmptyFieldTimeout.Size = new System.Drawing.Size(101, 25);
+            this.tbxEmptyFieldTimeout.Size = new System.Drawing.Size(77, 21);
             this.tbxEmptyFieldTimeout.TabIndex = 11;
             // 
             // tbxFieldPingInterval
             // 
             this.tbxFieldPingInterval.Enabled = false;
-            this.tbxFieldPingInterval.Location = new System.Drawing.Point(48, 251);
-            this.tbxFieldPingInterval.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxFieldPingInterval.Location = new System.Drawing.Point(36, 201);
             this.tbxFieldPingInterval.Name = "tbxFieldPingInterval";
-            this.tbxFieldPingInterval.Size = new System.Drawing.Size(101, 25);
+            this.tbxFieldPingInterval.Size = new System.Drawing.Size(77, 21);
             this.tbxFieldPingInterval.TabIndex = 10;
             // 
             // lblFieldPingInterval
             // 
             this.lblFieldPingInterval.AutoSize = true;
             this.lblFieldPingInterval.Enabled = false;
-            this.lblFieldPingInterval.Location = new System.Drawing.Point(28, 232);
-            this.lblFieldPingInterval.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFieldPingInterval.Location = new System.Drawing.Point(21, 186);
             this.lblFieldPingInterval.Name = "lblFieldPingInterval";
-            this.lblFieldPingInterval.Size = new System.Drawing.Size(199, 15);
+            this.lblFieldPingInterval.Size = new System.Drawing.Size(149, 12);
             this.lblFieldPingInterval.TabIndex = 9;
             this.lblFieldPingInterval.Text = "Field Ping Interval (ms)";
             // 
             // tbxReducedChannelList
             // 
             this.tbxReducedChannelList.Enabled = false;
-            this.tbxReducedChannelList.Location = new System.Drawing.Point(48, 124);
-            this.tbxReducedChannelList.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxReducedChannelList.Location = new System.Drawing.Point(36, 99);
             this.tbxReducedChannelList.Name = "tbxReducedChannelList";
-            this.tbxReducedChannelList.Size = new System.Drawing.Size(168, 25);
+            this.tbxReducedChannelList.Size = new System.Drawing.Size(127, 21);
             this.tbxReducedChannelList.TabIndex = 8;
+            this.tbxReducedChannelList.TextChanged += new System.EventHandler(this.tbxReducedChannelList_TextChanged);
             // 
             // lblReducedChannelList
             // 
             this.lblReducedChannelList.AutoSize = true;
             this.lblReducedChannelList.Enabled = false;
-            this.lblReducedChannelList.Location = new System.Drawing.Point(27, 102);
-            this.lblReducedChannelList.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblReducedChannelList.Location = new System.Drawing.Point(20, 82);
             this.lblReducedChannelList.Name = "lblReducedChannelList";
-            this.lblReducedChannelList.Size = new System.Drawing.Size(215, 15);
+            this.lblReducedChannelList.Size = new System.Drawing.Size(161, 12);
             this.lblReducedChannelList.TabIndex = 7;
             this.lblReducedChannelList.Text = "Channel List (e.g.1,3,6,7)";
             // 
             // cbImpinjReducedPowerFrequencyMode
             // 
             this.cbImpinjReducedPowerFrequencyMode.AutoSize = true;
-            this.cbImpinjReducedPowerFrequencyMode.Location = new System.Drawing.Point(7, 78);
-            this.cbImpinjReducedPowerFrequencyMode.Margin = new System.Windows.Forms.Padding(4);
+            this.cbImpinjReducedPowerFrequencyMode.Location = new System.Drawing.Point(5, 62);
             this.cbImpinjReducedPowerFrequencyMode.Name = "cbImpinjReducedPowerFrequencyMode";
-            this.cbImpinjReducedPowerFrequencyMode.Size = new System.Drawing.Size(309, 19);
+            this.cbImpinjReducedPowerFrequencyMode.Size = new System.Drawing.Size(234, 16);
             this.cbImpinjReducedPowerFrequencyMode.TabIndex = 6;
             this.cbImpinjReducedPowerFrequencyMode.Text = "Impinj Reduced Power Frequency Mode";
             this.cbImpinjReducedPowerFrequencyMode.UseVisualStyleBackColor = true;
@@ -1067,19 +975,17 @@
             // cbImpiJSearchMode
             // 
             this.cbImpiJSearchMode.FormattingEnabled = true;
-            this.cbImpiJSearchMode.Location = new System.Drawing.Point(31, 45);
-            this.cbImpiJSearchMode.Margin = new System.Windows.Forms.Padding(4);
+            this.cbImpiJSearchMode.Location = new System.Drawing.Point(23, 36);
             this.cbImpiJSearchMode.Name = "cbImpiJSearchMode";
-            this.cbImpiJSearchMode.Size = new System.Drawing.Size(245, 23);
+            this.cbImpiJSearchMode.Size = new System.Drawing.Size(185, 20);
             this.cbImpiJSearchMode.TabIndex = 1;
             // 
             // lblImpinjInventorySearchMode
             // 
             this.lblImpinjInventorySearchMode.AutoSize = true;
-            this.lblImpinjInventorySearchMode.Location = new System.Drawing.Point(5, 26);
-            this.lblImpinjInventorySearchMode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblImpinjInventorySearchMode.Location = new System.Drawing.Point(4, 21);
             this.lblImpinjInventorySearchMode.Name = "lblImpinjInventorySearchMode";
-            this.lblImpinjInventorySearchMode.Size = new System.Drawing.Size(175, 15);
+            this.lblImpinjInventorySearchMode.Size = new System.Drawing.Size(131, 12);
             this.lblImpinjInventorySearchMode.TabIndex = 0;
             this.lblImpinjInventorySearchMode.Text = "Inventory Search Mode";
             // 
@@ -1092,11 +998,9 @@
             this.gbC1G2SingulationControl.Controls.Add(this.lblTagPopulation);
             this.gbC1G2SingulationControl.Controls.Add(this.cbSession);
             this.gbC1G2SingulationControl.Controls.Add(this.lblSession);
-            this.gbC1G2SingulationControl.Location = new System.Drawing.Point(8, 149);
-            this.gbC1G2SingulationControl.Margin = new System.Windows.Forms.Padding(4);
+            this.gbC1G2SingulationControl.Location = new System.Drawing.Point(6, 119);
             this.gbC1G2SingulationControl.Name = "gbC1G2SingulationControl";
-            this.gbC1G2SingulationControl.Padding = new System.Windows.Forms.Padding(4);
-            this.gbC1G2SingulationControl.Size = new System.Drawing.Size(328, 155);
+            this.gbC1G2SingulationControl.Size = new System.Drawing.Size(246, 124);
             this.gbC1G2SingulationControl.TabIndex = 3;
             this.gbC1G2SingulationControl.TabStop = false;
             this.gbC1G2SingulationControl.Text = "C1G2 Singulation Control";
@@ -1104,65 +1008,58 @@
             // lblScope3
             // 
             this.lblScope3.AutoSize = true;
-            this.lblScope3.Location = new System.Drawing.Point(180, 74);
-            this.lblScope3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblScope3.Location = new System.Drawing.Point(135, 59);
             this.lblScope3.Name = "lblScope3";
-            this.lblScope3.Size = new System.Drawing.Size(63, 15);
+            this.lblScope3.Size = new System.Drawing.Size(47, 12);
             this.lblScope3.TabIndex = 14;
             this.lblScope3.Text = "0-65000";
             // 
             // tbxTagTransitTime
             // 
-            this.tbxTagTransitTime.Location = new System.Drawing.Point(31, 121);
-            this.tbxTagTransitTime.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxTagTransitTime.Location = new System.Drawing.Point(23, 97);
             this.tbxTagTransitTime.Name = "tbxTagTransitTime";
-            this.tbxTagTransitTime.Size = new System.Drawing.Size(133, 25);
+            this.tbxTagTransitTime.Size = new System.Drawing.Size(101, 21);
             this.tbxTagTransitTime.TabIndex = 5;
             // 
             // lblTagTransmiteTime
             // 
             this.lblTagTransmiteTime.AutoSize = true;
-            this.lblTagTransmiteTime.Location = new System.Drawing.Point(8, 102);
-            this.lblTagTransmiteTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTagTransmiteTime.Location = new System.Drawing.Point(6, 82);
             this.lblTagTransmiteTime.Name = "lblTagTransmiteTime";
-            this.lblTagTransmiteTime.Size = new System.Drawing.Size(175, 15);
+            this.lblTagTransmiteTime.Size = new System.Drawing.Size(131, 12);
             this.lblTagTransmiteTime.TabIndex = 4;
             this.lblTagTransmiteTime.Text = "Tag Transit Time (ms)";
             // 
             // tbxTagPopulation
             // 
-            this.tbxTagPopulation.Location = new System.Drawing.Point(31, 70);
-            this.tbxTagPopulation.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxTagPopulation.Location = new System.Drawing.Point(23, 56);
             this.tbxTagPopulation.Name = "tbxTagPopulation";
-            this.tbxTagPopulation.Size = new System.Drawing.Size(133, 25);
+            this.tbxTagPopulation.Size = new System.Drawing.Size(101, 21);
             this.tbxTagPopulation.TabIndex = 3;
             // 
             // lblTagPopulation
             // 
             this.lblTagPopulation.AutoSize = true;
-            this.lblTagPopulation.Location = new System.Drawing.Point(8, 51);
-            this.lblTagPopulation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTagPopulation.Location = new System.Drawing.Point(6, 41);
             this.lblTagPopulation.Name = "lblTagPopulation";
-            this.lblTagPopulation.Size = new System.Drawing.Size(119, 15);
+            this.lblTagPopulation.Size = new System.Drawing.Size(89, 12);
             this.lblTagPopulation.TabIndex = 2;
             this.lblTagPopulation.Text = "Tag Population";
             // 
             // cbSession
             // 
             this.cbSession.FormattingEnabled = true;
-            this.cbSession.Location = new System.Drawing.Point(128, 22);
-            this.cbSession.Margin = new System.Windows.Forms.Padding(4);
+            this.cbSession.Location = new System.Drawing.Point(96, 18);
             this.cbSession.Name = "cbSession";
-            this.cbSession.Size = new System.Drawing.Size(193, 23);
+            this.cbSession.Size = new System.Drawing.Size(146, 20);
             this.cbSession.TabIndex = 1;
             // 
             // lblSession
             // 
             this.lblSession.AutoSize = true;
-            this.lblSession.Location = new System.Drawing.Point(9, 26);
-            this.lblSession.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSession.Location = new System.Drawing.Point(7, 21);
             this.lblSession.Name = "lblSession";
-            this.lblSession.Size = new System.Drawing.Size(63, 15);
+            this.lblSession.Size = new System.Drawing.Size(47, 12);
             this.lblSession.TabIndex = 0;
             this.lblSession.Text = "Session";
             // 
@@ -1172,59 +1069,53 @@
             this.gbC1G2RFControl.Controls.Add(this.lblTari);
             this.gbC1G2RFControl.Controls.Add(this.cbModeIndex);
             this.gbC1G2RFControl.Controls.Add(this.lblModeIndex);
-            this.gbC1G2RFControl.Location = new System.Drawing.Point(8, 52);
-            this.gbC1G2RFControl.Margin = new System.Windows.Forms.Padding(4);
+            this.gbC1G2RFControl.Location = new System.Drawing.Point(6, 42);
             this.gbC1G2RFControl.Name = "gbC1G2RFControl";
-            this.gbC1G2RFControl.Padding = new System.Windows.Forms.Padding(4);
-            this.gbC1G2RFControl.Size = new System.Drawing.Size(328, 89);
+            this.gbC1G2RFControl.Size = new System.Drawing.Size(246, 71);
             this.gbC1G2RFControl.TabIndex = 2;
             this.gbC1G2RFControl.TabStop = false;
             this.gbC1G2RFControl.Text = "C1G2 RF Control";
             // 
             // tbxTari
             // 
-            this.tbxTari.Location = new System.Drawing.Point(128, 55);
-            this.tbxTari.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxTari.Location = new System.Drawing.Point(96, 44);
             this.tbxTari.Name = "tbxTari";
-            this.tbxTari.Size = new System.Drawing.Size(193, 25);
+            this.tbxTari.Size = new System.Drawing.Size(146, 21);
             this.tbxTari.TabIndex = 3;
             // 
             // lblTari
             // 
             this.lblTari.AutoSize = true;
-            this.lblTari.Location = new System.Drawing.Point(8, 60);
-            this.lblTari.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTari.Location = new System.Drawing.Point(6, 48);
             this.lblTari.Name = "lblTari";
-            this.lblTari.Size = new System.Drawing.Size(79, 15);
+            this.lblTari.Size = new System.Drawing.Size(59, 12);
             this.lblTari.TabIndex = 2;
             this.lblTari.Text = "Tari (ns)";
             // 
             // cbModeIndex
             // 
             this.cbModeIndex.FormattingEnabled = true;
-            this.cbModeIndex.Location = new System.Drawing.Point(128, 22);
-            this.cbModeIndex.Margin = new System.Windows.Forms.Padding(4);
+            this.cbModeIndex.Location = new System.Drawing.Point(96, 18);
             this.cbModeIndex.Name = "cbModeIndex";
-            this.cbModeIndex.Size = new System.Drawing.Size(193, 23);
+            this.cbModeIndex.Size = new System.Drawing.Size(146, 20);
             this.cbModeIndex.TabIndex = 1;
+            this.cbModeIndex.SelectedIndexChanged += new System.EventHandler(this.cbModeIndex_SelectedIndexChanged);
             // 
             // lblModeIndex
             // 
             this.lblModeIndex.AutoSize = true;
-            this.lblModeIndex.Location = new System.Drawing.Point(8, 29);
-            this.lblModeIndex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModeIndex.Location = new System.Drawing.Point(6, 23);
             this.lblModeIndex.Name = "lblModeIndex";
-            this.lblModeIndex.Size = new System.Drawing.Size(119, 15);
+            this.lblModeIndex.Size = new System.Drawing.Size(89, 12);
             this.lblModeIndex.TabIndex = 0;
             this.lblModeIndex.Text = "Inventory Mode";
             // 
             // lblTagInventoryStateAware
             // 
             this.lblTagInventoryStateAware.AutoSize = true;
-            this.lblTagInventoryStateAware.Location = new System.Drawing.Point(5, 24);
-            this.lblTagInventoryStateAware.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTagInventoryStateAware.Location = new System.Drawing.Point(4, 19);
             this.lblTagInventoryStateAware.Name = "lblTagInventoryStateAware";
-            this.lblTagInventoryStateAware.Size = new System.Drawing.Size(207, 15);
+            this.lblTagInventoryStateAware.Size = new System.Drawing.Size(155, 12);
             this.lblTagInventoryStateAware.TabIndex = 1;
             this.lblTagInventoryStateAware.Text = "Tag Inventory State Aware";
             // 
@@ -1234,20 +1125,19 @@
             this.cbTagInventoryStateAware.Items.AddRange(new object[] {
             "false",
             "true"});
-            this.cbTagInventoryStateAware.Location = new System.Drawing.Point(233, 20);
-            this.cbTagInventoryStateAware.Margin = new System.Windows.Forms.Padding(4);
+            this.cbTagInventoryStateAware.Location = new System.Drawing.Point(175, 16);
             this.cbTagInventoryStateAware.Name = "cbTagInventoryStateAware";
-            this.cbTagInventoryStateAware.Size = new System.Drawing.Size(96, 23);
+            this.cbTagInventoryStateAware.Size = new System.Drawing.Size(73, 20);
             this.cbTagInventoryStateAware.TabIndex = 0;
             this.cbTagInventoryStateAware.Text = "false";
+            this.cbTagInventoryStateAware.SelectedIndexChanged += new System.EventHandler(this.cbTagInventoryStateAware_SelectedIndexChanged);
             // 
             // cbAntenna3
             // 
             this.cbAntenna3.AutoSize = true;
-            this.cbAntenna3.Location = new System.Drawing.Point(183, 640);
-            this.cbAntenna3.Margin = new System.Windows.Forms.Padding(4);
+            this.cbAntenna3.Location = new System.Drawing.Point(137, 512);
             this.cbAntenna3.Name = "cbAntenna3";
-            this.cbAntenna3.Size = new System.Drawing.Size(37, 19);
+            this.cbAntenna3.Size = new System.Drawing.Size(30, 16);
             this.cbAntenna3.TabIndex = 17;
             this.cbAntenna3.Text = "3";
             this.cbAntenna3.UseVisualStyleBackColor = true;
@@ -1256,10 +1146,9 @@
             // 
             this.cbAntenna2.AutoSize = true;
             this.cbAntenna2.Enabled = false;
-            this.cbAntenna2.Location = new System.Drawing.Point(139, 640);
-            this.cbAntenna2.Margin = new System.Windows.Forms.Padding(4);
+            this.cbAntenna2.Location = new System.Drawing.Point(104, 512);
             this.cbAntenna2.Name = "cbAntenna2";
-            this.cbAntenna2.Size = new System.Drawing.Size(37, 19);
+            this.cbAntenna2.Size = new System.Drawing.Size(30, 16);
             this.cbAntenna2.TabIndex = 16;
             this.cbAntenna2.Text = "2";
             this.cbAntenna2.UseVisualStyleBackColor = true;
@@ -1267,21 +1156,20 @@
             // cbAntenna1
             // 
             this.cbAntenna1.AutoSize = true;
-            this.cbAntenna1.Location = new System.Drawing.Point(97, 640);
-            this.cbAntenna1.Margin = new System.Windows.Forms.Padding(4);
+            this.cbAntenna1.Location = new System.Drawing.Point(73, 512);
             this.cbAntenna1.Name = "cbAntenna1";
-            this.cbAntenna1.Size = new System.Drawing.Size(37, 19);
+            this.cbAntenna1.Size = new System.Drawing.Size(30, 16);
             this.cbAntenna1.TabIndex = 15;
             this.cbAntenna1.Text = "1";
             this.cbAntenna1.UseVisualStyleBackColor = true;
+            this.cbAntenna1.CheckedChanged += new System.EventHandler(this.cbAntenna1_CheckedChanged);
             // 
             // lblAntennaID
             // 
             this.lblAntennaID.AutoSize = true;
-            this.lblAntennaID.Location = new System.Drawing.Point(11, 641);
-            this.lblAntennaID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAntennaID.Location = new System.Drawing.Point(8, 513);
             this.lblAntennaID.Name = "lblAntennaID";
-            this.lblAntennaID.Size = new System.Drawing.Size(79, 15);
+            this.lblAntennaID.Size = new System.Drawing.Size(59, 12);
             this.lblAntennaID.TabIndex = 13;
             this.lblAntennaID.Text = "AntennaID";
             // 
@@ -1294,10 +1182,9 @@
             this.tpRoSpec.Controls.Add(this.lblN);
             this.tpRoSpec.Controls.Add(this.cbROReportTrigger);
             this.tpRoSpec.Controls.Add(this.lblROReportTrigger);
-            this.tpRoSpec.Location = new System.Drawing.Point(4, 25);
-            this.tpRoSpec.Margin = new System.Windows.Forms.Padding(4);
+            this.tpRoSpec.Location = new System.Drawing.Point(4, 22);
             this.tpRoSpec.Name = "tpRoSpec";
-            this.tpRoSpec.Size = new System.Drawing.Size(371, 846);
+            this.tpRoSpec.Size = new System.Drawing.Size(276, 674);
             this.tpRoSpec.TabIndex = 2;
             this.tpRoSpec.Text = "RoSpec";
             this.tpRoSpec.UseVisualStyleBackColor = true;
@@ -1310,11 +1197,9 @@
             this.gbImpinjTagReportContentSelector.Controls.Add(this.cbImpinjEnablePeakRSSI);
             this.gbImpinjTagReportContentSelector.Controls.Add(this.cbImpinjEnableOptimizedRead);
             this.gbImpinjTagReportContentSelector.Controls.Add(this.cbImpinjEnableGPSCoordinates);
-            this.gbImpinjTagReportContentSelector.Location = new System.Drawing.Point(13, 539);
-            this.gbImpinjTagReportContentSelector.Margin = new System.Windows.Forms.Padding(4);
+            this.gbImpinjTagReportContentSelector.Location = new System.Drawing.Point(10, 431);
             this.gbImpinjTagReportContentSelector.Name = "gbImpinjTagReportContentSelector";
-            this.gbImpinjTagReportContentSelector.Padding = new System.Windows.Forms.Padding(4);
-            this.gbImpinjTagReportContentSelector.Size = new System.Drawing.Size(336, 195);
+            this.gbImpinjTagReportContentSelector.Size = new System.Drawing.Size(252, 156);
             this.gbImpinjTagReportContentSelector.TabIndex = 12;
             this.gbImpinjTagReportContentSelector.TabStop = false;
             this.gbImpinjTagReportContentSelector.Text = "Impinj Tag Report Content Selector";
@@ -1322,10 +1207,9 @@
             // cbImpinjEnableSerializedTID
             // 
             this.cbImpinjEnableSerializedTID.AutoSize = true;
-            this.cbImpinjEnableSerializedTID.Location = new System.Drawing.Point(9, 25);
-            this.cbImpinjEnableSerializedTID.Margin = new System.Windows.Forms.Padding(4);
+            this.cbImpinjEnableSerializedTID.Location = new System.Drawing.Point(7, 20);
             this.cbImpinjEnableSerializedTID.Name = "cbImpinjEnableSerializedTID";
-            this.cbImpinjEnableSerializedTID.Size = new System.Drawing.Size(253, 19);
+            this.cbImpinjEnableSerializedTID.Size = new System.Drawing.Size(192, 16);
             this.cbImpinjEnableSerializedTID.TabIndex = 5;
             this.cbImpinjEnableSerializedTID.Text = "Impinj Enable Serialized TID";
             this.cbImpinjEnableSerializedTID.UseVisualStyleBackColor = true;
@@ -1333,10 +1217,9 @@
             // cbImpinjEnableRFPhaseAngle
             // 
             this.cbImpinjEnableRFPhaseAngle.AutoSize = true;
-            this.cbImpinjEnableRFPhaseAngle.Location = new System.Drawing.Point(8, 52);
-            this.cbImpinjEnableRFPhaseAngle.Margin = new System.Windows.Forms.Padding(4);
+            this.cbImpinjEnableRFPhaseAngle.Location = new System.Drawing.Point(6, 42);
             this.cbImpinjEnableRFPhaseAngle.Name = "cbImpinjEnableRFPhaseAngle";
-            this.cbImpinjEnableRFPhaseAngle.Size = new System.Drawing.Size(253, 19);
+            this.cbImpinjEnableRFPhaseAngle.Size = new System.Drawing.Size(192, 16);
             this.cbImpinjEnableRFPhaseAngle.TabIndex = 4;
             this.cbImpinjEnableRFPhaseAngle.Text = "Impinj Enable RF Phase Angle";
             this.cbImpinjEnableRFPhaseAngle.UseVisualStyleBackColor = true;
@@ -1344,10 +1227,9 @@
             // cbImpinjEnableRFDopplerFrequency
             // 
             this.cbImpinjEnableRFDopplerFrequency.AutoSize = true;
-            this.cbImpinjEnableRFDopplerFrequency.Location = new System.Drawing.Point(8, 164);
-            this.cbImpinjEnableRFDopplerFrequency.Margin = new System.Windows.Forms.Padding(4);
+            this.cbImpinjEnableRFDopplerFrequency.Location = new System.Drawing.Point(6, 131);
             this.cbImpinjEnableRFDopplerFrequency.Name = "cbImpinjEnableRFDopplerFrequency";
-            this.cbImpinjEnableRFDopplerFrequency.Size = new System.Drawing.Size(301, 19);
+            this.cbImpinjEnableRFDopplerFrequency.Size = new System.Drawing.Size(228, 16);
             this.cbImpinjEnableRFDopplerFrequency.TabIndex = 3;
             this.cbImpinjEnableRFDopplerFrequency.Text = "Impinj Enable RF Doppler Frequency";
             this.cbImpinjEnableRFDopplerFrequency.UseVisualStyleBackColor = true;
@@ -1355,10 +1237,9 @@
             // cbImpinjEnablePeakRSSI
             // 
             this.cbImpinjEnablePeakRSSI.AutoSize = true;
-            this.cbImpinjEnablePeakRSSI.Location = new System.Drawing.Point(8, 81);
-            this.cbImpinjEnablePeakRSSI.Margin = new System.Windows.Forms.Padding(4);
+            this.cbImpinjEnablePeakRSSI.Location = new System.Drawing.Point(6, 65);
             this.cbImpinjEnablePeakRSSI.Name = "cbImpinjEnablePeakRSSI";
-            this.cbImpinjEnablePeakRSSI.Size = new System.Drawing.Size(213, 19);
+            this.cbImpinjEnablePeakRSSI.Size = new System.Drawing.Size(162, 16);
             this.cbImpinjEnablePeakRSSI.TabIndex = 2;
             this.cbImpinjEnablePeakRSSI.Text = "Impinj Enable Peak RSSI";
             this.cbImpinjEnablePeakRSSI.UseVisualStyleBackColor = true;
@@ -1366,10 +1247,9 @@
             // cbImpinjEnableOptimizedRead
             // 
             this.cbImpinjEnableOptimizedRead.AutoSize = true;
-            this.cbImpinjEnableOptimizedRead.Location = new System.Drawing.Point(9, 136);
-            this.cbImpinjEnableOptimizedRead.Margin = new System.Windows.Forms.Padding(4);
+            this.cbImpinjEnableOptimizedRead.Location = new System.Drawing.Point(7, 109);
             this.cbImpinjEnableOptimizedRead.Name = "cbImpinjEnableOptimizedRead";
-            this.cbImpinjEnableOptimizedRead.Size = new System.Drawing.Size(253, 19);
+            this.cbImpinjEnableOptimizedRead.Size = new System.Drawing.Size(192, 16);
             this.cbImpinjEnableOptimizedRead.TabIndex = 1;
             this.cbImpinjEnableOptimizedRead.Text = "Impinj Enable Optimized Read";
             this.cbImpinjEnableOptimizedRead.UseVisualStyleBackColor = true;
@@ -1377,10 +1257,9 @@
             // cbImpinjEnableGPSCoordinates
             // 
             this.cbImpinjEnableGPSCoordinates.AutoSize = true;
-            this.cbImpinjEnableGPSCoordinates.Location = new System.Drawing.Point(9, 109);
-            this.cbImpinjEnableGPSCoordinates.Margin = new System.Windows.Forms.Padding(4);
+            this.cbImpinjEnableGPSCoordinates.Location = new System.Drawing.Point(7, 87);
             this.cbImpinjEnableGPSCoordinates.Name = "cbImpinjEnableGPSCoordinates";
-            this.cbImpinjEnableGPSCoordinates.Size = new System.Drawing.Size(261, 19);
+            this.cbImpinjEnableGPSCoordinates.Size = new System.Drawing.Size(198, 16);
             this.cbImpinjEnableGPSCoordinates.TabIndex = 0;
             this.cbImpinjEnableGPSCoordinates.Text = "Impinj Enable GPS Coordinates";
             this.cbImpinjEnableGPSCoordinates.UseVisualStyleBackColor = true;
@@ -1398,11 +1277,9 @@
             this.gbTagReportContentSelector.Controls.Add(this.cbEnableInventoryParameterSpecID);
             this.gbTagReportContentSelector.Controls.Add(this.cbEnableAntennaID);
             this.gbTagReportContentSelector.Controls.Add(this.cbEnableFirstSeenTimestamp);
-            this.gbTagReportContentSelector.Location = new System.Drawing.Point(8, 112);
-            this.gbTagReportContentSelector.Margin = new System.Windows.Forms.Padding(4);
+            this.gbTagReportContentSelector.Location = new System.Drawing.Point(6, 90);
             this.gbTagReportContentSelector.Name = "gbTagReportContentSelector";
-            this.gbTagReportContentSelector.Padding = new System.Windows.Forms.Padding(4);
-            this.gbTagReportContentSelector.Size = new System.Drawing.Size(341, 408);
+            this.gbTagReportContentSelector.Size = new System.Drawing.Size(256, 326);
             this.gbTagReportContentSelector.TabIndex = 11;
             this.gbTagReportContentSelector.TabStop = false;
             this.gbTagReportContentSelector.Text = "Tag Report Content Selector";
@@ -1411,11 +1288,9 @@
             // 
             this.gbC1G2EPCMemorySelector.Controls.Add(this.cbEnablePCBits);
             this.gbC1G2EPCMemorySelector.Controls.Add(this.cbEnableCRC);
-            this.gbC1G2EPCMemorySelector.Location = new System.Drawing.Point(9, 311);
-            this.gbC1G2EPCMemorySelector.Margin = new System.Windows.Forms.Padding(4);
+            this.gbC1G2EPCMemorySelector.Location = new System.Drawing.Point(7, 249);
             this.gbC1G2EPCMemorySelector.Name = "gbC1G2EPCMemorySelector";
-            this.gbC1G2EPCMemorySelector.Padding = new System.Windows.Forms.Padding(4);
-            this.gbC1G2EPCMemorySelector.Size = new System.Drawing.Size(324, 80);
+            this.gbC1G2EPCMemorySelector.Size = new System.Drawing.Size(243, 64);
             this.gbC1G2EPCMemorySelector.TabIndex = 10;
             this.gbC1G2EPCMemorySelector.TabStop = false;
             this.gbC1G2EPCMemorySelector.Text = "C1G2 EPC Memory Selector";
@@ -1423,10 +1298,9 @@
             // cbEnablePCBits
             // 
             this.cbEnablePCBits.AutoSize = true;
-            this.cbEnablePCBits.Location = new System.Drawing.Point(9, 50);
-            this.cbEnablePCBits.Margin = new System.Windows.Forms.Padding(4);
+            this.cbEnablePCBits.Location = new System.Drawing.Point(7, 40);
             this.cbEnablePCBits.Name = "cbEnablePCBits";
-            this.cbEnablePCBits.Size = new System.Drawing.Size(141, 19);
+            this.cbEnablePCBits.Size = new System.Drawing.Size(108, 16);
             this.cbEnablePCBits.TabIndex = 1;
             this.cbEnablePCBits.Text = "Enable PC Bits";
             this.cbEnablePCBits.UseVisualStyleBackColor = true;
@@ -1434,10 +1308,9 @@
             // cbEnableCRC
             // 
             this.cbEnableCRC.AutoSize = true;
-            this.cbEnableCRC.Location = new System.Drawing.Point(9, 26);
-            this.cbEnableCRC.Margin = new System.Windows.Forms.Padding(4);
+            this.cbEnableCRC.Location = new System.Drawing.Point(7, 21);
             this.cbEnableCRC.Name = "cbEnableCRC";
-            this.cbEnableCRC.Size = new System.Drawing.Size(109, 19);
+            this.cbEnableCRC.Size = new System.Drawing.Size(84, 16);
             this.cbEnableCRC.TabIndex = 0;
             this.cbEnableCRC.Text = "Enable CRC";
             this.cbEnableCRC.UseVisualStyleBackColor = true;
@@ -1445,10 +1318,9 @@
             // cbEnableTagSeenCount
             // 
             this.cbEnableTagSeenCount.AutoSize = true;
-            this.cbEnableTagSeenCount.Location = new System.Drawing.Point(8, 255);
-            this.cbEnableTagSeenCount.Margin = new System.Windows.Forms.Padding(4);
+            this.cbEnableTagSeenCount.Location = new System.Drawing.Point(6, 204);
             this.cbEnableTagSeenCount.Name = "cbEnableTagSeenCount";
-            this.cbEnableTagSeenCount.Size = new System.Drawing.Size(189, 19);
+            this.cbEnableTagSeenCount.Size = new System.Drawing.Size(144, 16);
             this.cbEnableTagSeenCount.TabIndex = 9;
             this.cbEnableTagSeenCount.Text = "Enable TagSeen Count";
             this.cbEnableTagSeenCount.UseVisualStyleBackColor = true;
@@ -1456,10 +1328,9 @@
             // cbEnableSpecIndex
             // 
             this.cbEnableSpecIndex.AutoSize = true;
-            this.cbEnableSpecIndex.Location = new System.Drawing.Point(8, 55);
-            this.cbEnableSpecIndex.Margin = new System.Windows.Forms.Padding(4);
+            this.cbEnableSpecIndex.Location = new System.Drawing.Point(6, 44);
             this.cbEnableSpecIndex.Name = "cbEnableSpecIndex";
-            this.cbEnableSpecIndex.Size = new System.Drawing.Size(165, 19);
+            this.cbEnableSpecIndex.Size = new System.Drawing.Size(126, 16);
             this.cbEnableSpecIndex.TabIndex = 8;
             this.cbEnableSpecIndex.Text = "Enable Spec Index";
             this.cbEnableSpecIndex.UseVisualStyleBackColor = true;
@@ -1467,10 +1338,9 @@
             // cbEnableROSpecID
             // 
             this.cbEnableROSpecID.AutoSize = true;
-            this.cbEnableROSpecID.Location = new System.Drawing.Point(8, 28);
-            this.cbEnableROSpecID.Margin = new System.Windows.Forms.Padding(4);
+            this.cbEnableROSpecID.Location = new System.Drawing.Point(6, 22);
             this.cbEnableROSpecID.Name = "cbEnableROSpecID";
-            this.cbEnableROSpecID.Size = new System.Drawing.Size(165, 19);
+            this.cbEnableROSpecID.Size = new System.Drawing.Size(126, 16);
             this.cbEnableROSpecID.TabIndex = 7;
             this.cbEnableROSpecID.Text = "Enable RO Spec ID";
             this.cbEnableROSpecID.UseVisualStyleBackColor = true;
@@ -1478,10 +1348,9 @@
             // cbEnablePeakRSSI
             // 
             this.cbEnablePeakRSSI.AutoSize = true;
-            this.cbEnablePeakRSSI.Location = new System.Drawing.Point(8, 172);
-            this.cbEnablePeakRSSI.Margin = new System.Windows.Forms.Padding(4);
+            this.cbEnablePeakRSSI.Location = new System.Drawing.Point(6, 138);
             this.cbEnablePeakRSSI.Name = "cbEnablePeakRSSI";
-            this.cbEnablePeakRSSI.Size = new System.Drawing.Size(157, 19);
+            this.cbEnablePeakRSSI.Size = new System.Drawing.Size(120, 16);
             this.cbEnablePeakRSSI.TabIndex = 6;
             this.cbEnablePeakRSSI.Text = "Enable Peak RSSI";
             this.cbEnablePeakRSSI.UseVisualStyleBackColor = true;
@@ -1489,10 +1358,9 @@
             // cbEnableLastSeenTimestamp
             // 
             this.cbEnableLastSeenTimestamp.AutoSize = true;
-            this.cbEnableLastSeenTimestamp.Location = new System.Drawing.Point(8, 228);
-            this.cbEnableLastSeenTimestamp.Margin = new System.Windows.Forms.Padding(4);
+            this.cbEnableLastSeenTimestamp.Location = new System.Drawing.Point(6, 182);
             this.cbEnableLastSeenTimestamp.Name = "cbEnableLastSeenTimestamp";
-            this.cbEnableLastSeenTimestamp.Size = new System.Drawing.Size(229, 19);
+            this.cbEnableLastSeenTimestamp.Size = new System.Drawing.Size(174, 16);
             this.cbEnableLastSeenTimestamp.TabIndex = 5;
             this.cbEnableLastSeenTimestamp.Text = "Enable LastSeen Timestamp";
             this.cbEnableLastSeenTimestamp.UseVisualStyleBackColor = true;
@@ -1500,10 +1368,9 @@
             // cbEnableAccessSpecID
             // 
             this.cbEnableAccessSpecID.AutoSize = true;
-            this.cbEnableAccessSpecID.Location = new System.Drawing.Point(8, 282);
-            this.cbEnableAccessSpecID.Margin = new System.Windows.Forms.Padding(4);
+            this.cbEnableAccessSpecID.Location = new System.Drawing.Point(6, 226);
             this.cbEnableAccessSpecID.Name = "cbEnableAccessSpecID";
-            this.cbEnableAccessSpecID.Size = new System.Drawing.Size(197, 19);
+            this.cbEnableAccessSpecID.Size = new System.Drawing.Size(150, 16);
             this.cbEnableAccessSpecID.TabIndex = 0;
             this.cbEnableAccessSpecID.Text = "Enable Access Spec ID";
             this.cbEnableAccessSpecID.UseVisualStyleBackColor = true;
@@ -1511,10 +1378,9 @@
             // cbEnableChannelIndex
             // 
             this.cbEnableChannelIndex.AutoSize = true;
-            this.cbEnableChannelIndex.Location = new System.Drawing.Point(8, 142);
-            this.cbEnableChannelIndex.Margin = new System.Windows.Forms.Padding(4);
+            this.cbEnableChannelIndex.Location = new System.Drawing.Point(6, 114);
             this.cbEnableChannelIndex.Name = "cbEnableChannelIndex";
-            this.cbEnableChannelIndex.Size = new System.Drawing.Size(189, 19);
+            this.cbEnableChannelIndex.Size = new System.Drawing.Size(144, 16);
             this.cbEnableChannelIndex.TabIndex = 2;
             this.cbEnableChannelIndex.Text = "Enable Channel Index";
             this.cbEnableChannelIndex.UseVisualStyleBackColor = true;
@@ -1522,10 +1388,9 @@
             // cbEnableInventoryParameterSpecID
             // 
             this.cbEnableInventoryParameterSpecID.AutoSize = true;
-            this.cbEnableInventoryParameterSpecID.Location = new System.Drawing.Point(8, 82);
-            this.cbEnableInventoryParameterSpecID.Margin = new System.Windows.Forms.Padding(4);
+            this.cbEnableInventoryParameterSpecID.Location = new System.Drawing.Point(6, 66);
             this.cbEnableInventoryParameterSpecID.Name = "cbEnableInventoryParameterSpecID";
-            this.cbEnableInventoryParameterSpecID.Size = new System.Drawing.Size(301, 19);
+            this.cbEnableInventoryParameterSpecID.Size = new System.Drawing.Size(228, 16);
             this.cbEnableInventoryParameterSpecID.TabIndex = 4;
             this.cbEnableInventoryParameterSpecID.Text = "Enable Inventory Parameter Spec ID";
             this.cbEnableInventoryParameterSpecID.UseVisualStyleBackColor = true;
@@ -1533,10 +1398,9 @@
             // cbEnableAntennaID
             // 
             this.cbEnableAntennaID.AutoSize = true;
-            this.cbEnableAntennaID.Location = new System.Drawing.Point(8, 112);
-            this.cbEnableAntennaID.Margin = new System.Windows.Forms.Padding(4);
+            this.cbEnableAntennaID.Location = new System.Drawing.Point(6, 90);
             this.cbEnableAntennaID.Name = "cbEnableAntennaID";
-            this.cbEnableAntennaID.Size = new System.Drawing.Size(165, 19);
+            this.cbEnableAntennaID.Size = new System.Drawing.Size(126, 16);
             this.cbEnableAntennaID.TabIndex = 1;
             this.cbEnableAntennaID.Text = "Enable Antenna ID";
             this.cbEnableAntennaID.UseVisualStyleBackColor = true;
@@ -1544,20 +1408,18 @@
             // cbEnableFirstSeenTimestamp
             // 
             this.cbEnableFirstSeenTimestamp.AutoSize = true;
-            this.cbEnableFirstSeenTimestamp.Location = new System.Drawing.Point(8, 200);
-            this.cbEnableFirstSeenTimestamp.Margin = new System.Windows.Forms.Padding(4);
+            this.cbEnableFirstSeenTimestamp.Location = new System.Drawing.Point(6, 160);
             this.cbEnableFirstSeenTimestamp.Name = "cbEnableFirstSeenTimestamp";
-            this.cbEnableFirstSeenTimestamp.Size = new System.Drawing.Size(237, 19);
+            this.cbEnableFirstSeenTimestamp.Size = new System.Drawing.Size(180, 16);
             this.cbEnableFirstSeenTimestamp.TabIndex = 3;
             this.cbEnableFirstSeenTimestamp.Text = "Enable FirstSeen Timestamp";
             this.cbEnableFirstSeenTimestamp.UseVisualStyleBackColor = true;
             // 
             // nudN
             // 
-            this.nudN.Location = new System.Drawing.Point(33, 66);
-            this.nudN.Margin = new System.Windows.Forms.Padding(4);
+            this.nudN.Location = new System.Drawing.Point(25, 53);
             this.nudN.Name = "nudN";
-            this.nudN.Size = new System.Drawing.Size(48, 25);
+            this.nudN.Size = new System.Drawing.Size(36, 21);
             this.nudN.TabIndex = 10;
             this.nudN.Value = new decimal(new int[] {
             1,
@@ -1568,44 +1430,40 @@
             // lblN
             // 
             this.lblN.AutoSize = true;
-            this.lblN.Location = new System.Drawing.Point(11, 69);
-            this.lblN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblN.Location = new System.Drawing.Point(8, 55);
             this.lblN.Name = "lblN";
-            this.lblN.Size = new System.Drawing.Size(15, 15);
+            this.lblN.Size = new System.Drawing.Size(11, 12);
             this.lblN.TabIndex = 9;
             this.lblN.Text = "N";
             // 
             // cbROReportTrigger
             // 
             this.cbROReportTrigger.FormattingEnabled = true;
-            this.cbROReportTrigger.Location = new System.Drawing.Point(21, 34);
-            this.cbROReportTrigger.Margin = new System.Windows.Forms.Padding(4);
+            this.cbROReportTrigger.Location = new System.Drawing.Point(16, 27);
             this.cbROReportTrigger.Name = "cbROReportTrigger";
-            this.cbROReportTrigger.Size = new System.Drawing.Size(297, 23);
+            this.cbROReportTrigger.Size = new System.Drawing.Size(224, 20);
             this.cbROReportTrigger.TabIndex = 8;
             // 
             // lblROReportTrigger
             // 
             this.lblROReportTrigger.AutoSize = true;
-            this.lblROReportTrigger.Location = new System.Drawing.Point(11, 15);
-            this.lblROReportTrigger.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblROReportTrigger.Location = new System.Drawing.Point(8, 12);
             this.lblROReportTrigger.Name = "lblROReportTrigger";
-            this.lblROReportTrigger.Size = new System.Drawing.Size(127, 15);
+            this.lblROReportTrigger.Size = new System.Drawing.Size(95, 12);
             this.lblROReportTrigger.TabIndex = 7;
             this.lblROReportTrigger.Text = "ROReportTrigger";
             // 
             // ReaderSettingsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(379, 875);
+            this.ClientSize = new System.Drawing.Size(284, 700);
             this.Controls.Add(this.tcReaderSettings);
             this.DockAreas = ((WeifenLuo.WinFormsUI.Docking.DockAreas)(((WeifenLuo.WinFormsUI.Docking.DockAreas.Float | WeifenLuo.WinFormsUI.Docking.DockAreas.DockLeft) 
             | WeifenLuo.WinFormsUI.Docking.DockAreas.DockRight)));
             this.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.HideOnClose = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReaderSettingsForm";
             this.ShowIcon = false;
             this.Text = "Reader Settings";

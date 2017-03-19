@@ -102,8 +102,6 @@ namespace RFIDIntegratedApplication
                         return _searchRegionForm;
                     }
 
-
-
                     if (persistString == typeof(SimulationForm).ToString())
                     {
                         return _simulationForm;
@@ -712,8 +710,8 @@ namespace RFIDIntegratedApplication
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            DirectoryInfo dir = new DirectoryInfo(Application.StartupPath);
-            _filepath = Path.Combine(dir.Parent.Parent.Parent.FullName, "app");
+          //  DirectoryInfo dir = new DirectoryInfo(Application.StartupPath);
+            _filepath = "./";
 
             this.InitializeDockPanel();
 

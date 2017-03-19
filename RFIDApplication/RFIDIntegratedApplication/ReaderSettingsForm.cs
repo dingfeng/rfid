@@ -167,17 +167,25 @@ namespace RFIDIntegratedApplication
         /// <param name="comboRece">Coresponding Receiver Sensitivity ComboBox</param>
         /// <param name="comboTrans">Coresponding Transimter Power ComboBox</param>
         /// <param name="antennaID">Coresponding Antenna ID</param>
+        /// 
+        bool firstSet = true;
+        bool[] oldCheck;
         public void GetAntennaIndependentSettings(CheckBox[] check, ComboBox[] comboRece, ComboBox[] comboTrans)
         {
+            if (firstSet)
+            {
+                oldCheck = new bool[RFIDReaderParameter.antennaConfiguration.AntennaConnected.Length];
+                Array.Copy(RFIDReaderParameter.antennaConfiguration.AntennaConnected, oldCheck, oldCheck.Length);
+            }
+            firstSet = false;
             if (RFIDReaderParameter.antennaConfiguration.AntennaID != null)
             {
                 for (int i = 0; i < RFIDReaderParameter.antennaConfiguration.AntennaID.Length; i++)
                 {
                     check[i].Checked = RFIDReaderParameter.antennaConfiguration.AntennaConnected[i];
-                    check[i].Enabled = RFIDReaderParameter.antennaConfiguration.AntennaConnected[i];
-                    comboRece[i].Enabled = RFIDReaderParameter.antennaConfiguration.AntennaConnected[i];
-                    comboTrans[i].Enabled = RFIDReaderParameter.antennaConfiguration.AntennaConnected[i];
-
+                    check[i].Enabled = oldCheck[i];
+                    comboRece[i].Enabled = oldCheck[i];
+                    comboTrans[i].Enabled = oldCheck[i];
                     if (check[i].Checked && comboRece[i].Items.Count == 0)
                     {
                         tabControlAntenna.SelectedIndex = i;
@@ -312,13 +320,14 @@ namespace RFIDIntegratedApplication
         /// <param name="comboTrans">Coresponding Antenna ID</param>
         public void SetAntennaIndependentSettings(CheckBox[] check, ComboBox[] comboRece, ComboBox[] comboTrans)
         {
+            RFIDReaderParameter.antennaConfiguration.NumberOfAntennaConnected = 0;
             for (int i = 0; i < check.Length; i++)
             {
                 if (check[i].Checked)
                 {
                     ushort antennaID = (ushort)(i + 1);
+                    RFIDReaderParameter.antennaConfiguration.NumberOfAntennaConnected++;
                     RFIDReaderParameter.antennaConfiguration.AntennaID[i] = antennaID;
-                    RFIDReaderParameter.antennaConfiguration.AntennaConnected[i] = true;
                     RFIDReaderParameter.antennaConfiguration.SelectedReceiverSensitivity[i] = Convert.ToInt16(comboRece[i].Text.Trim());
                     RFIDReaderParameter.antennaConfiguration.SelectedReceiverSensitivityIndex[i] =
                                              RFIDReaderParameter.readerCapabilities.ReceiveSensitivityDic[RFIDReaderParameter.antennaConfiguration.SelectedReceiverSensitivity[i]];
@@ -326,7 +335,7 @@ namespace RFIDIntegratedApplication
                     RFIDReaderParameter.antennaConfiguration.SelectedTransmiterPowerIndex[i] =
                                              RFIDReaderParameter.readerCapabilities.TransmiterPowerDic[RFIDReaderParameter.antennaConfiguration.SelectedTransmiterPower[i]];
                 }
-
+                RFIDReaderParameter.antennaConfiguration.AntennaConnected[i] = check[i].Checked;
             }
         }
 
@@ -726,6 +735,26 @@ namespace RFIDIntegratedApplication
         }
 
         private void gbAddress_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbAntenna1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxReducedChannelList_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbModeIndex_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbTagInventoryStateAware_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

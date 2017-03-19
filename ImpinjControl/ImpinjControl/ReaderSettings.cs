@@ -248,7 +248,7 @@ namespace ImpinjControl
             MSG_ERROR_MESSAGE msg_err;
             MSG_ENABLE_ROSPEC msg = new MSG_ENABLE_ROSPEC();
             msg.ROSpecID = id;   // this better match the ROSpec we created above
-            MSG_ENABLE_ROSPEC_RESPONSE rsp = _reader.ENABLE_ROSPEC(msg, out msg_err, 12000);
+            MSG_ENABLE_ROSPEC_RESPONSE rsp = _reader.ENABLE_ROSPEC(msg, out msg_err, 600000);
             if (rsp != null)
             {
                 Console.WriteLine(rsp.LLRPStatus.StatusCode.ToString());
@@ -446,23 +446,23 @@ namespace ImpinjControl
             Console.WriteLine("Generate RoSpec...");
 
             MSG_ADD_ROSPEC ros;
-            string filepath = dir + "\\ROSpec.xml";
-            if (File.Exists(filepath))
-            {
-                ros = (MSG_ADD_ROSPEC)GetROSpecFromXML(dir);
-                //make sure specID is not 0
-                if (ros.ROSpec.ROSpecID >= uint.MaxValue)
-                    ros.ROSpec.ROSpecID = 1111;
-                else if (++ros.ROSpec.ROSpecID == 0)
-                    ++ros.ROSpec.ROSpecID;
-            }
-            else
-            {
+           // string filepath = dir + "\\ROSpec.xml";
+          //  if (File.Exists(filepath))
+         //   {
+        //        ros = (MSG_ADD_ROSPEC)GetROSpecFromXML(dir);
+        //        //make sure specID is not 0
+      //          if (ros.ROSpec.ROSpecID >= uint.MaxValue)
+      //              ros.ROSpec.ROSpecID = 1111;
+      //          else if (++ros.ROSpec.ROSpecID == 0)
+       //             ++ros.ROSpec.ROSpecID;
+       //     }
+        //    else
+        //    {
                 ros = new MSG_ADD_ROSPEC();
                 if (ros.ROSpec == null)
                     ros.ROSpec = new PARAM_ROSpec();
                 ros.ROSpec.ROSpecID = 1111;
-            }
+      //      }
 
             //------ROSpec------
             ros.ROSpec.CurrentState = ENUM_ROSpecState.Disabled;
@@ -539,22 +539,23 @@ namespace ImpinjControl
             if (aiSpec.InventoryParameterSpec[0].AntennaConfiguration == null)
                 aiSpec.InventoryParameterSpec[0].AntennaConfiguration = new PARAM_AntennaConfiguration[this.antennaConfiguration.NumberOfAntennaConnected];
             // Enable all connected antennas
+            int j = 0;
             for (int i = 0; i < this.antennaConfiguration.AntennaID.Length; i++)
             {
-                if (this.antennaConfiguration.AntennaConnected[i])
+                if (this.antennaConfiguration.AntennaConnected[i] && j < this.antennaConfiguration.NumberOfAntennaConnected)
                 {
                     //aiSpec.AntennaIDs.Add(0); // all antennas
                     if (!aiSpec.AntennaIDs.data.Contains(this.antennaConfiguration.AntennaID[i]))
                         aiSpec.AntennaIDs.Add(this.antennaConfiguration.AntennaID[i]);
-                    if (aiSpec.InventoryParameterSpec[0].AntennaConfiguration[i] == null)
-                        aiSpec.InventoryParameterSpec[0].AntennaConfiguration[i] = new PARAM_AntennaConfiguration();
-                    aiSpec.InventoryParameterSpec[0].AntennaConfiguration[0].AntennaID = this.antennaConfiguration.AntennaID[i];
+                    if (aiSpec.InventoryParameterSpec[0].AntennaConfiguration[j] == null)
+                        aiSpec.InventoryParameterSpec[0].AntennaConfiguration[j] = new PARAM_AntennaConfiguration();
+                    aiSpec.InventoryParameterSpec[0].AntennaConfiguration[j].AntennaID = this.antennaConfiguration.AntennaID[i];
                     bool flagAirProtocol = false;
                     PARAM_C1G2InventoryCommand c1G2Command;
-                    if (aiSpec.InventoryParameterSpec[0].AntennaConfiguration[0].AirProtocolInventoryCommandSettings.Count > 0)
+                    if (aiSpec.InventoryParameterSpec[0].AntennaConfiguration[j].AirProtocolInventoryCommandSettings.Count > 0)
                     {
                         flagAirProtocol = true;
-                        c1G2Command = (PARAM_C1G2InventoryCommand)aiSpec.InventoryParameterSpec[0].AntennaConfiguration[0].AirProtocolInventoryCommandSettings[0];
+                        c1G2Command = (PARAM_C1G2InventoryCommand)aiSpec.InventoryParameterSpec[0].AntennaConfiguration[j].AirProtocolInventoryCommandSettings[0];
                     }
                     else
                     {
@@ -578,7 +579,8 @@ namespace ImpinjControl
                     if (!flagC1G2Command)
                         c1G2Command.AddCustomParameter(fixedFrequencyList);
                     if (!flagAirProtocol)
-                        aiSpec.InventoryParameterSpec[0].AntennaConfiguration[i].AirProtocolInventoryCommandSettings.Add(c1G2Command);
+                        aiSpec.InventoryParameterSpec[0].AntennaConfiguration[j].AirProtocolInventoryCommandSettings.Add(c1G2Command);
+                    j = j + 1;
                 }
             }
             if (!flagSpecPara)
@@ -671,7 +673,7 @@ namespace ImpinjControl
             if (msg != null)
             {
                 MSG_ERROR_MESSAGE err_msg;
-                MSG_ADD_ROSPEC_RESPONSE rsp = _reader.ADD_ROSPEC(msg, out err_msg, 12000);
+                MSG_ADD_ROSPEC_RESPONSE rsp = _reader.ADD_ROSPEC(msg, out err_msg, 5000);
 
                 if (rsp != null)
                 {
@@ -1027,9 +1029,8 @@ namespace ImpinjControl
         public MSG_SET_READER_CONFIG GenerateReaderConfig(string dir, AntennaConfiguration antennaConfiguration, ROReportSpec rOReportSpec)
         {
             Console.WriteLine("Generate Reader config...");
-
+        //    antennaConfiguration.NumberOfAntennaConnected = 1;
             MSG_SET_READER_CONFIG config;
-
             if (RFIDReaderParameter.Reset)
             {
                 Console.WriteLine("Reset");
@@ -1053,30 +1054,31 @@ namespace ImpinjControl
             if (config.AntennaConfiguration == null)
                 config.AntennaConfiguration =
                     new PARAM_AntennaConfiguration[antennaConfiguration.NumberOfAntennaConnected];
+            int j = 0;
             for (int i = 0; i < antennaConfiguration.MaxNumberOfAntennaSupported; i++)
             {
-                if (antennaConfiguration.AntennaConnected[i])
+                if (antennaConfiguration.AntennaConnected[i] && j < antennaConfiguration.NumberOfAntennaConnected)
                 {
-                    if (config.AntennaConfiguration[i] == null)
-                        config.AntennaConfiguration[i] = new PARAM_AntennaConfiguration();
-                    config.AntennaConfiguration[i].AntennaID = antennaConfiguration.AntennaID[i];
-                    if (config.AntennaConfiguration[i].RFReceiver == null)
-                        config.AntennaConfiguration[i].RFReceiver = new PARAM_RFReceiver();
-                    config.AntennaConfiguration[i].RFReceiver.ReceiverSensitivity =
+                    if (config.AntennaConfiguration[j] == null)
+                        config.AntennaConfiguration[j] = new PARAM_AntennaConfiguration();
+                    config.AntennaConfiguration[j].AntennaID = antennaConfiguration.AntennaID[i];
+                    if (config.AntennaConfiguration[j].RFReceiver == null)
+                        config.AntennaConfiguration[j].RFReceiver = new PARAM_RFReceiver();
+                    config.AntennaConfiguration[j].RFReceiver.ReceiverSensitivity =
                         antennaConfiguration.SelectedReceiverSensitivityIndex[i];
-                    if (config.AntennaConfiguration[i].RFTransmitter == null)
-                        config.AntennaConfiguration[i].RFTransmitter = new PARAM_RFTransmitter();
-                    config.AntennaConfiguration[i].RFTransmitter.HopTableID = antennaConfiguration.HopTableID;
-                    config.AntennaConfiguration[i].RFTransmitter.ChannelIndex = antennaConfiguration.ChannelIndex;
-                    config.AntennaConfiguration[i].RFTransmitter.TransmitPower =
+                    if (config.AntennaConfiguration[j].RFTransmitter == null)
+                        config.AntennaConfiguration[j].RFTransmitter = new PARAM_RFTransmitter();
+                    config.AntennaConfiguration[j].RFTransmitter.HopTableID = antennaConfiguration.HopTableID;
+                    config.AntennaConfiguration[j].RFTransmitter.ChannelIndex = antennaConfiguration.ChannelIndex;
+                    config.AntennaConfiguration[j].RFTransmitter.TransmitPower =
                         antennaConfiguration.SelectedTransmiterPowerIndex[i];
 
                     PARAM_C1G2InventoryCommand c1G2Command;
                     bool flagInventoryCommand = false;
-                    if (config.AntennaConfiguration[i].AirProtocolInventoryCommandSettings.Count > 0)
+                    if (config.AntennaConfiguration[j].AirProtocolInventoryCommandSettings.Count > 0)
                     {
                         flagInventoryCommand = true;
-                        c1G2Command = (PARAM_C1G2InventoryCommand)config.AntennaConfiguration[i].AirProtocolInventoryCommandSettings[0];
+                        c1G2Command = (PARAM_C1G2InventoryCommand)config.AntennaConfiguration[j].AirProtocolInventoryCommandSettings[0];
                     }
                     else
                     {
@@ -1164,7 +1166,8 @@ namespace ImpinjControl
                     }
 
                     if (!flagInventoryCommand)
-                        config.AntennaConfiguration[i].AirProtocolInventoryCommandSettings.Add(c1G2Command);
+                        config.AntennaConfiguration[j].AirProtocolInventoryCommandSettings.Add(c1G2Command);
+                    j = j + 1;
                 }
             }
             #endregion

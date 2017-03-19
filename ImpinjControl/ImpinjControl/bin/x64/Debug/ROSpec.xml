@@ -2,9 +2,9 @@
  xmlns:llrp="http://www.llrp.org/ltk/schema/core/encoding/xml/1.0"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://www.llrp.org/ltk/schema/core/encoding/xml/1.0 http://www.llrp.org/ltk/schema/core/encoding/xml/1.0/llrp.xsd"
- Version="1" MessageID="15">
+ Version="1" MessageID="13550">
   <ROSpec>
-    <ROSpecID>1118</ROSpecID>
+    <ROSpecID>1111</ROSpecID>
     <Priority>0</Priority>
     <CurrentState>Disabled</CurrentState>
     <ROBoundarySpec>
@@ -17,7 +17,7 @@
       </ROSpecStopTrigger>
     </ROBoundarySpec>
     <AISpec>
-      <AntennaIDs>1</AntennaIDs>
+      <AntennaIDs>1 3</AntennaIDs>
       <AISpecStopTrigger>
         <AISpecStopTriggerType>Null</AISpecStopTriggerType>
         <DurationTrigger>0</DurationTrigger>
@@ -27,6 +27,20 @@
         <ProtocolID>EPCGlobalClass1Gen2</ProtocolID>
         <AntennaConfiguration>
           <AntennaID>1</AntennaID>
+          <C1G2InventoryCommand>
+            <TagInventoryStateAware>false</TagInventoryStateAware>
+            <Impinj:ImpinjFixedFrequencyList
+                xmlns:Impinj="http://developer.impinj.com/ltk/schema/encoding/xml/1.22"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://developer.impinj.com/ltk/schema/encoding/xml/1.22 http://developer.impinj.com/ltk/schema/encoding/xml/1.22/impinj.xsd"
+            >
+              <Impinj:FixedFrequencyMode>Disabled</Impinj:FixedFrequencyMode>
+              <Impinj:ChannelList></Impinj:ChannelList>
+            </Impinj:ImpinjFixedFrequencyList>
+          </C1G2InventoryCommand>
+        </AntennaConfiguration>
+        <AntennaConfiguration>
+          <AntennaID>3</AntennaID>
           <C1G2InventoryCommand>
             <TagInventoryStateAware>false</TagInventoryStateAware>
             <Impinj:ImpinjFixedFrequencyList
