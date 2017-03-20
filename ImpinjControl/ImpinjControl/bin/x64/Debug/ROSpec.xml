@@ -2,7 +2,7 @@
  xmlns:llrp="http://www.llrp.org/ltk/schema/core/encoding/xml/1.0"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://www.llrp.org/ltk/schema/core/encoding/xml/1.0 http://www.llrp.org/ltk/schema/core/encoding/xml/1.0/llrp.xsd"
- Version="1" MessageID="899">
+ Version="1" MessageID="7690">
   <ROSpec>
     <ROSpecID>1111</ROSpecID>
     <Priority>0</Priority>

@@ -2,7 +2,7 @@
  xmlns:llrp="http://www.llrp.org/ltk/schema/core/encoding/xml/1.0"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://www.llrp.org/ltk/schema/core/encoding/xml/1.0 http://www.llrp.org/ltk/schema/core/encoding/xml/1.0/llrp.xsd"
- Version="1" MessageID="896">
+ Version="1" MessageID="7687">
   <ResetToFactoryDefault>true</ResetToFactoryDefault>
   <ReaderEventNotificationSpec>
     <EventNotificationState>
@@ -59,7 +59,7 @@
         <C1G2TagInventoryMask>
           <MB>1</MB>
           <Pointer>32</Pointer>
-          <TagMask Count="0"></TagMask>
+          <TagMask Count="96">1111222233334444AAAA0289</TagMask>
         </C1G2TagInventoryMask>
         <C1G2TagInventoryStateUnawareFilterAction>
           <Action>Select_Unselect</Action>
@@ -136,7 +136,7 @@
         <C1G2TagInventoryMask>
           <MB>1</MB>
           <Pointer>32</Pointer>
-          <TagMask Count="0"></TagMask>
+          <TagMask Count="96">1111222233334444AAAA0289</TagMask>
         </C1G2TagInventoryMask>
         <C1G2TagInventoryStateUnawareFilterAction>
           <Action>Select_Unselect</Action>
