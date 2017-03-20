@@ -87,12 +87,12 @@
             chartArea1.Position.X = 2F;
             chartArea1.Position.Y = 10F;
             this.chartPhase.ChartAreas.Add(chartArea1);
-            this.chartPhase.Location = new System.Drawing.Point(0, 31);
-            this.chartPhase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartPhase.Location = new System.Drawing.Point(0, 25);
             this.chartPhase.Name = "chartPhase";
-            this.chartPhase.Size = new System.Drawing.Size(779, 545);
+            this.chartPhase.Size = new System.Drawing.Size(584, 436);
             this.chartPhase.TabIndex = 0;
             this.chartPhase.Text = "Phase";
+            this.chartPhase.Click += new System.EventHandler(this.chartPhase_Click);
             // 
             // tsPhaseSettings
             // 
@@ -107,57 +107,57 @@
             this.tscbPointFrequency});
             this.tsPhaseSettings.Location = new System.Drawing.Point(0, 0);
             this.tsPhaseSettings.Name = "tsPhaseSettings";
-            this.tsPhaseSettings.Size = new System.Drawing.Size(779, 28);
+            this.tsPhaseSettings.Size = new System.Drawing.Size(584, 25);
             this.tsPhaseSettings.TabIndex = 1;
             this.tsPhaseSettings.Text = "tsPhaseSettings";
             // 
             // tslblLineType
             // 
             this.tslblLineType.Name = "tslblLineType";
-            this.tslblLineType.Size = new System.Drawing.Size(79, 25);
+            this.tslblLineType.Size = new System.Drawing.Size(63, 22);
             this.tslblLineType.Text = "Line Type";
             // 
             // tscbLineType
             // 
             this.tscbLineType.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
             this.tscbLineType.Name = "tscbLineType";
-            this.tscbLineType.Size = new System.Drawing.Size(119, 28);
+            this.tscbLineType.Size = new System.Drawing.Size(90, 25);
             this.tscbLineType.Click += new System.EventHandler(this.tscbLineType_Click);
             // 
             // tslblLineWidth
             // 
             this.tslblLineWidth.Name = "tslblLineWidth";
-            this.tslblLineWidth.Size = new System.Drawing.Size(87, 25);
+            this.tslblLineWidth.Size = new System.Drawing.Size(69, 22);
             this.tslblLineWidth.Text = "Line Width";
             // 
             // tscbLineWidth
             // 
             this.tscbLineWidth.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
             this.tscbLineWidth.Name = "tscbLineWidth";
-            this.tscbLineWidth.Size = new System.Drawing.Size(99, 28);
+            this.tscbLineWidth.Size = new System.Drawing.Size(75, 25);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // tslblPointFreq
             // 
             this.tslblPointFreq.Name = "tslblPointFreq";
-            this.tslblPointFreq.Size = new System.Drawing.Size(127, 25);
+            this.tslblPointFreq.Size = new System.Drawing.Size(100, 22);
             this.tslblPointFreq.Text = "Point Frequency";
             // 
             // tscbPointFrequency
             // 
             this.tscbPointFrequency.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
             this.tscbPointFrequency.Name = "tscbPointFrequency";
-            this.tscbPointFrequency.Size = new System.Drawing.Size(99, 28);
+            this.tscbPointFrequency.Size = new System.Drawing.Size(75, 25);
             // 
             // PhaseGraphForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 576);
+            this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.chartPhase);
             this.Controls.Add(this.tsPhaseSettings);
             this.DockAreas = ((WeifenLuo.WinFormsUI.Docking.DockAreas)((((WeifenLuo.WinFormsUI.Docking.DockAreas.Float | WeifenLuo.WinFormsUI.Docking.DockAreas.DockTop) 
@@ -165,7 +165,6 @@
             | WeifenLuo.WinFormsUI.Docking.DockAreas.Document)));
             this.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.HideOnClose = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PhaseGraphForm";
             this.ShowIcon = false;
             this.Text = "Phase Graph";

@@ -48,6 +48,7 @@ namespace RFIDIntegratedApplication
         /// <param name="tagInfo">an object containing all information of a tag in one tag report</param>
         public void UpdatePhaseGraph(TagInfo tagInfo)
         {
+            string key = tagInfo.Antenna + "--" + tagInfo.EPC;
             if (tagInfo.TotalTagCount == 1)
             {
                 //Chart title for Phase
@@ -57,15 +58,15 @@ namespace RFIDIntegratedApplication
                 chartPhase.Titles.Add(titlePhase);
             }
 
-            if (chartPhase.Series.FindByName(tagInfo.EPC) != null)
+            if (chartPhase.Series.FindByName(key) != null)
             {
                 if ((tagInfo.TotalTagCount - 1) % Convert.ToInt32(tscbPointFrequency.Text.Trim()) == 0)
-                    chartPhase.Series[tagInfo.EPC].Points.AddXY(tagInfo.TimeStamp / 1000, tagInfo.AcutalPhaseInRadian);
+                    chartPhase.Series[key].Points.AddXY(tagInfo.TimeStamp / 1000, tagInfo.AcutalPhaseInRadian);
             }
             else
             {
                 //Create a new curve
-                Series seriesPhase = new Series(tagInfo.EPC);
+                Series seriesPhase = new Series(key);
                 //Set chart type
                 //seriesPhase.ChartType = SeriesChartType.FastPoint;
                 seriesPhase.ChartType = (SeriesChartType)Enum.Parse(typeof(SeriesChartType), tscbLineType.Text.Trim());
@@ -75,7 +76,7 @@ namespace RFIDIntegratedApplication
                 chartPhase.Series.Add(seriesPhase);
 
                 //Create a new legend
-                Legend legendPhase = new Legend("Phase:" + tagInfo.EPC);
+                Legend legendPhase = new Legend("Phase:" + key);
                 //Set legend propertities
                 legendPhase.Title = "EPC";
                 legendPhase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10, System.Drawing.FontStyle.Bold);
@@ -92,7 +93,7 @@ namespace RFIDIntegratedApplication
 
                 chartPhase.Legends.Add(legendPhase);
 
-                chartPhase.Legends["Phase:" + tagInfo.EPC].DockedToChartArea = "Phase";
+                chartPhase.Legends["Phase:" + key].DockedToChartArea = "Phase";
                 seriesPhase.Points.AddXY(tagInfo.TimeStamp / 1000, tagInfo.AcutalPhaseInRadian);
             }
 
@@ -138,6 +139,11 @@ namespace RFIDIntegratedApplication
         }
 
         private void tscbLineType_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chartPhase_Click(object sender, EventArgs e)
         {
 
         }
