@@ -35,12 +35,9 @@
             this.tsmiSave = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSaveAs = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnConnect = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnStart = new System.Windows.Forms.ToolStripButton();
             this.tsbtnStop = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnClear = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tssbtnAddWindow = new System.Windows.Forms.ToolStripSplitButton();
             this.tsmiReaderSettings = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,12 +69,9 @@
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tssbtnSave,
             this.toolStripSeparator5,
-            this.tsbtnConnect,
-            this.toolStripButton1,
-            this.toolStripSeparator4,
             this.tsbtnStart,
             this.tsbtnStop,
-            this.tsbtnClear,
+            this.toolStripButton1,
             this.toolStripSeparator2,
             this.tssbtnAddWindow});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
@@ -119,31 +113,9 @@
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(95, 24);
-            this.toolStripButton1.Text = "Disconnect";
-            this.toolStripButton1.Click += new System.EventHandler(this.tsbtnDisconnect_Click);
-            // 
-            // tsbtnConnect
-            // 
-            this.tsbtnConnect.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnConnect.Image")));
-            this.tsbtnConnect.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnConnect.Name = "tsbtnConnect";
-            this.tsbtnConnect.Size = new System.Drawing.Size(79, 24);
-            this.tsbtnConnect.Text = "Connect";
-            this.tsbtnConnect.Click += new System.EventHandler(this.tsbtnConnect_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
-            // 
             // tsbtnStart
             // 
+            this.tsbtnStart.Enabled = false;
             this.tsbtnStart.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnStart.Image")));
             this.tsbtnStart.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnStart.Name = "tsbtnStart";
@@ -160,19 +132,21 @@
             this.tsbtnStop.Text = "Stop";
             this.tsbtnStop.Click += new System.EventHandler(this.tsbtnStop_Click);
             // 
-            // tsbtnClear
+            // toolStripButton1
             // 
-            this.tsbtnClear.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnClear.Image")));
-            this.tsbtnClear.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnClear.Name = "tsbtnClear";
-            this.tsbtnClear.Size = new System.Drawing.Size(62, 24);
-            this.tsbtnClear.Text = "Clear";
-            this.tsbtnClear.Click += new System.EventHandler(this.tsbtnClear_Click);
+            this.toolStripButton1.Enabled = false;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(73, 24);
+            this.toolStripButton1.Text = "Restart";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator2.Click += new System.EventHandler(this.toolStripSeparator2_Click);
             // 
             // tssbtnAddWindow
             // 
@@ -326,11 +300,8 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiSave;
         private System.Windows.Forms.ToolStripMenuItem tsmiSaveAs;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripButton tsbtnConnect;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton tsbtnStart;
         private System.Windows.Forms.ToolStripButton tsbtnStop;
-        private System.Windows.Forms.ToolStripButton tsbtnClear;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel tsslRunTime;

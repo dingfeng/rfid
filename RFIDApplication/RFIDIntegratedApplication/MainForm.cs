@@ -181,21 +181,18 @@ namespace RFIDIntegratedApplication
 
                     if (RFIDReaderParameter.ReadMode == "Manual")
                     {
-                        tsbtnClear.Enabled = true;
                         // Start time for timer
                         _startTime = DateTime.Now;
                     }
                     else
                     {
-                        tsbtnClear.Enabled = false;
                         // Start time for timer
                         _startTime = DateTime.Now.AddMilliseconds(RFIDReaderParameter.Duration);
                     }
                 }
                 else
                 {
-                    tsbtnConnect.Enabled = false;
-                    tsbtnStart.Enabled = false;
+                    tsbtnStart.Enabled = true;
                     tsbtnStop.Enabled = false;
                 }
 
@@ -229,7 +226,6 @@ namespace RFIDIntegratedApplication
                 }
                 else
                 {
-                    tsbtnConnect.Enabled = true;
                     tsbtnStart.Enabled = false;
                     tsbtnStop.Enabled = false;
                 }
@@ -286,10 +282,10 @@ namespace RFIDIntegratedApplication
                 {
                     TimeSpan interval = DateTime.Now - _startTime;
                     //  tsslRunTime.Text = interval.ToString().Substring(0, 12);
-                    this.BeginInvoke(method : new Action(()=>
-                    {
-                        tsslRunTime.Text = interval.ToString().Substring(0, 12);
-                    }));
+                    this.BeginInvoke(method: new Action(() =>
+                   {
+                       tsslRunTime.Text = interval.ToString().Substring(0, 12);
+                   }));
                 }
                 else
                 {
@@ -483,8 +479,13 @@ namespace RFIDIntegratedApplication
 
         private void tsbtnConnect_Click(object sender, EventArgs e)
         {
+
+        }
+
+        public Boolean connect()
+        {
             string address = _readerSettingsForm.GetReaderAddress();
-            if (address == String.Empty) return;
+            if (address == String.Empty) return false;
 
             Console.WriteLine("Connectting to Reader...");
 
@@ -497,6 +498,8 @@ namespace RFIDIntegratedApplication
                 IImpinjControlService impinjControlService = ServiceManager.getOneImpinjControlService();
                 connectResponse = impinjControlService.connect(address);
                 ServiceManager.closeService(impinjControlService);
+                this.tsbtnStart.Enabled = true;
+                this.toolStripButton1.Enabled = true;
             }
             catch
             {
@@ -511,8 +514,8 @@ namespace RFIDIntegratedApplication
                 tsslblStatus.Image = Properties.Resources.status_stop;
 
                 MessageBox.Show(tsslblStatus.Text, "Connection Error");
-                RFIDReaderParameter.IsConnected = false;
-                return;
+                //    RFIDReaderParameter.IsConnected = false;
+                return false;
             }
             else
             {
@@ -522,19 +525,15 @@ namespace RFIDIntegratedApplication
                 RFIDReaderParameter.readerCapabilities = connectResponse.readerCapabilities;
                 RFIDReaderParameter.rOReportSpec = connectResponse.rOReportSpec;
                 // Display settings in ReaderSettingsForm
-                _readerSettingsForm.ReceiveConfigFromRFIDReaderPara();
+              //  _readerSettingsForm.ReceiveConfigFromRFIDReaderPara();
 
                 // Modify label status in the Status Strip
-                tsslblStatus.Text = ReaderStatus.Connected.ToString();
-                tsslblStatus.Image = Properties.Resources.status_ready;
-
-                // Modify button status in the Tool Strip
-                tsbtnConnect.Enabled = false;
-                tsbtnStart.Enabled = true;
+               
 
                 // Modify Setting panel status
-                _readerSettingsForm.UpdateComponentStatus(1, true);
-                RFIDReaderParameter.IsConnected = true;
+               
+                //     RFIDReaderParameter.IsConnected = true;
+                return true;
             }
         }
 
@@ -557,20 +556,29 @@ namespace RFIDIntegratedApplication
         {
             SARParameter.IsSimulation = false;
             PhaseLocating.getInstance().started = true;
-            if (!_readerSettingsForm.SendConfigToRFIDReaderPara()) return;
-
             IImpinjControlService impinjControlService = ServiceManager.getOneImpinjControlService();
             impinjControlService.startInventory(RFIDReaderParameter.antennaConfiguration, RFIDReaderParameter.rOReportSpec);
             ServiceManager.closeService(impinjControlService);
-            this.UpdateComponentStatus((int)ENUM_ROSpecEventType.Start_Of_ROSpec, SARParameter.IsSimulation);
+        //    this.UpdateComponentStatus((int)ENUM_ROSpecEventType.Start_Of_ROSpec, SARParameter.IsSimulation);
             StartDequeueThread();
         }
 
         private void tsbtnStart_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Start...");
+            start();
+        }
 
-            StartInventory();
+        private void start()
+        {
+            Console.WriteLine("Start...");
+            RFIDReaderParameter.IsConnected = connect();
+            if (RFIDReaderParameter.IsConnected)
+            {
+                this._readerSettingsForm.SendConfigToRFIDReaderPara();
+                StartInventory();
+                this.tsbtnStart.Enabled = false;
+                this.tsbtnStop.Enabled = true;
+            }
         }
 
         public void StopDequeueThread()
@@ -581,14 +589,15 @@ namespace RFIDIntegratedApplication
             }
             catch (Exception)
             {
-               // throw;
+                // throw;
             }
             try
             {
                 _dequeueTagPosThread.Abort();
-            }catch (Exception)
+            }
+            catch (Exception)
             {
-              //  throw;
+                //  throw;
             }
         }
 
@@ -602,13 +611,13 @@ namespace RFIDIntegratedApplication
                 IImpinjControlService impinjControlService = ServiceManager.getOneImpinjControlService();
                 impinjControlService.stopInventory();
                 ServiceManager.closeService(impinjControlService);
-                this.UpdateComponentStatus((int)ENUM_ROSpecEventType.End_Of_ROSpec, SARParameter.IsSimulation);
+               // this.UpdateComponentStatus((int)ENUM_ROSpecEventType.End_Of_ROSpec, SARParameter.IsSimulation);
             }
         }
 
         private void tsbtnStop_Click(object sender, EventArgs e)
         {
-            StopInventory();
+            stop();
         }
 
         /// <summary>
@@ -710,7 +719,7 @@ namespace RFIDIntegratedApplication
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-          //  DirectoryInfo dir = new DirectoryInfo(Application.StartupPath);
+            //  DirectoryInfo dir = new DirectoryInfo(Application.StartupPath);
             _filepath = "./";
 
             this.InitializeDockPanel();
@@ -718,10 +727,8 @@ namespace RFIDIntegratedApplication
             //------Initialize status of buttons------
             //Tool Strip
             tssbtnSave.Enabled = false;
-            tsbtnConnect.Enabled = true;
             tsbtnStart.Enabled = false;
             tsbtnStop.Enabled = false;
-            tsbtnClear.Enabled = false;
             tssbtnAddWindow.Enabled = true;
 
             // Modify the status of components in ReaderSettingsForm when initializing components
@@ -824,17 +831,33 @@ namespace RFIDIntegratedApplication
 
         private void tsbtnDisconnect_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void stop()
+        {
+            IImpinjControlService service =  ServiceManager.getOneImpinjControlService();
+            service.disconnect();
+            ServiceManager.closeService(service);
             StopInventory();
             //Tool Strip
-            tssbtnSave.Enabled = false;
-            tsbtnConnect.Enabled = true;
-            tsbtnStart.Enabled = false;
+            tsbtnStart.Enabled = true;
             tsbtnStop.Enabled = false;
-            tsbtnClear.Enabled = false;
             tssbtnAddWindow.Enabled = true;
 
             // Modify the status of components in ReaderSettingsForm when initializing components
-            _readerSettingsForm.UpdateComponentStatus(0, true);
+           // _readerSettingsForm.UpdateComponentStatus(0, true);
+        }
+
+        private void toolStripSeparator2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            stop();
+            start();
         }
     }
 }

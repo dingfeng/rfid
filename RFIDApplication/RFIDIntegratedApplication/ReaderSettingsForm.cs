@@ -216,6 +216,10 @@ namespace RFIDIntegratedApplication
             cbResetToFactoryDefault.Checked = RFIDReaderParameter.Reset;
             tbxDuration.Text = RFIDReaderParameter.Duration.ToString();
 
+            if (cbFreqMode.Items.Count > 0)
+            {
+                cbFreqMode.Items.Clear();
+            }
             // Frequency Mode
             for (int i = 0; i < RFIDReaderParameter.readerCapabilities.FixedFrequencyModeTable.Length; i++)
             {
@@ -228,6 +232,10 @@ namespace RFIDIntegratedApplication
                 cbFreqMode.Items.Add(RFIDReaderParameter.readerCapabilities.FixedFrequencyModeTable[i]);
             }
             // Frequency Set
+            if(clbFreqSet.Items.Count > 0)
+            {
+                clbFreqSet.Items.Clear();
+            }
             foreach (KeyValuePair<ushort, double> freq in RFIDReaderParameter.readerCapabilities.FrequencyDic)
             {
                 clbFreqSet.Items.Add(freq.Key + " - " + freq.Value + " MHz");
@@ -254,6 +262,10 @@ namespace RFIDIntegratedApplication
             }
             tbxTari.Text = RFIDReaderParameter.antennaConfiguration.Tari.ToString();
             // C1G2 Sigulation Control
+            if(cbSession.Items.Count > 0)
+            {
+                cbSession.Items.Clear();
+            }
             foreach (string session in RFIDReaderParameter.readerCapabilities.Sessions.Keys)
             {
                 cbSession.Items.Add(session);
@@ -262,6 +274,10 @@ namespace RFIDIntegratedApplication
             tbxTagPopulation.Text = RFIDReaderParameter.antennaConfiguration.TagPopulation.ToString();
             tbxTagTransitTime.Text = RFIDReaderParameter.antennaConfiguration.TagTransitTime.ToString();
             // ImpinJ
+            if(cbImpiJSearchMode.Items.Count > 0)
+            {
+                cbImpiJSearchMode.Items.Clear();
+            }
             for (int i = 0; i < RFIDReaderParameter.readerCapabilities.SearchModeTable.Length; i++)
             {
                 cbImpiJSearchMode.Items.Add(RFIDReaderParameter.readerCapabilities.SearchModeTable[i]);
@@ -731,7 +747,11 @@ namespace RFIDIntegratedApplication
 
         private void btnSearchIP_Click(object sender, EventArgs e)
         {
-
+            if (_mainform.connect())
+            {
+                ReceiveConfigFromRFIDReaderPara();
+                UpdateComponentStatus(1, true);
+            }
         }
 
         private void gbAddress_Enter(object sender, EventArgs e)
@@ -755,6 +775,26 @@ namespace RFIDIntegratedApplication
         }
 
         private void cbTagInventoryStateAware_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clbFreqSet_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbSession_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbImpiJSearchMode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbReceiverSensitivity1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

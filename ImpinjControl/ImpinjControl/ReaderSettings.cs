@@ -62,6 +62,13 @@ namespace ImpinjControl
             TotalTagCount = 0;
         }
 
+        //修改epc
+        public Boolean updateEpc(string oldEpc, string newEpc)
+        {
+
+            return false;
+        }
+
         #region  Get Settings
         /// <summary>
         /// Get Reader capbilities to set TransmitPower and Frequency

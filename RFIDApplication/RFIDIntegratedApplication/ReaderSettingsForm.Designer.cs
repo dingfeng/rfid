@@ -205,7 +205,7 @@
             this.tpBasic.Controls.Add(this.gbAddress);
             this.tpBasic.Location = new System.Drawing.Point(4, 22);
             this.tpBasic.Name = "tpBasic";
-            this.tpBasic.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpBasic.Padding = new System.Windows.Forms.Padding(3);
             this.tpBasic.Size = new System.Drawing.Size(276, 674);
             this.tpBasic.TabIndex = 0;
             this.tpBasic.Text = "Basic";
@@ -306,6 +306,7 @@
             this.clbFreqSet.Name = "clbFreqSet";
             this.clbFreqSet.Size = new System.Drawing.Size(178, 132);
             this.clbFreqSet.TabIndex = 5;
+            this.clbFreqSet.SelectedIndexChanged += new System.EventHandler(this.clbFreqSet_SelectedIndexChanged);
             // 
             // lblHop
             // 
@@ -434,7 +435,7 @@
             this.btnSearchIP.Name = "btnSearchIP";
             this.btnSearchIP.Size = new System.Drawing.Size(75, 23);
             this.btnSearchIP.TabIndex = 17;
-            this.btnSearchIP.Text = "Search";
+            this.btnSearchIP.Text = "connect";
             this.btnSearchIP.UseVisualStyleBackColor = true;
             this.btnSearchIP.Click += new System.EventHandler(this.btnSearchIP_Click);
             // 
@@ -541,7 +542,7 @@
             this.tpAntenna.Controls.Add(this.lblAntennaID);
             this.tpAntenna.Location = new System.Drawing.Point(4, 22);
             this.tpAntenna.Name = "tpAntenna";
-            this.tpAntenna.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpAntenna.Padding = new System.Windows.Forms.Padding(3);
             this.tpAntenna.Size = new System.Drawing.Size(276, 674);
             this.tpAntenna.TabIndex = 1;
             this.tpAntenna.Text = "Antenna";
@@ -566,7 +567,7 @@
             this.tabPage1.Controls.Add(this.gbRFTransmiter1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(254, 106);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Antenna1";
@@ -598,6 +599,7 @@
             this.cbReceiverSensitivity1.Name = "cbReceiverSensitivity1";
             this.cbReceiverSensitivity1.Size = new System.Drawing.Size(66, 20);
             this.cbReceiverSensitivity1.TabIndex = 0;
+            this.cbReceiverSensitivity1.SelectedIndexChanged += new System.EventHandler(this.cbReceiverSensitivity1_SelectedIndexChanged);
             // 
             // gbRFTransmiter1
             // 
@@ -634,7 +636,7 @@
             this.tabPage2.Controls.Add(this.gbRFTransmiter2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(254, 106);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Antenna2";
@@ -702,7 +704,7 @@
             this.tabPage3.Controls.Add(this.gbRFTransmiter3);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(254, 106);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Antenna3";
@@ -770,7 +772,7 @@
             this.tabPage4.Controls.Add(this.gbRFTransmiter4);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(254, 106);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Antenna4";
@@ -979,6 +981,7 @@
             this.cbImpiJSearchMode.Name = "cbImpiJSearchMode";
             this.cbImpiJSearchMode.Size = new System.Drawing.Size(185, 20);
             this.cbImpiJSearchMode.TabIndex = 1;
+            this.cbImpiJSearchMode.SelectedIndexChanged += new System.EventHandler(this.cbImpiJSearchMode_SelectedIndexChanged);
             // 
             // lblImpinjInventorySearchMode
             // 
@@ -1053,6 +1056,7 @@
             this.cbSession.Name = "cbSession";
             this.cbSession.Size = new System.Drawing.Size(146, 20);
             this.cbSession.TabIndex = 1;
+            this.cbSession.SelectedIndexChanged += new System.EventHandler(this.cbSession_SelectedIndexChanged);
             // 
             // lblSession
             // 

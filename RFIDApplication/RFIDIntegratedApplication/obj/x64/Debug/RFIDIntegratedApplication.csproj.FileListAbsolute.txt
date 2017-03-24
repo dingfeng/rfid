@@ -215,4 +215,3 @@ F:\rfid实验室\丁峰\cs linear guide\RFIDApplication\RFIDIntegratedApplicatio
 F:\rfid实验室\丁峰\cs linear guide\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.SearchReaderIPForm.resources
 F:\rfid实验室\丁峰\cs linear guide\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.TagTableForm.resources
 F:\rfid实验室\丁峰\cs linear guide\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.csproj.GenerateResource.Cache
-F:\rfid实验室\丁峰\cs linear guide\RFIDApplication\RFIDIntegratedApplication\obj\x64\Debug\RFIDIntegratedApplication.csprojResolveAssemblyReference.cache
