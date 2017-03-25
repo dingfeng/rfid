@@ -21,6 +21,8 @@ using WeifenLuo.WinFormsUI.Docking;
 using RFIDIntegratedApplication.ServiceReference1;
 using RFIDIntegratedApplication.service;
 using RFIDIntegratedApplication.ServiceReference3;
+using RFIDIntegratedApplication.Forms;
+
 namespace RFIDIntegratedApplication
 {
     public partial class MainForm : Form, IFormable
@@ -30,7 +32,7 @@ namespace RFIDIntegratedApplication
         TagTableForm _tagTableForm;
         RSSIGraphFrom _rssiGraphForm;
         PhaseGraphForm _phaseGraphForm;
-
+        UpdateEpcForm  _updateEpcForm;
         SearchRegionForm _searchRegionForm;
         SimulationForm _simulationForm;
 
@@ -67,7 +69,7 @@ namespace RFIDIntegratedApplication
 
             _sortingBooksForm = new SortingBooksForm();
             _linearGuideForm = new LinearGuideForm();
-
+            _updateEpcForm = new UpdateEpcForm();
             _searchRegionForm = new SearchRegionForm();
 
             _simulationForm = new SimulationForm(this, _linearGuideForm);
@@ -80,6 +82,11 @@ namespace RFIDIntegratedApplication
                     if (persistString == typeof(ReaderSettingsForm).ToString())
                     {
                         return _readerSettingsForm;
+                    }
+
+                    if(persistString == typeof(UpdateEpcForm).ToString())
+                    {
+                        return _updateEpcForm;
                     }
 
                     if (persistString == typeof(TagTableForm).ToString())
@@ -137,7 +144,8 @@ namespace RFIDIntegratedApplication
                 if (_searchRegionForm.DockState != DockState.Unknown && _searchRegionForm.DockState != DockState.Hidden)
                     AppConfig.searchRegionDockState = _searchRegionForm.DockState;
 
-
+                if (_updateEpcForm.DockState != DockState.Unknown && _updateEpcForm.DockState != DockState.Hidden)
+                    AppConfig.updateEpcDockState = _updateEpcForm.DockState;
 
                 if (_simulationForm.DockState != DockState.Unknown && _simulationForm.DockState != DockState.Hidden)
                     AppConfig.simulationDockState = _simulationForm.DockState;
@@ -852,26 +860,10 @@ namespace RFIDIntegratedApplication
             stop();
             start();
         }
-        int count = 0;
-        private void toolStripButton2_Click(object sender, EventArgs e)
+
+        private void tsmiUpdateEpc_Click(object sender, EventArgs e)
         {
-            //    for (int i = 0; i < 500; ++i)
-            //     {
-            string[] strs = new string[] { "000000000000000000000008", "000000000000000000000009" };
-            for (int i = 0; i < 500; ++i)
-            {
-                IImpinjControlService service = ServiceManager.getOneImpinjControlService();
-                service.updateEpc(strs[count % 2], strs[(count + 1) % 2]);
-                count++;
-                ServiceManager.closeService(service);
-                Thread.Sleep(2000);
-            }
-            //    Thread.Sleep(1000);
-            //      service = ServiceManager.getOneImpinjControlService();
-            //        service.updateEpc("000000000000000000000008", "000000000000000000000009");
-            //       ServiceManager.closeService(service);
-            //       Console.WriteLine("i:"+i);
-            //   }
+            this._updateEpcForm.Show(this.dockPanelMain, AppConfig.updateEpcDockState);
         }
     }
 

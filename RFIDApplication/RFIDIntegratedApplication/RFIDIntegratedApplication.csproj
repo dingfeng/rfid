@@ -120,6 +120,12 @@
     <Compile Include="Forms\SortingBooksForm.Designer.cs">
       <DependentUpon>SortingBooksForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UpdateEpcForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UpdateEpcForm.Designer.cs">
+      <DependentUpon>UpdateEpcForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SortingBooksForm.resx">
       <DependentUpon>SortingBooksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UpdateEpcForm.resx">
+      <DependentUpon>UpdateEpcForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -341,6 +350,8 @@
     <None Include="Resources\holographics.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\restart.png" />
+    <None Include="Resources\epc.png" />
     <Content Include="rfid.ico" />
     <None Include="Service References\ServiceReference3\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>

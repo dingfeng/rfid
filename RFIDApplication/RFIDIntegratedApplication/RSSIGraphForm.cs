@@ -133,5 +133,7 @@ namespace RFIDIntegratedApplication
             }
             tscbPointFrequency.Text = Convert.ToString(1);
         }
+
+     
     }
 }
