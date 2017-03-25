@@ -1438,6 +1438,12 @@ namespace RFIDIntegratedApplication.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IImpinjControlService/startInventory", ReplyAction="http://tempuri.org/IImpinjControlService/startInventoryResponse")]
         System.Threading.Tasks.Task startInventoryAsync(RFIDIntegratedApplication.ServiceReference1.AntennaConfiguration antennaConfiguration, RFIDIntegratedApplication.ServiceReference1.ROReportSpec rOReportSpec);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IImpinjControlService/updateEpc", ReplyAction="http://tempuri.org/IImpinjControlService/updateEpcResponse")]
+        void updateEpc(string oldEpc, string newEpc);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IImpinjControlService/updateEpc", ReplyAction="http://tempuri.org/IImpinjControlService/updateEpcResponse")]
+        System.Threading.Tasks.Task updateEpcAsync(string oldEpc, string newEpc);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IImpinjControlService/stopInventory", ReplyAction="http://tempuri.org/IImpinjControlService/stopInventoryResponse")]
         void stopInventory();
         
@@ -1498,6 +1504,14 @@ namespace RFIDIntegratedApplication.ServiceReference1 {
         
         public System.Threading.Tasks.Task startInventoryAsync(RFIDIntegratedApplication.ServiceReference1.AntennaConfiguration antennaConfiguration, RFIDIntegratedApplication.ServiceReference1.ROReportSpec rOReportSpec) {
             return base.Channel.startInventoryAsync(antennaConfiguration, rOReportSpec);
+        }
+        
+        public void updateEpc(string oldEpc, string newEpc) {
+            base.Channel.updateEpc(oldEpc, newEpc);
+        }
+        
+        public System.Threading.Tasks.Task updateEpcAsync(string oldEpc, string newEpc) {
+            return base.Channel.updateEpcAsync(oldEpc, newEpc);
         }
         
         public void stopInventory() {

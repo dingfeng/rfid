@@ -28,6 +28,19 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="updateEpc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="oldEpc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="newEpc" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateEpcResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="stopInventory">
     <xs:complexType>
       <xs:sequence />

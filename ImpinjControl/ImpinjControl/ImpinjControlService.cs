@@ -7,6 +7,7 @@ using Org.LLRP.LTK.LLRPV1;
 using Org.LLRP.LTK.LLRPV1.Impinj;
 using System.IO;
 using System.ServiceModel;
+using System.Threading;
 namespace ImpinjControl
 {
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single,
@@ -16,7 +17,7 @@ namespace ImpinjControl
         volatile   LLRPClient _reader;
         volatile   ReaderSettings _readerSettings;
         volatile   string _filepath = ".";         //The filepath of App related file
-        volatile   uint _currentSpecID;      //Make sure all the ROSpec operations are in the same ROSpec
+       public static  volatile   uint _currentSpecID;      //Make sure all the ROSpec operations are in the same ROSpec
         volatile   bool started;  //是否已经start
         volatile   bool connected; //是否已经建立连接
         volatile   bool impinjInstalled;
@@ -87,6 +88,15 @@ namespace ImpinjControl
         }
 
 
+        //修改epc
+        public void updateEpc(string oldEpc, string newEpc)
+        {
+            _readerSettings.addAccessSpec(_currentSpecID,oldEpc, newEpc);
+            _readerSettings.enableAccessSpec();
+            _readerSettings.Enable_ROSpec(_currentSpecID);
+            _readerSettings.Start_ROSpec(_currentSpecID);
+        }
+
         public void startInventory(AntennaConfiguration antennaConfiguration, ROReportSpec rOReportSpec)
         {
             try
@@ -95,6 +105,8 @@ namespace ImpinjControl
                 {
                     _readerSettings.clearTagInfoQueue();
                     _readerSettings.SetReaderConfiguration(_filepath, antennaConfiguration, rOReportSpec);
+                    _readerSettings.antennaConfiguration = antennaConfiguration;
+                    _readerSettings.rOReportSpec = rOReportSpec;
                     _currentSpecID = _readerSettings.AddROSpec(_filepath);
                     _readerSettings.Enable_ROSpec(_currentSpecID);
                     _readerSettings.Start_ROSpec(_currentSpecID);
@@ -118,6 +130,7 @@ namespace ImpinjControl
                 if (connected && started)
                 {
                     _readerSettings.Stop_ROSpec(_currentSpecID);
+                    _readerSettings.Disable_ROSpec(_currentSpecID);
                     started = false;
                     Console.WriteLine("status:connected");
                 }

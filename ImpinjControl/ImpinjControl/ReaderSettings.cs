@@ -45,12 +45,12 @@ namespace ImpinjControl
     public class ReaderSettings
     {
         LLRPClient _reader;        //Receive the LLRPClient instance created from _mainForm
-        public   AntennaConfiguration antennaConfiguration;
-        public   ROReportSpec rOReportSpec;
-        public   ReaderCapabilities readerCapabilities;
-        public  int TotalTagCount { get; set; }
+        public AntennaConfiguration antennaConfiguration;
+        public ROReportSpec rOReportSpec;
+        public ReaderCapabilities readerCapabilities;
+        public int TotalTagCount { get; set; }
         public ConcurrentQueue<TagInfo> tagInfoQueue = new ConcurrentQueue<TagInfo>();
-
+        public  uint AccessSpecID = 1;
         public void clearTagInfoQueue()
         {
             tagInfoQueue = new ConcurrentQueue<TagInfo>();
@@ -62,12 +62,7 @@ namespace ImpinjControl
             TotalTagCount = 0;
         }
 
-        //修改epc
-        public Boolean updateEpc(string oldEpc, string newEpc)
-        {
 
-            return false;
-        }
 
         #region  Get Settings
         /// <summary>
@@ -113,7 +108,7 @@ namespace ImpinjControl
             readerCapabilities.MaxNumberOfAntennaSupported =
                 capabilities.GeneralDeviceCapabilities.MaxNumberOfAntennaSupported;
 
-           
+
             uint[] availableFrequencyList = capabilities
                                             .RegulatoryCapabilities
                                             .UHFBandCapabilities
@@ -255,7 +250,7 @@ namespace ImpinjControl
             MSG_ERROR_MESSAGE msg_err;
             MSG_ENABLE_ROSPEC msg = new MSG_ENABLE_ROSPEC();
             msg.ROSpecID = id;   // this better match the ROSpec we created above
-            MSG_ENABLE_ROSPEC_RESPONSE rsp = _reader.ENABLE_ROSPEC(msg, out msg_err, 600000);
+            MSG_ENABLE_ROSPEC_RESPONSE rsp = _reader.ENABLE_ROSPEC(msg, out msg_err, 2000);
             if (rsp != null)
             {
                 Console.WriteLine(rsp.LLRPStatus.StatusCode.ToString());
@@ -342,6 +337,39 @@ namespace ImpinjControl
             }
         }
 
+       
+        public void Delete_ROSpec(uint id)
+        {
+            Console.WriteLine("deleting RoSpec ...");
+            MSG_DELETE_ROSPEC msg = new MSG_DELETE_ROSPEC();
+            MSG_ERROR_MESSAGE err_msg;
+            msg.ROSpecID = id; // this better match the RoSpec we created above
+
+            MSG_DELETE_ROSPEC_RESPONSE stp_rsp = _reader.DELETE_ROSPEC(msg, out err_msg, 12000);
+
+            if (stp_rsp != null)
+            {
+                Console.WriteLine(stp_rsp.LLRPStatus.StatusCode.ToString());
+                if (stp_rsp.LLRPStatus.StatusCode != ENUM_StatusCode.M_Success)
+                {
+                    _reader.Close();
+                    return;
+                }
+            }
+            else if (err_msg != null)
+            {
+                Console.WriteLine(err_msg.ToString());
+                _reader.Close();
+                return;
+            }
+            else
+            {
+                Console.WriteLine("STOP_ROSPEC Command Timed out!");
+                _reader.Close();
+                return;
+            }
+        }
+
         public void Stop_ROSpec(uint id)
         {
             Console.WriteLine("Stopping RoSpec ...");
@@ -373,6 +401,39 @@ namespace ImpinjControl
                 return;
             }
         }
+
+        public void Disable_ROSpec(uint id)
+        {
+            Console.WriteLine("Disable RoSpec ...");
+            MSG_DISABLE_ROSPEC msg = new MSG_DISABLE_ROSPEC();
+            MSG_ERROR_MESSAGE err_msg;
+            msg.ROSpecID = id; // this better match the RoSpec we created above
+
+            MSG_DISABLE_ROSPEC_RESPONSE stp_rsp = _reader.DISABLE_ROSPEC(msg, out err_msg, 12000);
+
+            if (stp_rsp != null)
+            {
+                Console.WriteLine(stp_rsp.LLRPStatus.StatusCode.ToString());
+                if (stp_rsp.LLRPStatus.StatusCode != ENUM_StatusCode.M_Success)
+                {
+                    _reader.Close();
+                    return;
+                }
+            }
+            else if (err_msg != null)
+            {
+                Console.WriteLine(err_msg.ToString());
+                _reader.Close();
+                return;
+            }
+            else
+            {
+                Console.WriteLine("STOP_ROSPEC Command Timed out!");
+                _reader.Close();
+                return;
+            }
+        }
+
 
         public MSG_GET_ROSPECS_RESPONSE GetROSpecFromReader()
         {
@@ -448,28 +509,28 @@ namespace ImpinjControl
             return obj;
         }
 
-        public MSG_ADD_ROSPEC GenerateROSpec(string dir)
+        public MSG_ADD_ROSPEC GenerateROSpec()
         {
             Console.WriteLine("Generate RoSpec...");
 
             MSG_ADD_ROSPEC ros;
-           // string filepath = dir + "\\ROSpec.xml";
-          //  if (File.Exists(filepath))
-         //   {
-        //        ros = (MSG_ADD_ROSPEC)GetROSpecFromXML(dir);
-        //        //make sure specID is not 0
-      //          if (ros.ROSpec.ROSpecID >= uint.MaxValue)
-      //              ros.ROSpec.ROSpecID = 1111;
-      //          else if (++ros.ROSpec.ROSpecID == 0)
-       //             ++ros.ROSpec.ROSpecID;
-       //     }
-        //    else
-        //    {
-                ros = new MSG_ADD_ROSPEC();
-                if (ros.ROSpec == null)
-                    ros.ROSpec = new PARAM_ROSpec();
-                ros.ROSpec.ROSpecID = 1111;
-      //      }
+            // string filepath = dir + "\\ROSpec.xml";
+            //  if (File.Exists(filepath))
+            //   {
+            //        ros = (MSG_ADD_ROSPEC)GetROSpecFromXML(dir);
+            //        //make sure specID is not 0
+            //          if (ros.ROSpec.ROSpecID >= uint.MaxValue)
+            //              ros.ROSpec.ROSpecID = 1111;
+            //          else if (++ros.ROSpec.ROSpecID == 0)
+            //             ++ros.ROSpec.ROSpecID;
+            //     }
+            //    else
+            //    {
+            ros = new MSG_ADD_ROSPEC();
+            if (ros.ROSpec == null)
+                ros.ROSpec = new PARAM_ROSpec();
+            ros.ROSpec.ROSpecID = 1111;
+            //      }
 
             //------ROSpec------
             ros.ROSpec.CurrentState = ENUM_ROSpecState.Disabled;
@@ -675,7 +736,7 @@ namespace ImpinjControl
         public uint AddROSpec(string dir)
         {
             Console.WriteLine("Add Rospec...");
-            MSG_ADD_ROSPEC msg = GenerateROSpec(dir);
+            MSG_ADD_ROSPEC msg = GenerateROSpec();
 
             if (msg != null)
             {
@@ -760,7 +821,7 @@ namespace ImpinjControl
         /// <param name="msg">message</param>
         public void OnTagReportEvent(MSG_RO_ACCESS_REPORT msg)
         {
-            TagInfo _tagInfo = new TagInfo();          //Store information of every tag read conveyed in one tag report
+           TagInfo _tagInfo = new TagInfo();          //Store information of every tag read conveyed in one tag report
             if (msg != null && msg.TagReportData != null)
             {
                 //Loop through all the tags in the report
@@ -783,7 +844,7 @@ namespace ImpinjControl
                     {
                         _tagInfo.FirstSeenTime = msg.TagReportData[i].FirstSeenTimestampUTC.Microseconds;
                     }
-                   // Console.WriteLine("tagTime: "+ ( (long)_tagInfo.FirstSeenTime - CurrentMillis.MicroSeconds));
+                    // Console.WriteLine("tagTime: "+ ( (long)_tagInfo.FirstSeenTime - CurrentMillis.MicroSeconds));
                     if (msg.TagReportData[i].LastSeenTimestampUTC != null)
                         _tagInfo.LastSeenTime = msg.TagReportData[i].LastSeenTimestampUTC.Microseconds;
 
@@ -815,11 +876,175 @@ namespace ImpinjControl
                         else if (param is PARAM_ImpinjRFDopplerFrequency)
                             _tagInfo.DopplerShift = ((PARAM_ImpinjRFDopplerFrequency)param).DopplerFrequency;
                     }
+                    //修改access operation
+                    if (msg.TagReportData[i].AccessCommandOpSpecResult != null && msg.TagReportData[i].AccessCommandOpSpecResult.Count > 0)
+                    {
+                        PARAM_C1G2WriteOpSpecResult result = (PARAM_C1G2WriteOpSpecResult)msg.TagReportData[i].AccessCommandOpSpecResult[0];
+                        // msg.TagReportData[i].
+                        Console.WriteLine("write to epc = " + _tagInfo.EPC);
+                        this.deleteAccessSpec();
+                        AccessSpecID++;
+                        this.Stop_ROSpec(ImpinjControlService._currentSpecID);
+                        this.Disable_ROSpec(ImpinjControlService._currentSpecID);
+                    }
+                    else
+                    {
 
-                    _tagInfo.TotalTagCount = ++TotalTagCount;
-                    //增加队列
-                    tagInfoQueue.Enqueue(_tagInfo);
+                        _tagInfo.TotalTagCount = ++TotalTagCount;
+                        //增加队列
+                        tagInfoQueue.Enqueue(_tagInfo);
+                    }
                 }
+            }
+        }
+
+        public   void deleteAccessSpec()
+        {
+            MSG_ERROR_MESSAGE msg_err;
+            MSG_DELETE_ACCESSSPEC msg = new MSG_DELETE_ACCESSSPEC();
+            msg.AccessSpecID = this.AccessSpecID;
+            // Delete all AccessSpecs
+            MSG_DELETE_ACCESSSPEC_RESPONSE rsp =
+                _reader.DELETE_ACCESSSPEC(msg, out msg_err, 2000);
+            if (rsp != null)
+            {
+                // Success
+                Console.WriteLine(rsp.ToString());
+            }
+            else if (msg_err != null)
+            {
+                // Error
+                Console.WriteLine(msg_err.ToString());
+            }
+            else
+            {
+                // Timeout
+                Console.WriteLine("Timeout Error.");
+            }
+        }
+
+        public  void enableAccessSpec()
+        {
+            MSG_ERROR_MESSAGE msg_err;
+            MSG_ENABLE_ACCESSSPEC msg = new MSG_ENABLE_ACCESSSPEC();
+            msg.AccessSpecID = AccessSpecID;
+            MSG_ENABLE_ACCESSSPEC_RESPONSE rsp =
+                _reader.ENABLE_ACCESSSPEC(msg, out msg_err, 2000);
+            if (rsp != null)
+            {
+                // Success
+                Console.WriteLine(rsp.ToString());
+            }
+            else if (msg_err != null)
+            {
+                // Error
+                Console.WriteLine(msg_err.ToString());
+            }
+            else
+            {
+                // Timeout
+                Console.WriteLine("Timeout Error.");
+            }
+        }
+
+        public  void  addAccessSpec(uint _currentSpecID ,string oldEpc,string newEpc)
+        {
+            MSG_ERROR_MESSAGE msg_err;
+            MSG_ADD_ACCESSSPEC msg = new MSG_ADD_ACCESSSPEC();
+            msg.AccessSpec = new PARAM_AccessSpec();
+
+            /////////////////////////////////////////////////
+            // AccessSpec
+            /////////////////////////////////////////////////
+            // AccessSpecID should be set to a unique identifier.
+            msg.AccessSpec.AccessSpecID = AccessSpecID;
+            msg.AccessSpec.AntennaID = 1;
+            // We're writing to a Gen2 tag
+            msg.AccessSpec.ProtocolID = ENUM_AirProtocols.EPCGlobalClass1Gen2;
+            // AccessSpecs must be disabled when you add them.
+            msg.AccessSpec.CurrentState = ENUM_AccessSpecState.Disabled;
+            msg.AccessSpec.ROSpecID = _currentSpecID;
+            // Setup the triggers
+            msg.AccessSpec.AccessSpecStopTrigger =
+                new PARAM_AccessSpecStopTrigger();
+            msg.AccessSpec.AccessSpecStopTrigger.AccessSpecStopTrigger =
+                ENUM_AccessSpecStopTriggerType.Null;
+            // OperationCountValue indicate the number of times this Spec is
+            // executed before it is deleted. If set to 0, this is equivalent
+            // to no stop trigger defined.
+            msg.AccessSpec.AccessSpecStopTrigger.OperationCountValue = 1;
+
+            /////////////////////////////////////////////////
+            // AccessCommand
+            //
+            // Define which tags we want to write to.
+            /////////////////////////////////////////////////
+            msg.AccessSpec.AccessCommand = new PARAM_AccessCommand();
+            msg.AccessSpec.AccessCommand.AirProtocolTagSpec =
+                new UNION_AirProtocolTagSpec();
+            PARAM_C1G2TagSpec tagSpec = new PARAM_C1G2TagSpec();
+            // Specify the target tag. Which tag do we want to write to?
+            tagSpec.C1G2TargetTag = new PARAM_C1G2TargetTag[1];
+            tagSpec.C1G2TargetTag[0] = new PARAM_C1G2TargetTag();
+            tagSpec.C1G2TargetTag[0].Match = true;
+            // We'll use the tag's EPC to determine if this is the label we want.
+            // Set the memory bank to 1 (The EPC memory bank on a Monza 4 tag).
+            tagSpec.C1G2TargetTag[0].MB = new TwoBits(1);
+            // The first (msb) bit location of the specified memory
+            // bank against which to compare the TagMask.
+            // We'll set it to 0x20, to skip the protocol
+            // control bits and CRC.
+            tagSpec.C1G2TargetTag[0].Pointer = 0x20;
+            tagSpec.C1G2TargetTag[0].TagMask = LLRPBitArray.FromHexString("FFFFFFFFFFFFFFFFFFFFFFFF");
+            //tagSpec.C1G2TargetTag[0].TagMask = LLRPBitArray.FromHexString("F");
+            tagSpec.C1G2TargetTag[0].TagData =
+                LLRPBitArray.FromHexString(oldEpc);
+            msg.AccessSpec.AccessCommand.AirProtocolTagSpec.Add(tagSpec);
+
+            /////////////////////////////////////////////////
+            // AccessCommandOpSpec
+            //
+            // Define the data we want to write.
+            /////////////////////////////////////////////////
+            msg.AccessSpec.AccessCommand.AccessCommandOpSpec =
+                new UNION_AccessCommandOpSpec();
+            PARAM_C1G2Write wr = new PARAM_C1G2Write();
+            wr.AccessPassword = 0;
+            // Bank 3 is user memory on a Monza 4 tag.
+            wr.MB = new TwoBits(1);
+            // OpSpecID should be set to a unique identifier.
+            wr.OpSpecID = 111;
+            // Write to the base of user memory.
+            wr.WordPointer = 2;
+            // Data to be written.
+            wr.WriteData = UInt16Array.FromHexString(newEpc);
+            msg.AccessSpec.AccessCommand.AccessCommandOpSpec.Add(wr);
+            /////////////////////////////////////////////////
+            // AccessReportSpec
+            //
+            // Define when we want to receive AccessReports
+            /////////////////////////////////////////////////
+            msg.AccessSpec.AccessReportSpec = new PARAM_AccessReportSpec();
+            msg.AccessSpec.AccessReportSpec.AccessReportTrigger =
+                ENUM_AccessReportTriggerType.End_Of_AccessSpec;
+
+            // Send the message and check the reply
+            MSG_ADD_ACCESSSPEC_RESPONSE rsp =
+                _reader.ADD_ACCESSSPEC(msg, out msg_err, 2000);
+            if (rsp != null)
+            {
+                // Success
+                Console.WriteLine(rsp.ToString());
+            }
+            else if (msg_err != null)
+            {
+                // Error
+                Console.WriteLine(msg_err.ToString());
+            }
+            else
+            {
+                // Timeout
+                Console.WriteLine("Timeout Error.");
             }
         }
 
@@ -925,8 +1150,8 @@ namespace ImpinjControl
                 {
                     case ENUM_ROSpecEventType.Start_Of_ROSpec:
                         Console.WriteLine("RoSpecEvent Start Of ROSpec");
-                        break; 
-                      case ENUM_ROSpecEventType.End_Of_ROSpec:
+                        break;
+                    case ENUM_ROSpecEventType.End_Of_ROSpec:
                         Console.WriteLine("RoSpecEvent End Of ROSpec");
                         break;
                     case ENUM_ROSpecEventType.Preemption_Of_ROSpec:
@@ -1036,7 +1261,7 @@ namespace ImpinjControl
         public MSG_SET_READER_CONFIG GenerateReaderConfig(string dir, AntennaConfiguration antennaConfiguration, ROReportSpec rOReportSpec)
         {
             Console.WriteLine("Generate Reader config...");
-        //    antennaConfiguration.NumberOfAntennaConnected = 1;
+            //    antennaConfiguration.NumberOfAntennaConnected = 1;
             MSG_SET_READER_CONFIG config;
             if (RFIDReaderParameter.Reset)
             {
@@ -1103,7 +1328,7 @@ namespace ImpinjControl
                     c1G2Command.C1G2SingulationControl.Session = new TwoBits(antennaConfiguration.SelectedSessionIndex);
                     c1G2Command.C1G2SingulationControl.TagPopulation = antennaConfiguration.TagPopulation;
                     c1G2Command.C1G2SingulationControl.TagTransitTime = antennaConfiguration.TagTransitTime;
-                    
+
 
                     c1G2Command.C1G2Filter = new PARAM_C1G2Filter[2];
 

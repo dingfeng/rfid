@@ -18,6 +18,8 @@ namespace ImpinjControl
         [OperationContract]
         void startInventory(AntennaConfiguration antennaConfiguration, ROReportSpec rOReportSpec);
         [OperationContract]
+        void updateEpc(string oldEpc, string newEpc);  //修改epc
+        [OperationContract]
         void stopInventory();
         [OperationContract]
         List<TagInfo> tryDeque();

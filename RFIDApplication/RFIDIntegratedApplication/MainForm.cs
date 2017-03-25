@@ -525,13 +525,13 @@ namespace RFIDIntegratedApplication
                 RFIDReaderParameter.readerCapabilities = connectResponse.readerCapabilities;
                 RFIDReaderParameter.rOReportSpec = connectResponse.rOReportSpec;
                 // Display settings in ReaderSettingsForm
-              //  _readerSettingsForm.ReceiveConfigFromRFIDReaderPara();
+                //  _readerSettingsForm.ReceiveConfigFromRFIDReaderPara();
 
                 // Modify label status in the Status Strip
-               
+
 
                 // Modify Setting panel status
-               
+
                 //     RFIDReaderParameter.IsConnected = true;
                 return true;
             }
@@ -559,7 +559,7 @@ namespace RFIDIntegratedApplication
             IImpinjControlService impinjControlService = ServiceManager.getOneImpinjControlService();
             impinjControlService.startInventory(RFIDReaderParameter.antennaConfiguration, RFIDReaderParameter.rOReportSpec);
             ServiceManager.closeService(impinjControlService);
-        //    this.UpdateComponentStatus((int)ENUM_ROSpecEventType.Start_Of_ROSpec, SARParameter.IsSimulation);
+            //    this.UpdateComponentStatus((int)ENUM_ROSpecEventType.Start_Of_ROSpec, SARParameter.IsSimulation);
             StartDequeueThread();
         }
 
@@ -570,15 +570,11 @@ namespace RFIDIntegratedApplication
 
         private void start()
         {
-            Console.WriteLine("Start...");
-            RFIDReaderParameter.IsConnected = connect();
-            if (RFIDReaderParameter.IsConnected)
-            {
-                this._readerSettingsForm.SendConfigToRFIDReaderPara();
-                StartInventory();
-                this.tsbtnStart.Enabled = false;
-                this.tsbtnStop.Enabled = true;
-            }
+            this._readerSettingsForm.SendConfigToRFIDReaderPara();
+            StartInventory();
+            this.tsbtnStart.Enabled = false;
+            this.tsbtnStop.Enabled = true;
+
         }
 
         public void StopDequeueThread()
@@ -611,7 +607,7 @@ namespace RFIDIntegratedApplication
                 IImpinjControlService impinjControlService = ServiceManager.getOneImpinjControlService();
                 impinjControlService.stopInventory();
                 ServiceManager.closeService(impinjControlService);
-               // this.UpdateComponentStatus((int)ENUM_ROSpecEventType.End_Of_ROSpec, SARParameter.IsSimulation);
+                // this.UpdateComponentStatus((int)ENUM_ROSpecEventType.End_Of_ROSpec, SARParameter.IsSimulation);
             }
         }
 
@@ -836,9 +832,6 @@ namespace RFIDIntegratedApplication
 
         private void stop()
         {
-            IImpinjControlService service =  ServiceManager.getOneImpinjControlService();
-            service.disconnect();
-            ServiceManager.closeService(service);
             StopInventory();
             //Tool Strip
             tsbtnStart.Enabled = true;
@@ -846,7 +839,7 @@ namespace RFIDIntegratedApplication
             tssbtnAddWindow.Enabled = true;
 
             // Modify the status of components in ReaderSettingsForm when initializing components
-           // _readerSettingsForm.UpdateComponentStatus(0, true);
+            // _readerSettingsForm.UpdateComponentStatus(0, true);
         }
 
         private void toolStripSeparator2_Click(object sender, EventArgs e)
@@ -859,5 +852,27 @@ namespace RFIDIntegratedApplication
             stop();
             start();
         }
+        int count = 0;
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            //    for (int i = 0; i < 500; ++i)
+            //     {
+            string[] strs = new string[] { "000000000000000000000008", "000000000000000000000009" };
+            for (int i = 0; i < 500; ++i)
+            {
+                IImpinjControlService service = ServiceManager.getOneImpinjControlService();
+                service.updateEpc(strs[count % 2], strs[(count + 1) % 2]);
+                count++;
+                ServiceManager.closeService(service);
+                Thread.Sleep(2000);
+            }
+            //    Thread.Sleep(1000);
+            //      service = ServiceManager.getOneImpinjControlService();
+            //        service.updateEpc("000000000000000000000008", "000000000000000000000009");
+            //       ServiceManager.closeService(service);
+            //       Console.WriteLine("i:"+i);
+            //   }
+        }
     }
+
 }

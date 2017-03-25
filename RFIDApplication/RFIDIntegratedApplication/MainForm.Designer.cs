@@ -51,6 +51,7 @@
             this.tsslRunTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslblCounter = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslblStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +71,7 @@
             this.tssbtnSave,
             this.toolStripSeparator5,
             this.tsbtnStart,
+            this.toolStripButton2,
             this.tsbtnStop,
             this.toolStripButton1,
             this.toolStripSeparator2,
@@ -267,6 +269,15 @@
             this.tsslblStatus.Text = "Ready";
             this.tsslblStatus.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(59, 24);
+            this.toolStripButton2.Text = "Stop";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -316,5 +327,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiDemoSortingBooks;
         private System.Windows.Forms.ToolStripMenuItem tsmiDemoTrackingObjects;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }
