@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFIDTest", "RFIDTest\RFIDTest.csproj", "{210621FD-997B-4F95-9D6D-B2E88DE1481E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFIDIntegratedApplication", "RFIDIntegratedApplication\RFIDIntegratedApplication.csproj", "{FBBBE4AC-68FB-4C42-9FBE-3B9469DE1104}"
 EndProject
 Global
@@ -15,14 +13,6 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{210621FD-997B-4F95-9D6D-B2E88DE1481E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{210621FD-997B-4F95-9D6D-B2E88DE1481E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{210621FD-997B-4F95-9D6D-B2E88DE1481E}.Debug|x64.ActiveCfg = Debug|x64
-		{210621FD-997B-4F95-9D6D-B2E88DE1481E}.Debug|x64.Build.0 = Debug|x64
-		{210621FD-997B-4F95-9D6D-B2E88DE1481E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{210621FD-997B-4F95-9D6D-B2E88DE1481E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{210621FD-997B-4F95-9D6D-B2E88DE1481E}.Release|x64.ActiveCfg = Release|x64
-		{210621FD-997B-4F95-9D6D-B2E88DE1481E}.Release|x64.Build.0 = Release|x64
 		{FBBBE4AC-68FB-4C42-9FBE-3B9469DE1104}.Debug|Any CPU.ActiveCfg = Debug|x64
 		{FBBBE4AC-68FB-4C42-9FBE-3B9469DE1104}.Debug|Any CPU.Build.0 = Debug|x64
 		{FBBBE4AC-68FB-4C42-9FBE-3B9469DE1104}.Debug|x64.ActiveCfg = Debug|x64

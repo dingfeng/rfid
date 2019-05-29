@@ -14,3 +14,11 @@ F:\rfid实验室\丁峰\cs linear guide\ImpinjControl\ImpinjControl\bin\x64\Debu
 F:\rfid实验室\丁峰\cs linear guide\ImpinjControl\ImpinjControl\bin\x64\Debug\LLRP.dll
 F:\rfid实验室\丁峰\cs linear guide\ImpinjControl\ImpinjControl\bin\x64\Debug\LLRP.Impinj.dll
 F:\rfid实验室\丁峰\cs linear guide\ImpinjControl\ImpinjControl\obj\x64\Debug\ImpinjControl.csprojResolveAssemblyReference.cache
+F:\rfid实验室\项目\ImpinjControl\ImpinjControl\bin\x64\Debug\ImpinjControl.exe.config
+F:\rfid实验室\项目\ImpinjControl\ImpinjControl\bin\x64\Debug\ImpinjControl.exe
+F:\rfid实验室\项目\ImpinjControl\ImpinjControl\bin\x64\Debug\ImpinjControl.pdb
+F:\rfid实验室\项目\ImpinjControl\ImpinjControl\bin\x64\Debug\LLRP.dll
+F:\rfid实验室\项目\ImpinjControl\ImpinjControl\bin\x64\Debug\LLRP.Impinj.dll
+F:\rfid实验室\项目\ImpinjControl\ImpinjControl\obj\x64\Debug\ImpinjControl.csprojResolveAssemblyReference.cache
+F:\rfid实验室\项目\ImpinjControl\ImpinjControl\obj\x64\Debug\ImpinjControl.exe
+F:\rfid实验室\项目\ImpinjControl\ImpinjControl\obj\x64\Debug\ImpinjControl.pdb

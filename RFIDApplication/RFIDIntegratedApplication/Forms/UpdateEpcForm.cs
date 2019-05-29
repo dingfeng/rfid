@@ -49,5 +49,10 @@ namespace RFIDIntegratedApplication.Forms
             service.updateEpc(oldEpc, newEpc);
             ServiceManager.closeService(service);
         }
+
+        private void cancelButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

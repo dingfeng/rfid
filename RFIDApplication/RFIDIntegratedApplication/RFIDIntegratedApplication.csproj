@@ -120,6 +120,12 @@
     <Compile Include="Forms\SortingBooksForm.Designer.cs">
       <DependentUpon>SortingBooksForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SystemInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SystemInfoForm.Designer.cs">
+      <DependentUpon>SystemInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UpdateEpcForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SortingBooksForm.resx">
       <DependentUpon>SortingBooksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SystemInfoForm.resx">
+      <DependentUpon>SystemInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UpdateEpcForm.resx">
       <DependentUpon>UpdateEpcForm.cs</DependentUpon>
@@ -290,7 +299,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\status_connecting.png" />
@@ -352,6 +363,7 @@
   <ItemGroup>
     <None Include="Resources\restart.png" />
     <None Include="Resources\epc.png" />
+    <None Include="Resources\sys_info.png" />
     <Content Include="rfid.ico" />
     <None Include="Service References\ServiceReference3\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>

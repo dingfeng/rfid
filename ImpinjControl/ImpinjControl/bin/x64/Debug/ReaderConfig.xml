@@ -2,7 +2,7 @@
  xmlns:llrp="http://www.llrp.org/ltk/schema/core/encoding/xml/1.0"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://www.llrp.org/ltk/schema/core/encoding/xml/1.0 http://www.llrp.org/ltk/schema/core/encoding/xml/1.0/llrp.xsd"
- Version="1" MessageID="847">
+ Version="1" MessageID="151087">
   <ResetToFactoryDefault>true</ResetToFactoryDefault>
   <ReaderEventNotificationSpec>
     <EventNotificationState>
@@ -58,26 +58,26 @@
         <T>Do_Not_Truncate</T>
         <C1G2TagInventoryMask>
           <MB>1</MB>
-          <Pointer>32</Pointer>
-          <TagMask Count="0"></TagMask>
+          <Pointer>112</Pointer>
+          <TagMask Count="4">80</TagMask>
         </C1G2TagInventoryMask>
         <C1G2TagInventoryStateUnawareFilterAction>
-          <Action>Select_Unselect</Action>
+          <Action>DoNothing_Unselect</Action>
         </C1G2TagInventoryStateUnawareFilterAction>
       </C1G2Filter>
       <C1G2Filter>
         <T>Do_Not_Truncate</T>
         <C1G2TagInventoryMask>
           <MB>1</MB>
-          <Pointer>32</Pointer>
-          <TagMask Count="0"></TagMask>
+          <Pointer>124</Pointer>
+          <TagMask Count="4">50</TagMask>
         </C1G2TagInventoryMask>
         <C1G2TagInventoryStateUnawareFilterAction>
-          <Action>Select_DoNothing</Action>
+          <Action>DoNothing_Unselect</Action>
         </C1G2TagInventoryStateUnawareFilterAction>
       </C1G2Filter>
       <C1G2RFControl>
-        <ModeIndex>1000</ModeIndex>
+        <ModeIndex>0</ModeIndex>
         <Tari>0</Tari>
       </C1G2RFControl>
       <C1G2SingulationControl>

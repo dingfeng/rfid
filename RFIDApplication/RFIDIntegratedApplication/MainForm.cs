@@ -32,10 +32,10 @@ namespace RFIDIntegratedApplication
         TagTableForm _tagTableForm;
         RSSIGraphFrom _rssiGraphForm;
         PhaseGraphForm _phaseGraphForm;
-        UpdateEpcForm  _updateEpcForm;
+        UpdateEpcForm _updateEpcForm;
         SearchRegionForm _searchRegionForm;
         SimulationForm _simulationForm;
-
+        SystemInfoForm _systemInfoForm;
         LinearGuideForm _linearGuideForm;
         SortingBooksForm _sortingBooksForm;
 
@@ -66,7 +66,7 @@ namespace RFIDIntegratedApplication
             _tagTableForm = new TagTableForm();
             _rssiGraphForm = new RSSIGraphFrom();
             _phaseGraphForm = new PhaseGraphForm();
-
+            _systemInfoForm = new SystemInfoForm();
             _sortingBooksForm = new SortingBooksForm();
             _linearGuideForm = new LinearGuideForm();
             _updateEpcForm = new UpdateEpcForm();
@@ -84,7 +84,7 @@ namespace RFIDIntegratedApplication
                         return _readerSettingsForm;
                     }
 
-                    if(persistString == typeof(UpdateEpcForm).ToString())
+                    if (persistString == typeof(UpdateEpcForm).ToString())
                     {
                         return _updateEpcForm;
                     }
@@ -391,6 +391,7 @@ namespace RFIDIntegratedApplication
                     }
                     TagInfo lastTagInfo = tagInfoList.Last();
                     UpdateStatusStrip(lastTagInfo, false);
+                    this._systemInfoForm.updateTime((long)lastTagInfo.FirstSeenTime);
                 }
                 Thread.Sleep(10);
             }
@@ -480,8 +481,8 @@ namespace RFIDIntegratedApplication
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
                 CSVFileHelper.SaveCSV(_tagsTable.Tags, fileDialog.FileName);
-                TagsWithPosTable tagsWithPosTable = PhaseLocating.getInstance().tagsWithPosTable;
-                CSVFileHelper.SaveCSV(tagsWithPosTable.tags, fileDialog.FileName + "WithPos.csv");
+                //TagsWithPosTable tagsWithPosTable = PhaseLocating.getInstance().tagsWithPosTable;
+               // CSVFileHelper.SaveCSV(tagsWithPosTable.tags, fileDialog.FileName + "WithPos.csv");
             }
         }
 
@@ -574,9 +575,10 @@ namespace RFIDIntegratedApplication
         private void tsbtnStart_Click(object sender, EventArgs e)
         {
             start();
+            this.tssbtnSave.Enabled = false;
         }
 
-        private void start()
+        public void start()
         {
             this._readerSettingsForm.SendConfigToRFIDReaderPara();
             StartInventory();
@@ -622,6 +624,7 @@ namespace RFIDIntegratedApplication
         private void tsbtnStop_Click(object sender, EventArgs e)
         {
             stop();
+            this.tssbtnSave.Enabled = true;
         }
 
         /// <summary>
@@ -710,7 +713,7 @@ namespace RFIDIntegratedApplication
 
         private void tsmiPhaseGraph_Click(object sender, EventArgs e)
         {
-            _phaseGraphForm.Show(this.dockPanelMain, AppConfig.phaseGraphDockState);
+            _systemInfoForm.Show(this.dockPanelMain, AppConfig.phaseGraphDockState);
         }
 
         private void tsmiDemoSortingBooks_Click(object sender, EventArgs e)
@@ -830,7 +833,7 @@ namespace RFIDIntegratedApplication
 
         private void tssbtnAddWindow_ButtonClick(object sender, EventArgs e)
         {
-
+           
         }
 
         private void tsbtnDisconnect_Click(object sender, EventArgs e)
@@ -838,7 +841,7 @@ namespace RFIDIntegratedApplication
 
         }
 
-        private void stop()
+        public void stop()
         {
             StopInventory();
             //Tool Strip
@@ -859,11 +862,17 @@ namespace RFIDIntegratedApplication
         {
             stop();
             start();
+            this.tssbtnSave.Enabled = false;
         }
 
         private void tsmiUpdateEpc_Click(object sender, EventArgs e)
         {
             this._updateEpcForm.Show(this.dockPanelMain, AppConfig.updateEpcDockState);
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            _phaseGraphForm.Show(this.dockPanelMain, AppConfig.phaseGraphDockState);
         }
     }
 

@@ -32,9 +32,7 @@
             this.tpBasic = new System.Windows.Forms.TabPage();
             this.cbResetToFactoryDefault = new System.Windows.Forms.CheckBox();
             this.gbTagFilter = new System.Windows.Forms.GroupBox();
-            this.cbExtraMask = new System.Windows.Forms.ComboBox();
-            this.cbMask = new System.Windows.Forms.ComboBox();
-            this.lblExtraMask = new System.Windows.Forms.Label();
+            this.includeTextBox = new System.Windows.Forms.TextBox();
             this.lblMask = new System.Windows.Forms.Label();
             this.gbFrequencyInfo = new System.Windows.Forms.GroupBox();
             this.nudHop = new System.Windows.Forms.NumericUpDown();
@@ -224,52 +222,31 @@
             // 
             // gbTagFilter
             // 
-            this.gbTagFilter.Controls.Add(this.cbExtraMask);
-            this.gbTagFilter.Controls.Add(this.cbMask);
-            this.gbTagFilter.Controls.Add(this.lblExtraMask);
+            this.gbTagFilter.Controls.Add(this.includeTextBox);
             this.gbTagFilter.Controls.Add(this.lblMask);
             this.gbTagFilter.Location = new System.Drawing.Point(8, 515);
             this.gbTagFilter.Name = "gbTagFilter";
-            this.gbTagFilter.Size = new System.Drawing.Size(260, 70);
+            this.gbTagFilter.Size = new System.Drawing.Size(260, 139);
             this.gbTagFilter.TabIndex = 10;
             this.gbTagFilter.TabStop = false;
             this.gbTagFilter.Text = "Tag Filter";
             // 
-            // cbExtraMask
+            // includeTextBox
             // 
-            this.cbExtraMask.FormattingEnabled = true;
-            this.cbExtraMask.Location = new System.Drawing.Point(75, 44);
-            this.cbExtraMask.Name = "cbExtraMask";
-            this.cbExtraMask.Size = new System.Drawing.Size(178, 20);
-            this.cbExtraMask.TabIndex = 5;
-            this.cbExtraMask.SelectedIndexChanged += new System.EventHandler(this.cbExtraMask_SelectedIndexChanged);
-            // 
-            // cbMask
-            // 
-            this.cbMask.FormattingEnabled = true;
-            this.cbMask.Location = new System.Drawing.Point(75, 18);
-            this.cbMask.Name = "cbMask";
-            this.cbMask.Size = new System.Drawing.Size(178, 20);
-            this.cbMask.TabIndex = 4;
-            this.cbMask.SelectedIndexChanged += new System.EventHandler(this.cbMask_SelectedIndexChanged);
-            // 
-            // lblExtraMask
-            // 
-            this.lblExtraMask.AutoSize = true;
-            this.lblExtraMask.Location = new System.Drawing.Point(9, 47);
-            this.lblExtraMask.Name = "lblExtraMask";
-            this.lblExtraMask.Size = new System.Drawing.Size(65, 12);
-            this.lblExtraMask.TabIndex = 1;
-            this.lblExtraMask.Text = "Extra Mask";
+            this.includeTextBox.Location = new System.Drawing.Point(62, 18);
+            this.includeTextBox.Name = "includeTextBox";
+            this.includeTextBox.Size = new System.Drawing.Size(191, 21);
+            this.includeTextBox.TabIndex = 2;
+            this.includeTextBox.Text = "XXXXXXXXXXXXXXXXXXXXXXXX";
             // 
             // lblMask
             // 
             this.lblMask.AutoSize = true;
             this.lblMask.Location = new System.Drawing.Point(9, 21);
             this.lblMask.Name = "lblMask";
-            this.lblMask.Size = new System.Drawing.Size(29, 12);
+            this.lblMask.Size = new System.Drawing.Size(47, 12);
             this.lblMask.TabIndex = 0;
-            this.lblMask.Text = "Mask";
+            this.lblMask.Text = "include";
             // 
             // gbFrequencyInfo
             // 
@@ -1537,10 +1514,6 @@
         private System.Windows.Forms.TabPage tpRoSpec;
         private System.Windows.Forms.CheckBox cbResetToFactoryDefault;
         private System.Windows.Forms.GroupBox gbTagFilter;
-        private System.Windows.Forms.ComboBox cbExtraMask;
-        private System.Windows.Forms.ComboBox cbMask;
-        private System.Windows.Forms.Label lblExtraMask;
-        private System.Windows.Forms.Label lblMask;
         private System.Windows.Forms.GroupBox gbFrequencyInfo;
         private System.Windows.Forms.NumericUpDown nudHop;
         private System.Windows.Forms.CheckedListBox clbFreqSet;
@@ -1654,5 +1627,7 @@
         private System.Windows.Forms.Label lblN;
         private System.Windows.Forms.ComboBox cbROReportTrigger;
         private System.Windows.Forms.Label lblROReportTrigger;
+        private System.Windows.Forms.TextBox includeTextBox;
+        private System.Windows.Forms.Label lblMask;
     }
 }

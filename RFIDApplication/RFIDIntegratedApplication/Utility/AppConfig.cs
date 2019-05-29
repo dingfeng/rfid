@@ -19,10 +19,10 @@ namespace RFIDIntegratedApplication.Utility
         public static DockState updateEpcDockState = DockState.DockRight;
         public static DockState hologramDockState = DockState.Document;
         public static DockState simulationDockState = DockState.DockRight;
+        public static DockState systemInfoDockState = DockState.DockRight;
 
         public static DockState linearGuideDockState = DockState.DockRight;
         public static DockState sortingBooksDockState = DockState.Document;
-
 
     }
 }

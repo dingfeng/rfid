@@ -71,8 +71,7 @@ namespace RFIDIntegratedApplication
                     tbxMAC3.Enabled = false;
 
                     gbTagFilter.Enabled = false;
-                    cbMask.Items.Add(String.Empty);
-                    cbExtraMask.Items.Add(String.Empty);
+                 
                 }
                 else
                 {
@@ -123,10 +122,10 @@ namespace RFIDIntegratedApplication
         /// <param name="tagInfo"></param>
         public void UpdateTagFilter(TagInfo tagInfo)
         {
-            if (!cbMask.Items.Contains(tagInfo.EPC))
+          /*  if (!cbMask.Items.Contains(tagInfo.EPC))
                 cbMask.Items.Add(tagInfo.EPC);
             if (!cbExtraMask.Items.Contains(tagInfo.EPC))
-                cbExtraMask.Items.Add(tagInfo.EPC);
+                cbExtraMask.Items.Add(tagInfo.EPC);*/
         }
 
         /// <summary>
@@ -248,6 +247,7 @@ namespace RFIDIntegratedApplication
             // Tag Inventory State Aware
             cbTagInventoryStateAware.Text = RFIDReaderParameter.antennaConfiguration.TagInventoryStateAware.ToString();
             // C1G2 RF Control
+            RFIDReaderParameter.antennaConfiguration.ModeIndex = 0;
             foreach (uint index in RFIDReaderParameter.readerCapabilities.SupportedModeIndex)
             {
                 foreach (KeyValuePair<string, ushort> mode in RFIDReaderParameter.readerCapabilities.PreDefinedModeTable)
@@ -450,8 +450,8 @@ namespace RFIDIntegratedApplication
                 }
             }
             // Tag Filter
-            RFIDReaderParameter.antennaConfiguration.mask = cbMask.Text;
-            RFIDReaderParameter.antennaConfiguration.extraMask = cbExtraMask.Text;
+            RFIDReaderParameter.antennaConfiguration.mask = this.includeTextBox.Text;
+          //  RFIDReaderParameter.antennaConfiguration.extraMask = this.excludeTextBox.Text;
             //------Basic Settings------
 
             //------Antenna Settings------
@@ -656,8 +656,8 @@ namespace RFIDIntegratedApplication
         {
             if (RFIDReaderParameter.ReadMode != "Timer")
             {
-                _mainform.StopInventory();
-                _mainform.StartInventory();
+                _mainform.stop();
+                _mainform.start();
             }
         }
 
@@ -665,8 +665,8 @@ namespace RFIDIntegratedApplication
         {
             if (RFIDReaderParameter.ReadMode != "Timer")
             {
-                _mainform.StopInventory();
-                _mainform.StartInventory();
+                _mainform.stop();
+                _mainform.start();
             }
         }
 

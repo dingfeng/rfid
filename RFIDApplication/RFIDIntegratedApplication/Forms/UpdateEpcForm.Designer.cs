@@ -91,6 +91,7 @@
             this.cancelButton.TabIndex = 5;
             this.cancelButton.Text = "cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click_1);
             // 
             // UpdateEpcForm
             // 

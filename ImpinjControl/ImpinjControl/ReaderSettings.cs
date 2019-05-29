@@ -1330,18 +1330,37 @@ namespace ImpinjControl
                     c1G2Command.C1G2SingulationControl.TagTransitTime = antennaConfiguration.TagTransitTime;
 
 
-                    c1G2Command.C1G2Filter = new PARAM_C1G2Filter[2];
+                  /*  c1G2Command.C1G2Filter = new PARAM_C1G2Filter[2];
 
                     c1G2Command.C1G2Filter[0] = new PARAM_C1G2Filter();
                     c1G2Command.C1G2Filter[0].T = ENUM_C1G2TruncateAction.Do_Not_Truncate;
                     c1G2Command.C1G2Filter[0].C1G2TagInventoryMask = new PARAM_C1G2TagInventoryMask();
                     c1G2Command.C1G2Filter[0].C1G2TagInventoryMask.MB = new TwoBits(1);
-                    c1G2Command.C1G2Filter[0].C1G2TagInventoryMask.Pointer = 32;
-                    c1G2Command.C1G2Filter[0].C1G2TagInventoryMask.TagMask = LLRPBitArray.FromHexString(antennaConfiguration.mask);
+                    c1G2Command.C1G2Filter[0].C1G2TagInventoryMask.Pointer = 32;*/
+                    char[] mask = antennaConfiguration.mask.ToCharArray();
+                    List<PARAM_C1G2Filter> list = new List<PARAM_C1G2Filter>();
+                    for(int k=0;k<mask.Length;k++)
+                    {
+                        if (mask[k] != 'X')
+                        {
+                            PARAM_C1G2Filter filter = new PARAM_C1G2Filter();
+                            filter.T = ENUM_C1G2TruncateAction.Do_Not_Truncate;
+                            filter.C1G2TagInventoryMask = new PARAM_C1G2TagInventoryMask();
+                            filter.C1G2TagInventoryMask.MB = new TwoBits(1);
+                            filter.C1G2TagInventoryMask.Pointer = (ushort)(32+k*4);
+                            filter.C1G2TagInventoryMask.TagMask = LLRPBitArray.FromHexString(antennaConfiguration.mask.Substring(k,1));
+                            filter.C1G2TagInventoryStateUnawareFilterAction = new PARAM_C1G2TagInventoryStateUnawareFilterAction();
+                            filter.C1G2TagInventoryStateUnawareFilterAction.Action = ENUM_C1G2StateUnawareAction.DoNothing_Unselect;
+                            list.Add(filter); 
+                        }
+                    }
+                    c1G2Command.C1G2Filter=list.ToArray();
+                    /*c1G2Command.C1G2Filter[0].C1G2TagInventoryMask.TagMask = LLRPBitArray.FromHexString(antennaConfiguration.mask);
                     //ToLLRPBitArray(RFIDReaderParameter.Mask);
                     c1G2Command.C1G2Filter[0].C1G2TagInventoryStateUnawareFilterAction = new PARAM_C1G2TagInventoryStateUnawareFilterAction();
-                    c1G2Command.C1G2Filter[0].C1G2TagInventoryStateUnawareFilterAction.Action = ENUM_C1G2StateUnawareAction.Select_Unselect;
+                    c1G2Command.C1G2Filter[0].C1G2TagInventoryStateUnawareFilterAction.Action = ENUM_C1G2StateUnawareAction.Select_Unselect;*/
 
+                    /*
                     c1G2Command.C1G2Filter[1] = new PARAM_C1G2Filter();
                     c1G2Command.C1G2Filter[1].T = ENUM_C1G2TruncateAction.Do_Not_Truncate;
                     c1G2Command.C1G2Filter[1].C1G2TagInventoryMask = new PARAM_C1G2TagInventoryMask();
@@ -1350,8 +1369,8 @@ namespace ImpinjControl
                     c1G2Command.C1G2Filter[1].C1G2TagInventoryMask.TagMask = LLRPBitArray.FromHexString(antennaConfiguration.extraMask);
                     //ToLLRPBitArray(RFIDReaderParameter.ExtraMask);
                     c1G2Command.C1G2Filter[1].C1G2TagInventoryStateUnawareFilterAction = new PARAM_C1G2TagInventoryStateUnawareFilterAction();
-                    c1G2Command.C1G2Filter[1].C1G2TagInventoryStateUnawareFilterAction.Action = ENUM_C1G2StateUnawareAction.Select_DoNothing;
-
+                    c1G2Command.C1G2Filter[1].C1G2TagInventoryStateUnawareFilterAction.Action = ENUM_C1G2StateUnawareAction.DoNothing_Unselect;
+                    */
                     PARAM_ImpinjInventorySearchMode searchMode;
                     PARAM_ImpinjFixedFrequencyList fixedFrequencyList;
                     PARAM_ImpinjReducedPowerFrequencyList reducedPowerFrequencyList;
